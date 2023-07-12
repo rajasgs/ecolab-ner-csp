@@ -11,7 +11,7 @@ source:
 
 import subprocess
 
-MODEL_NAME = 'eco1'
+MODEL_NAME = 'exp1'
 classpath = "jars/*"
 
 def train_model():

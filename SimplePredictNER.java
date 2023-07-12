@@ -36,11 +36,12 @@ import java.io.FileWriter;
 
 public class PredictNER {
 
-    static String MODEL_PATH        = "ecolab_address_ner_model_csp.model.ser.gz";
+    static String MODEL_PATH        = "exp1.model.ser.gz";
 
-    static String STREET_NAME       = "STREET_NAME";
-    static String HOUSE_NO          = "HOUSE_NO";
-    static String SUITE_NO          = "SUITE_NO";
+    static String STREET_NAME           = "STREET_NAME";
+    static String HOUSE_NO              = "HOUSE_NO";
+    static String SUITE_NO              = "SUITE_NO";
+    static String SUITE_AND_HOUSE_NO    = "SUITE_AND_HOUSE_NO";
 
     public static CRFClassifier getModel(String modelPath) {
         return CRFClassifier.getClassifierNoExceptions(modelPath);
@@ -67,6 +68,11 @@ public class PredictNER {
         // System.out.println(input+" ==> "+model.classifyToString(input));
         String result = model.classifyToString(input);
 
+        print(result);
+
+        print(model.classifyWithInlineXML(input));
+        // <HOUSE_NO>1626</HOUSE_NO><STREET_NAME>-1630 NESS AVE</STREET_NAME>
+
         List<String> resultParts = Arrays.asList(result.split(" "));
         // print(resultParts);
 
@@ -75,6 +81,8 @@ public class PredictNER {
 
         resultMap.put(STREET_NAME, "");
         resultMap.put(HOUSE_NO, "");
+        resultMap.put(SUITE_NO, "");
+        resultMap.put(SUITE_AND_HOUSE_NO, "");
         for (String object: resultParts) {
 
             // print("part : " + object);
@@ -107,6 +115,13 @@ public class PredictNER {
                 String newValue = prevValue + " " + value; 
                 resultMap.put(SUITE_NO, newValue);
 
+            } else if (key.equalsIgnoreCase(SUITE_AND_HOUSE_NO)){
+
+                String prevValue = resultMap.get(SUITE_AND_HOUSE_NO);
+
+                String newValue = prevValue + " " + value; 
+                resultMap.put(SUITE_AND_HOUSE_NO, newValue);
+
             }
             
         }
@@ -114,6 +129,7 @@ public class PredictNER {
         resultMap.put(STREET_NAME, (resultMap.getOrDefault(STREET_NAME, "")).trim());
         resultMap.put(HOUSE_NO, (resultMap.getOrDefault(HOUSE_NO, "")).trim());
         resultMap.put(SUITE_NO, (resultMap.getOrDefault(SUITE_NO, "")).trim());
+        resultMap.put(SUITE_AND_HOUSE_NO, (resultMap.getOrDefault(SUITE_AND_HOUSE_NO, "")).trim());
 
         print("");
 
@@ -142,7 +158,7 @@ public class PredictNER {
 
         CRFClassifier model = getModel(MODEL_PATH);
 
-        String content = "12A WEST STREET";
+        String content = "1626-1630 NESS AVE";
 
         // doTagging(model, content);
         HashMap<String, String> result = getEntities(model, content);
