@@ -149,8 +149,6 @@ def startpy():
 if __name__ == '__main__':
     startpy()
 
-
-
 # Compiling the Java file
 # javac -cp "/home/ashish/corenlp/stanford-corenlp-4.5.2/*" PredictNER.java
 

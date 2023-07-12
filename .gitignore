@@ -134,3 +134,6 @@ dmypy.json
 
 *.model.props
 *.model.ser.gz
+
+
+*.ser.gz
