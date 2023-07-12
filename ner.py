@@ -93,7 +93,7 @@ def train_model(model_name: str, train_files: list, test_files: list, print_repo
                 check=True'''
     #if print_report:
     #    print(*result.stderr.decode('utf-8').split('\n')[-11:], sep='\n')
-    print("ASHISH")
+    print("done")
     return model_file
 
 

@@ -19,7 +19,7 @@ def train_model():
     model_file        = f'{MODEL_NAME}.model.ser.gz'
     ner_prop_filename = f'{MODEL_NAME}.model.props'
 
-    with open("ner_classification.txt", 'w') as f:
+    with open("one.txt", 'w') as f:
         result = subprocess.run(
             ['java',
                      '-Xmx1g',
