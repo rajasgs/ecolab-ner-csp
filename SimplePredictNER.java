@@ -122,6 +122,8 @@ public class PredictNER {
 
 
     static void printMap(HashMap<String, String> map){
+
+
         for (Map.Entry<String, String> entry : map.entrySet()) {
             String key = entry.getKey();
             Object value = entry.getValue();
@@ -140,11 +142,11 @@ public class PredictNER {
 
         CRFClassifier model = getModel(MODEL_PATH);
 
-        String content = "22 DRUMCONDRA ROAD UPPER";
+        String content = "12A WEST STREET";
 
         // doTagging(model, content);
         HashMap<String, String> result = getEntities(model, content);
-        // print(result);
+        print(result);
         printMap(result);
 
     }
