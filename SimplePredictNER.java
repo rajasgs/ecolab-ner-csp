@@ -32,12 +32,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
-import java.io.FileWriter;
-import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.ByteArrayInputStream;
-import javax.xml.parsers.DocumentBuilder;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
+// import java.io.FileWriter;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 
 public class PredictNER {
 
@@ -79,25 +81,23 @@ public class PredictNER {
         return null;
     }
 
-    static void string2XML(){
-        String xml = "<HOUSE_NO>150</HOUSE_NO> <STREET_NAME>GLADSTONE AVE N</STREET_NAME>";
+    static HashMap<String, String> string2XMLDocument(String content){
+        String xml = "<item>" + content+"</item>";
 
-        xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><content>" + xml+"</content>";
+        HashMap<String, String> resultMap = new HashMap<String, String>();
 
-        xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><message><warning>Hello World</warning></message>";
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        
+        Document doc = Jsoup.parse(xml, "", Parser.xmlParser());
+        for (Element item : doc.select("item")) {
+            Elements children = item.children();
+            for (Element child : children) {
+                // System.out.println(child.tag() + " : " + child.text());
+                // System.out.println(child.text());
 
-        Document doc = null;
-        try {
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            doc = db.parse(new ByteArrayInputStream(xml.getBytes("UTF-8")));
-        } catch(Exception  saxe){
-            print("Error while parsing ");
-            saxe.printStackTrace();
+                resultMap.put(""+child.tag(), child.text());
+            }
         }
-        
-        print(doc);
+
+        return resultMap;
     }
 
     public static HashMap<String, String> getEntities(CRFClassifier model, String input){
@@ -105,9 +105,12 @@ public class PredictNER {
         // System.out.println(input+" ==> "+model.classifyToString(input));
         String result = model.classifyToString(input);
 
-        print(result);
+        // print(result);
 
-        print(model.classifyWithInlineXML(input));
+        
+
+
+        // print();
         // <HOUSE_NO>1626</HOUSE_NO><STREET_NAME>-1630 NESS AVE</STREET_NAME>
 
         List<String> resultParts = Arrays.asList(result.split(" "));
@@ -173,6 +176,14 @@ public class PredictNER {
         return resultMap;
     }
 
+    public static HashMap<String, String> getEntities2(CRFClassifier model, String input){
+        
+        String xmlContent = model.classifyWithInlineXML(input);
+
+        HashMap<String, String> resultMap = string2XMLDocument(xmlContent);
+
+        return resultMap;
+    }
 
     static void printMap(HashMap<String, String> map){
 
@@ -198,11 +209,11 @@ public class PredictNER {
         String content = "150 GLADSTONE AVE N";
 
         // doTagging(model, content);
-        // HashMap<String, String> result = getEntities(model, content);
-        // print(result);
+        HashMap<String, String> result = getEntities2(model, content);
+        print(result);
         // printMap(result);
 
-        string2XML();
+        // string2XMLDocument("<HOUSE_NO>150</HOUSE_NO> <STREET_NAME>GLADSTONE AVE N</STREET_NAME>");
 
     }
 }
@@ -213,7 +224,7 @@ public class PredictNER {
  * 
 
 # Compiling the Java file
-javac -cp "/home/ashish/corenlp/stanford-corenlp-4.5.2/*" PredictNER.java
+
 
 # Running the class
 java -cp "jars/*:." SimplePredictNER.java
