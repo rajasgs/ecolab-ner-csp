@@ -85,6 +85,74 @@ def pattern_1_maker_multiple():
     return content
 
 
+def pattern_13_maker_single(address):
+
+    '''
+        Pattern 13:
+
+        1	
+        (House_No) (StreetName) (UNIT) (Suite_No)
+        
+        Sample:
+        23 CHEVIN Road UNIT 90
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    content += f"{address_parts[0]}"
+    content += f"{get_spaces(address_parts[0])}"
+    content += "HOUSE_NO"
+    content += "\n"
+
+    content += f"{address_parts[1]}"
+    content += f"{get_spaces(address_parts[1])}"
+    content += "STREET_NAME"
+    content += "\n"
+
+    content += f"{address_parts[2]}"
+    content += f"{get_spaces(address_parts[2])}"
+    content += "STREET_NAME"
+    content += "\n"
+
+    content += f"{address_parts[3]}"
+    content += f"{get_spaces(address_parts[3])}"
+    content += "SUITE_NO"
+    content += "\n"
+
+    content += f"{address_parts[4]}"
+    content += f"{get_spaces(address_parts[4])}"
+    content += "SUITE_NO"
+
+    # print(content)
+
+    return content
+
+def pattern_13_maker_multiple():
+
+    file = 'pattern13.txt'
+
+    lines = None
+    with open(file) as f:
+        lines = f.readlines()
+
+    # print(lines)
+
+    content = ""
+
+    for c_line in lines:
+        c_line = c_line.replace('\n', '')
+
+        content += pattern_13_maker_single(c_line)
+
+        content += "\n\n"
+
+    # print(content)
+
+    return content
+
+
 def pattern_3_maker_single(address):
 
     '''
@@ -108,7 +176,7 @@ def pattern_3_maker_single(address):
     content += "SUITE_NO"
     content += "\n"
 
-    content += f"-{sub_parts[1]}"
+    content += f"{sub_parts[1]}"
     content += f"{get_spaces(sub_parts[1])}"
     content += "HOUSE_NO"
     content += "\n"
@@ -158,11 +226,15 @@ def startpy():
 
     # Pattern 3
     # print(pattern_3_maker_single("1626-1630 NESS AVE"))
-    print(pattern_3_maker_multiple())
+    # print(pattern_3_maker_multiple())
 
     # Pattern 3
     # print(pattern_3_maker_single("1626-1630 NESS AVE"))
     # print(pattern_3_maker_multiple())
+
+    # Pattern 13
+    # print(pattern_3_maker_single("1626-1630 NESS AVE"))
+    print(pattern_13_maker_multiple())
 
     pass
 
