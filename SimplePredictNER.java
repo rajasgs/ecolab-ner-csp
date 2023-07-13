@@ -43,7 +43,7 @@ import org.jsoup.select.Elements;
 
 public class PredictNER {
 
-    static String MODEL_PATH        = "exp1.model.ser.gz";
+    static String MODEL_PATH            = "exp6.model.ser.gz";
 
     static String STREET_NAME           = "STREET_NAME";
     static String HOUSE_NO              = "HOUSE_NO";
@@ -93,7 +93,17 @@ public class PredictNER {
                 // System.out.println(child.tag() + " : " + child.text());
                 // System.out.println(child.text());
 
-                resultMap.put(""+child.tag(), child.text());
+                String cTag     = ""+child.tag();
+                String cValue   = child.text();
+
+                if(resultMap.containsKey(cTag)){
+                    cValue = "" + resultMap.get(cTag) + " " + cValue;
+                    resultMap.put(cTag, cValue);
+                } else{
+                    resultMap.put(cTag, cValue);
+                }
+
+                
             }
         }
 
@@ -180,6 +190,8 @@ public class PredictNER {
         
         String xmlContent = model.classifyWithInlineXML(input);
 
+        // print(xmlContent);
+
         HashMap<String, String> resultMap = string2XMLDocument(xmlContent);
 
         return resultMap;
@@ -206,7 +218,7 @@ public class PredictNER {
 
         CRFClassifier model = getModel(MODEL_PATH);
 
-        String content = "229-241 KEARNEY ST";
+        String content = "1626-1630 NESS AVE";
 
         // doTagging(model, content);
         HashMap<String, String> result = getEntities2(model, content);

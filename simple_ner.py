@@ -11,15 +11,15 @@ source:
 
 import subprocess
 
-MODEL_NAME = 'exp1'
 classpath = "jars/*"
+
+ner_prop_filename = f'exp6.model.props'
 
 def train_model():
     
-    model_file        = f'{MODEL_NAME}.model.ser.gz'
-    ner_prop_filename = f'{MODEL_NAME}.model.props'
-
-    with open("one.txt", 'w') as f:
+    model_file        = f'exp6.model.ser.gz'
+    
+    with open("exp6_output.txt", 'w') as f:
         result = subprocess.run(
             ['java',
                      '-Xmx1g',
