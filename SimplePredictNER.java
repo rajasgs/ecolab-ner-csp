@@ -33,6 +33,11 @@ import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
 import java.io.FileWriter;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.ByteArrayInputStream;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 public class PredictNER {
 
@@ -61,7 +66,39 @@ public class PredictNER {
         System.out.println(obj);
     }
 
+    public static HashMap<String, String> getEntities_2(CRFClassifier model, String input){
 
+        input = input.trim();
+        // System.out.println(input+" ==> "+model.classifyToString(input));
+        String result = model.classifyToString(input);
+
+        print(result);
+
+        String result1 = model.classifyWithInlineXML(input);
+
+        return null;
+    }
+
+    static void string2XML(){
+        String xml = "<HOUSE_NO>150</HOUSE_NO> <STREET_NAME>GLADSTONE AVE N</STREET_NAME>";
+
+        xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><content>" + xml+"</content>";
+
+        xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><message><warning>Hello World</warning></message>";
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        
+
+        Document doc = null;
+        try {
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            doc = db.parse(new ByteArrayInputStream(xml.getBytes("UTF-8")));
+        } catch(Exception  saxe){
+            print("Error while parsing ");
+            saxe.printStackTrace();
+        }
+        
+        print(doc);
+    }
 
     public static HashMap<String, String> getEntities(CRFClassifier model, String input){
         input = input.trim();
@@ -158,12 +195,14 @@ public class PredictNER {
 
         CRFClassifier model = getModel(MODEL_PATH);
 
-        String content = "1626-1630 NESS AVE";
+        String content = "150 GLADSTONE AVE N";
 
         // doTagging(model, content);
-        HashMap<String, String> result = getEntities(model, content);
-        print(result);
-        printMap(result);
+        // HashMap<String, String> result = getEntities(model, content);
+        // print(result);
+        // printMap(result);
+
+        string2XML();
 
     }
 }
