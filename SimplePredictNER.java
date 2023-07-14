@@ -218,7 +218,7 @@ public class PredictNER {
 
         CRFClassifier model = getModel(MODEL_PATH);
 
-        String content = "4 BROCKLEBANK ROAD UNIT C";
+        String content = "55/57 BAHNHOFSTRASSE";
 
         // doTagging(model, content);
         HashMap<String, String> result = getEntities2(model, content);

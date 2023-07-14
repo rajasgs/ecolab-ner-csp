@@ -61,28 +61,28 @@ def pattern_1_maker_single(address):
 
     return content
 
-def pattern_1_maker_multiple():
+# def pattern_1_maker_multiple():
 
-    file = 'pattern1.txt'
+#     file = 'pattern1.txt'
 
-    lines = None
-    with open(file) as f:
-        lines = f.readlines()
+#     lines = None
+#     with open(file) as f:
+#         lines = f.readlines()
 
-    # print(lines)
+#     # print(lines)
 
-    content = ""
+#     content = ""
 
-    for c_line in lines:
-        c_line = c_line.replace('\n', '')
+#     for c_line in lines:
+#         c_line = c_line.replace('\n', '')
 
-        content += pattern_1_maker_single(c_line)
+#         content += pattern_1_maker_single(c_line)
 
-        content += "\n\n"
+#         content += "\n\n"
 
-    # print(content)
+#     # print(content)
 
-    return content
+#     return content
 
 
 def pattern_13_maker_single(address):
@@ -129,28 +129,28 @@ def pattern_13_maker_single(address):
 
     return content
 
-def pattern_13_maker_multiple():
+# def pattern_13_maker_multiple():
 
-    file = 'pattern13.txt'
+#     file = 'pattern13.txt'
 
-    lines = None
-    with open(file) as f:
-        lines = f.readlines()
+#     lines = None
+#     with open(file) as f:
+#         lines = f.readlines()
 
-    # print(lines)
+#     # print(lines)
 
-    content = ""
+#     content = ""
 
-    for c_line in lines:
-        c_line = c_line.replace('\n', '')
+#     for c_line in lines:
+#         c_line = c_line.replace('\n', '')
 
-        content += pattern_13_maker_single(c_line)
+#         content += pattern_13_maker_single(c_line)
 
-        content += "\n\n"
+#         content += "\n\n"
 
-    # print(content)
+#     # print(content)
 
-    return content
+#     return content
 
 
 def pattern_3_maker_single(address):
@@ -194,9 +194,79 @@ def pattern_3_maker_single(address):
 
     return content
 
-def pattern_3_maker_multiple():
+# def pattern_3_maker_multiple():
 
-    file = 'pattern3.txt'
+#     file = 'pattern3.txt'
+
+#     lines = None
+#     with open(file) as f:
+#         lines = f.readlines()
+
+#     # print(lines)
+
+#     content = ""
+
+#     for c_line in lines:
+#         c_line = c_line.replace('\n', '')
+
+#         content += pattern_3_maker_single(c_line)
+
+#         content += "\n\n"
+
+#     # print(content)
+
+#     return content
+
+def pattern_10_maker_single(address):
+
+    '''
+        Pattern 10:
+
+        10	
+        (House_No with Alphabet) (StreetName)	
+
+        Sample:
+        12A WEST STREET
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    content += f"{address_parts[0]}"
+    content += f"{get_spaces(address_parts[0])}"
+    content += "HOUSE_NO"
+    content += "\n"
+
+    content += f"{address_parts[1]}"
+    content += f"{get_spaces(address_parts[1])}"
+    content += "STREET_NAME"
+    content += "\n"
+
+    content += f"{address_parts[2]}"
+    content += f"{get_spaces(address_parts[2])}"
+    content += "STREET_NAME"
+
+    # print(content)
+
+    return content
+
+def pattern_maker_single(c_line, pattern_index):
+
+    if(pattern_index == 1):
+        return pattern_1_maker_single(c_line)
+    elif(pattern_index == 3):
+        return pattern_3_maker_single(c_line)
+    elif(pattern_index == 10):
+        return pattern_10_maker_single(c_line)
+    elif(pattern_index == 13):
+        return pattern_13_maker_single(c_line)
+
+    return 0
+
+def pattern_maker_multiple(pattern_index):
+
+    file = f'pattern{pattern_index}.txt'
 
     lines = None
     with open(file) as f:
@@ -209,7 +279,7 @@ def pattern_3_maker_multiple():
     for c_line in lines:
         c_line = c_line.replace('\n', '')
 
-        content += pattern_3_maker_single(c_line)
+        content += pattern_maker_single(c_line, pattern_index)
 
         content += "\n\n"
 
@@ -234,7 +304,7 @@ def startpy():
 
     # Pattern 13
     # print(pattern_3_maker_single("1626-1630 NESS AVE"))
-    print(pattern_13_maker_multiple())
+    print(pattern_maker_multiple(10))
 
     pass
 
