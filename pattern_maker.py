@@ -231,6 +231,78 @@ def pattern_5_maker_single(address):
 
     return content
 
+def pattern_6_maker_single(address):
+
+    '''
+        Pattern 5:
+
+        6	
+        (StreetName) # (Suite_No)	
+        CALLE NUEVA YORK # 301
+
+        Sample:
+        5535 IRWIN SIMPSON RD # 5535
+    '''
+
+    # print(address)
+
+    
+
+    # print(len(address_parts))
+
+    address_full_parts = address.split("#")
+
+    address_parts = address_full_parts[0].split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            
+            if(isinstance(c_item, int)):
+                content += f"{c_item}"
+                content += f"{get_spaces(c_item)}"
+                content += "SUITE_NO"
+                content += "\n"
+            else:
+                content += f"{c_item}"
+                content += f"{get_spaces(c_item)}"
+                content += "STREET_NAME"
+                content += "\n"
+        else:
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+        
+    
+    content += f"#"
+    content += f"{get_spaces('#')}"
+    content += "0"
+    content += "\n"
+
+    content += f"{address_full_parts[1]}"
+    content += f"{get_spaces(address_full_parts[1])}"
+    content += "0"
+    content += "\n"
+
+    return content
+
+
+def pattern_7_maker_single(address):
+
+    pass
+
+def pattern_8_maker_single(address):
+
+    pass
+
+def pattern_9_maker_single(address):
+
+    pass
+
 def pattern_10_maker_single(address):
 
     '''
@@ -264,6 +336,14 @@ def pattern_10_maker_single(address):
     # print(content)
 
     return content
+
+def pattern_11_maker_single(address):
+
+    pass
+
+def pattern_12_maker_single(address):
+
+    pass
 
 def pattern_13_maker_single(address):
 
@@ -354,8 +434,20 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_4_maker_single(c_line)
     elif(pattern_index == 5):
         return pattern_5_maker_single(c_line)
+    elif(pattern_index == 6):
+        return pattern_6_maker_single(c_line)
+    elif(pattern_index == 7):
+        return pattern_7_maker_single(c_line)
+    elif(pattern_index == 8):
+        return pattern_8_maker_single(c_line)
+    elif(pattern_index == 9):
+        return pattern_9_maker_single(c_line)
     elif(pattern_index == 10):
         return pattern_10_maker_single(c_line)
+    elif(pattern_index == 11):
+        return pattern_11_maker_single(c_line)
+    elif(pattern_index == 12):
+        return pattern_12_maker_single(c_line)
     elif(pattern_index == 13):
         return pattern_13_maker_single(c_line)
     elif(pattern_index == 14):
