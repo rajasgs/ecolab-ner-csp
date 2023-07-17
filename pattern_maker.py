@@ -251,6 +251,39 @@ def pattern_10_maker_single(address):
 
     return content
 
+#  
+def pattern_14_maker_single(address):
+
+    '''
+        Pattern 14:
+
+        14	
+        (House_No) (HWY with No)	
+        	
+        Sample:
+        575 HWY 21
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    content += f"{address_parts[0]}"
+    content += f"{get_spaces(address_parts[0])}"
+    content += "HOUSE_NO"
+    content += "\n"
+
+    content += f"{address_parts[1]}"
+    content += f"{get_spaces(address_parts[1])}"
+    content += "STREET_NAME"
+    content += "\n"
+
+    content += f"{address_parts[2]}"
+    content += f"{get_spaces(address_parts[2])}"
+    content += "STREET_NAME"
+
+    return content
+
 def pattern_maker_single(c_line, pattern_index):
 
     if(pattern_index == 1):
@@ -261,6 +294,8 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_10_maker_single(c_line)
     elif(pattern_index == 13):
         return pattern_13_maker_single(c_line)
+    elif(pattern_index == 14):
+        return pattern_14_maker_single(c_line)
 
     return 0
 
@@ -295,16 +330,16 @@ def startpy():
     # print(pattern_1_maker_multiple())
 
     # Pattern 3
-    # print(pattern_3_maker_single("1626-1630 NESS AVE"))
     # print(pattern_3_maker_multiple())
 
-    # Pattern 3
-    # print(pattern_3_maker_single("1626-1630 NESS AVE"))
-    # print(pattern_3_maker_multiple())
+    # Pattern 10
+    # print(pattern_maker_multiple(10))
 
     # Pattern 13
-    # print(pattern_3_maker_single("1626-1630 NESS AVE"))
-    print(pattern_maker_multiple(10))
+    # print(pattern_maker_multiple(13))
+
+    # Pattern 14
+    print(pattern_maker_multiple(14))
 
     pass
 
