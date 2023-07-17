@@ -556,12 +556,33 @@ def pattern_16_maker_single(address):
         JURIJA GAGARINA 16
 
         Sample:
-        200A-200B LAKESHORE DR
+        JURIJA GAGARINA 16
 
         
     '''
 
-    pass
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == len(address_parts) - 1):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    return content
 
 
 def pattern_17_maker_single(address):
@@ -569,25 +590,67 @@ def pattern_17_maker_single(address):
     '''
         Pattern 17:
 
+        17	
+        ( Street_No) (Street_Name) (Post_Box_No)	
         
 
         Sample:
-        
+        99 LEVEN STREET PO BOX 7159
 
         
     '''
 
-    pass
+    main_address_parts = address.split("PO BOX")
+
+    address_parts = main_address_parts[0].split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        c_item = c_item.strip()
+
+        if(len(c_item) == 0):
+            continue
+
+        if(c_index == 0):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    content += f"PO BOX"
+    content += f"{get_spaces('PO BOX')}"
+    content += "HOUSE_NO"
+    content += "\n"
+
+    sub_address = main_address_parts[1].strip()
+
+    content += f"{sub_address}"
+    content += f"{get_spaces(sub_address)}"
+    content += "HOUSE_NO"
+    content += "\n"
+
+    return content
 
 def pattern_18_maker_single(address):
 
     '''
         Pattern 17:
 
-        
+        18		
 
         Sample:
-        
+        103 PTH 12 N
 
         
     '''
@@ -600,7 +663,9 @@ def pattern_19_maker_single(address):
     '''
         Pattern 17:
 
-        
+        19	
+        (House_No) (HWY with No)	
+        10 HWY
 
         Sample:
         
@@ -608,7 +673,28 @@ def pattern_19_maker_single(address):
         
     '''
 
-    pass
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    return content
 
 
 def pattern_20_maker_single(address):
@@ -699,6 +785,12 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_14_maker_single(c_line)
     elif(pattern_index == 15):
         return pattern_15_maker_single(c_line)
+    elif(pattern_index == 16):
+        return pattern_16_maker_single(c_line)
+    elif(pattern_index == 17):
+        return pattern_17_maker_single(c_line)
+    elif(pattern_index == 19):
+        return pattern_19_maker_single(c_line)
     elif(pattern_index == 29):
         return pattern_29_maker_single(c_line)
 
@@ -775,7 +867,16 @@ def startpy():
     # print(pattern_maker_multiple(14))
 
     # Pattern 15
-    print(pattern_maker_multiple(15))
+    # print(pattern_maker_multiple(15))
+
+    # Pattern 16
+    # print(pattern_maker_multiple(16))
+
+    # Pattern 17
+    # print(pattern_maker_multiple(17))
+
+    # Pattern 19
+    print(pattern_maker_multiple(19))
 
     # Pattern 29
     # print(pattern_maker_multiple(29))
