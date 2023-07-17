@@ -293,13 +293,46 @@ def pattern_6_maker_single(address):
 
 def pattern_7_maker_single(address):
 
+    '''
+        Pattern 7:
+        
+        7	
+        (StreetName) (Suite_No) (StreetName)	        
+
+        Sample:
+        BOTANY TOWN CENTRE 588 CHAPEL ROAD
+
+        Not clear
+    '''
+
     pass
 
 def pattern_8_maker_single(address):
 
+    '''
+        Pattern :
+
+        
+
+        Sample:
+        
+
+        Not clear
+    '''
+
     pass
 
 def pattern_9_maker_single(address):
+
+    '''
+        Pattern :
+
+        
+
+        Sample:
+        
+        Not clear
+    '''
 
     pass
 
@@ -339,11 +372,63 @@ def pattern_10_maker_single(address):
 
 def pattern_11_maker_single(address):
 
+    '''
+        Pattern :
+
+        (House_No with Alphabet)-(House_No with Alphabet) (StreetName)	
+
+        Sample:
+        200A-200B LAKESHORE DR
+
+        Redundant
+    '''
+
     pass
 
 def pattern_12_maker_single(address):
 
-    pass
+    '''
+        Pattern :
+
+        12	
+        (Suite_No) (House_No) (StreetName)	
+        3820 43 AVE
+
+        Sample:
+        3820 43 AVE
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "SUITE_NO"
+            content += "\n"
+
+        elif(c_index == 1):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    # print(content)
+
+    return content
 
 def pattern_13_maker_single(address):
 
@@ -422,6 +507,146 @@ def pattern_14_maker_single(address):
 
     return content
 
+
+def pattern_15_maker_single(address):
+
+    '''
+        Pattern 15:
+
+        15	
+        (Street_No) (street_with_highway_in_hash_and_number)	
+        409 HIGHWAY #4 N	
+
+        Sample:
+        ?
+
+        
+    '''
+
+    pass
+
+
+def pattern_16_maker_single(address):
+
+    '''
+        Pattern 16:
+
+        16	
+        (Street_Name) ( Street_No)	
+        JURIJA GAGARINA 16
+
+        Sample:
+        200A-200B LAKESHORE DR
+
+        
+    '''
+
+    pass
+
+
+def pattern_17_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    pass
+
+def pattern_18_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    pass
+
+
+def pattern_19_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    pass
+
+
+def pattern_20_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    
+
+    # print(content)
+
+    pass
+
+
+def pattern_29_maker_single(address):
+
+    '''
+        Pattern 29:
+
+        29	
+        (Street_No) (street_with_highway_in_number)	
+        12128 S US HIGHWAY 71        
+
+        Sample:
+        12128 S US HIGHWAY 71
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    return content
+
 def pattern_maker_single(c_line, pattern_index):
 
     if(pattern_index == 1):
@@ -452,6 +677,8 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_13_maker_single(c_line)
     elif(pattern_index == 14):
         return pattern_14_maker_single(c_line)
+    elif(pattern_index == 29):
+        return pattern_29_maker_single(c_line)
 
     return 0
 
@@ -496,7 +723,7 @@ def startpy():
 
     # Pattern 5
     # pattern_5_maker_single("1/3 WESTGATE PARK FODDERWICK")
-    print(pattern_maker_multiple(5))
+    # print(pattern_maker_multiple(5))
 
     # Pattern 6
     # print(pattern_maker_multiple(6))
@@ -524,6 +751,9 @@ def startpy():
 
     # Pattern 14
     # print(pattern_maker_multiple(14))
+
+    # Pattern 29
+    print(pattern_maker_multiple(29))
 
     pass
 
