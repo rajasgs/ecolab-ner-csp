@@ -11,7 +11,13 @@ source:
     https://docs.google.com/spreadsheets/d/1QH_T6C3MAJNj5f_1gL1dZtLRUjFbwJ4wcHpPwlCfylI/edit#gid=968221325
 
     https://www.kaggle.com/rajacsp/address-pattern/
+
+    https://stackoverflow.com/questions/31627321/testing-if-a-value-is-numeric
+
+    
 '''
+
+import numbers
 
 def get_spaces(content):
 
@@ -661,7 +667,7 @@ def pattern_18_maker_single(address):
 def pattern_19_maker_single(address):
 
     '''
-        Pattern 17:
+        Pattern 19:
 
         19	
         (House_No) (HWY with No)	
@@ -698,6 +704,171 @@ def pattern_19_maker_single(address):
 
 
 def pattern_20_maker_single(address):
+
+    '''
+        Pattern 20:
+
+        
+
+        
+    '''
+
+    
+
+    # print(content)
+
+    pass
+
+def convert_num(s):
+    try:
+        return int(s)
+    except ValueError:
+        return s
+
+def find_digit_index_in_list(address_list):
+
+    for c_index, c_item in enumerate(address_list):
+
+        c_item = convert_num(c_item.strip())
+
+        # print(f'{c_index} : [{c_item}] : {isinstance(c_item, numbers.Number)}')
+
+        if(isinstance(c_item, int)):
+            return c_index
+
+    return 0
+
+def pattern_21_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        21	
+        (House_name) (House_No) (Street_Name)	
+        
+
+        Sample:
+        TOWN HALL HOUSE 456 KENT ST
+
+    '''
+
+    ad_list = address.split(" ")
+    int_index = find_digit_index_in_list(ad_list)
+
+    # print(int_index)
+
+    content = ""
+
+    for c_index, c_item in enumerate(ad_list):
+
+        if(c_index == int_index):
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+            break
+        
+        content += f"{c_item}"
+        content += f"{get_spaces(c_item)}"
+        content += "SUITE_NO"
+        content += "\n"
+    
+
+    # print(content)
+
+    for c_index, c_item in enumerate(ad_list):
+
+        if(c_index > int_index):
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    return content
+
+
+def pattern_22_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    
+
+    # print(content)
+
+    pass
+
+
+def pattern_23_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    
+
+    # print(content)
+
+    pass
+
+
+def pattern_24_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    
+
+    # print(content)
+
+    pass
+
+
+def pattern_25_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    
+
+    # print(content)
+
+    pass
+
+
+def pattern_26_maker_single(address):
 
     '''
         Pattern 17:
@@ -791,6 +962,8 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_17_maker_single(c_line)
     elif(pattern_index == 19):
         return pattern_19_maker_single(c_line)
+    elif(pattern_index == 21):
+        return pattern_21_maker_single(c_line)
     elif(pattern_index == 29):
         return pattern_29_maker_single(c_line)
 
@@ -876,7 +1049,11 @@ def startpy():
     # print(pattern_maker_multiple(17))
 
     # Pattern 19
-    print(pattern_maker_multiple(19))
+    # print(pattern_maker_multiple(19))
+
+    # print(pattern_21_maker_single("KAMPUNG MUHHIBAH 14981 JALAN PUCHONG"))
+    # Pattern 21
+    print(pattern_maker_multiple(21))
 
     # Pattern 29
     # print(pattern_maker_multiple(29))
