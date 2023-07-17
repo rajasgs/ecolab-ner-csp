@@ -791,21 +791,36 @@ def pattern_21_maker_single(address):
 def pattern_22_maker_single(address):
 
     '''
-        Pattern 17:
+        Pattern 22:
 
-        
+        22	
+        (Street_Name) ( Suite_No)	
+        RUA PROFESSOR SIMÃO HESS, 341
 
         Sample:
         
 
         
     '''
+    ad_list = address.split(" ")
+    content = "" 
 
-    
+    for c_index, c_item in enumerate(ad_list):
 
-    # print(content)
+        if(c_index == (len(ad_list)-1)):
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
 
-    pass
+            break
+        
+        content += f"{c_item}"
+        content += f"{get_spaces(c_item)}"
+        content += "STREET_NAME"
+        content += "\n"
+
+    return content
 
 
 def pattern_23_maker_single(address):
@@ -964,6 +979,8 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_19_maker_single(c_line)
     elif(pattern_index == 21):
         return pattern_21_maker_single(c_line)
+    elif(pattern_index == 22):
+        return pattern_22_maker_single(c_line)
     elif(pattern_index == 29):
         return pattern_29_maker_single(c_line)
 
@@ -1053,7 +1070,10 @@ def startpy():
 
     # print(pattern_21_maker_single("KAMPUNG MUHHIBAH 14981 JALAN PUCHONG"))
     # Pattern 21
-    print(pattern_maker_multiple(21))
+    # print(pattern_maker_multiple(21))
+
+    # Pattern 22
+    print(pattern_maker_multiple(22))
 
     # Pattern 29
     # print(pattern_maker_multiple(29))
