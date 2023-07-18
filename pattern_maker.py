@@ -724,16 +724,21 @@ def convert_num(s):
         return int(s)
     except ValueError:
         return s
+    
+def is_int(c_item):
+
+    c_item = convert_num(c_item.strip())
+
+    return (isinstance(c_item, int))
+
 
 def find_digit_index_in_list(address_list):
 
     for c_index, c_item in enumerate(address_list):
 
-        c_item = convert_num(c_item.strip())
-
         # print(f'{c_index} : [{c_item}] : {isinstance(c_item, numbers.Number)}')
 
-        if(isinstance(c_item, int)):
+        if(is_int(c_item)):
             return c_index
 
     return 0
@@ -892,6 +897,42 @@ def pattern_26_maker_single(address):
         
     '''
 
+    address_parts = address.split(" ")
+    content = "" 
+    unit_finished_flag = False
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        c_item = c_item.strip()
+
+        if(c_index == 0 or c_index == 1):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "SUITE_NO"
+            content += "\n"
+
+        else:
+
+            if(c_index == 2 and is_int(c_item)):
+                content += f"{c_item}"
+                content += f"{get_spaces(c_item)}"
+                content += "HOUSE_NO"
+                content += "\n"
+
+                after_suite_flag = True
+            else:
+
+                content += f"{c_item}"
+                content += f"{get_spaces(c_item)}"
+                content += "STREET_NAME"
+                content += "\n"
+    
+
+    # print(content)
+
+    return content
     
 
     # print(content)
@@ -904,12 +945,13 @@ def pattern_27_maker_single(address):
     '''
         Pattern 17:
 
+        27	
+        ( Street_No) (Street_Name) (Postal_no)	
         
 
         Sample:
-        
+        2643 COMMERCIAL CENTER BLVD STE C300
 
-        
     '''
 
     address_parts = address.split(" ")
@@ -1075,6 +1117,8 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_21_maker_single(c_line)
     elif(pattern_index == 22):
         return pattern_22_maker_single(c_line)
+    elif(pattern_index == 26):
+        return pattern_26_maker_single(c_line)
     elif(pattern_index == 27):
         return pattern_27_maker_single(c_line)
     elif(pattern_index == 28):
@@ -1173,6 +1217,9 @@ def startpy():
     # Pattern 22
     # print(pattern_maker_multiple(22))
 
+    # Pattern 26
+    # print(pattern_maker_multiple(26))
+
     # Pattern 27
     # print(pattern_27_maker_single("76 W HORIZON RIDGE PKWY STE 120"))
     # print(pattern_maker_multiple(27))
@@ -1246,16 +1293,15 @@ Can't do:
 
 23
 
-
 24
 
-25
+25 - CAN'T DO
 
-26
+26 - DONE
 
-27
+27 - DONE
 
-28
+28 - DONE
 
 29 - DONE
 
