@@ -835,11 +835,7 @@ def pattern_23_maker_single(address):
 
         
     '''
-
     
-
-    # print(content)
-
     pass
 
 
@@ -902,6 +898,104 @@ def pattern_26_maker_single(address):
 
     pass
 
+
+def pattern_27_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    address_parts = address.split(" ")
+    content = "" 
+    after_suite_flag = False
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        c_item = c_item.strip()
+
+        if(c_index == 0):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            if(c_item == "STE" or c_item == "SUITE"):
+                content += f"{c_item}"
+                content += f"{get_spaces(c_item)}"
+                content += "SUITE_NO"
+                content += "\n"
+
+                after_suite_flag = True
+            else:
+
+                if(after_suite_flag):
+                    content += f"{c_item}"
+                    content += f"{get_spaces(c_item)}"
+                    content += "SUITE_NO"
+                    content += "\n"
+                else:
+                    content += f"{c_item}"
+                    content += f"{get_spaces(c_item)}"
+                    content += "STREET_NAME"
+                    content += "\n"
+    
+
+    # print(content)
+
+    return content
+
+def pattern_28_maker_single(address):
+
+    '''
+        Pattern 17:
+
+        
+
+        Sample:
+        
+
+        
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "HOUSE_NO"
+            content += "\n"
+
+        else:
+
+            content += f"{c_item}"
+            content += f"{get_spaces(c_item)}"
+            content += "STREET_NAME"
+            content += "\n"
+
+    return content
+
+    
+
+    # print(content)
+
+    pass
 
 def pattern_29_maker_single(address):
 
@@ -981,6 +1075,10 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_21_maker_single(c_line)
     elif(pattern_index == 22):
         return pattern_22_maker_single(c_line)
+    elif(pattern_index == 27):
+        return pattern_27_maker_single(c_line)
+    elif(pattern_index == 28):
+        return pattern_28_maker_single(c_line)
     elif(pattern_index == 29):
         return pattern_29_maker_single(c_line)
 
@@ -1073,7 +1171,14 @@ def startpy():
     # print(pattern_maker_multiple(21))
 
     # Pattern 22
-    print(pattern_maker_multiple(22))
+    # print(pattern_maker_multiple(22))
+
+    # Pattern 27
+    # print(pattern_27_maker_single("76 W HORIZON RIDGE PKWY STE 120"))
+    # print(pattern_maker_multiple(27))
+
+    # Pattern 28
+    # print(pattern_maker_multiple(28))
 
     # Pattern 29
     # print(pattern_maker_multiple(29))
@@ -1083,3 +1188,75 @@ def startpy():
 
 if __name__ == '__main__':
     startpy()
+
+
+
+'''
+Status:
+
+Total Done:
+
+Can't do:
+2?
+
+
+01 - 
+
+02 - 
+
+03 - 
+
+04
+
+05 
+
+06
+
+07
+
+08
+
+09
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29 - DONE
+
+'''
