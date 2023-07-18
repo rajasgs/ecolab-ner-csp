@@ -142,28 +142,19 @@ def pattern_3_maker_single(address):
 
     content = ""
 
-    sub_parts = address_parts[0].split("-")
+    
 
-    content += f"{sub_parts[0]}"
-    content += f"{get_spaces(sub_parts[0])}"
-    content += "SUITE_NO"
-    content += "\n"
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
 
-    content += f"{sub_parts[1]}"
-    content += f"{get_spaces(sub_parts[1])}"
-    content += "HOUSE_NO"
-    content += "\n"
+        if(c_index == 0):
+            sub_parts = c_item.split("-")
 
-    content += f"{address_parts[1]}"
-    content += f"{get_spaces(address_parts[1])}"
-    content += "STREET_NAME"
-    content += "\n"
+            content += get_single_content(sub_parts[0], "SUITE_NO")
+            content += get_single_content(sub_parts[1], "HOUSE_NO")
 
-    content += f"{address_parts[2]}"
-    content += f"{get_spaces(address_parts[2])}"
-    content += "STREET_NAME"
-
-    # print(content)
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
@@ -1159,13 +1150,13 @@ def startpy():
     # pattern_1_maker_single("12A WEST STREET")
 
     # Pattern 1
-    print(pattern_maker_multiple(1))
+    # print(pattern_maker_multiple(1))
 
     # Pattern 2
     # print(pattern_maker_multiple(2))
 
     # Pattern 3
-    # print(pattern_maker_multiple(3))
+    print(pattern_maker_multiple(3))
 
     # Pattern 4
     # print(pattern_maker_multiple(4))
