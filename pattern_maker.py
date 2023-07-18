@@ -497,18 +497,9 @@ def pattern_16_maker_single(address):
         # print(c_index, c_item)
 
         if(c_index == len(address_parts) - 1):
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "HOUSE_NO"
-            content += "\n"
-
+            content += get_single_content(c_item, "HOUSE_NO")
         else:
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
@@ -543,30 +534,14 @@ def pattern_17_maker_single(address):
             continue
 
         if(c_index == 0):
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "HOUSE_NO"
-            content += "\n"
-
+            content += get_single_content(c_item, "HOUSE_NO")
         else:
+            content += get_single_content(c_item, "STREET_NAME")
 
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
-
-    content += f"PO BOX"
-    content += f"{get_spaces('PO BOX')}"
-    content += "HOUSE_NO"
-    content += "\n"
+    content += get_single_content("PO BOX", "HOUSE_NO")
 
     sub_address = main_address_parts[1].strip()
-
-    content += f"{sub_address}"
-    content += f"{get_spaces(sub_address)}"
-    content += "HOUSE_NO"
-    content += "\n"
+    content += get_single_content(sub_address, "HOUSE_NO")
 
     return content
 
@@ -609,18 +584,9 @@ def pattern_19_maker_single(address):
         # print(c_index, c_item)
 
         if(c_index == 0):
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "HOUSE_NO"
-            content += "\n"
-
+            content += get_single_content(c_item, "HOUSE_NO")
         else:
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
