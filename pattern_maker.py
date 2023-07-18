@@ -1241,15 +1241,15 @@ Can't do:
 2?
 
 
-01 - 
+01 - DONE
 
-02 - 
+02 - DONE
 
-03 - 
+03 - DONE
 
-04
+04 - DONE
 
-05 
+05 - DONE
 
 06
 
@@ -1259,31 +1259,31 @@ Can't do:
 
 09
 
-10
+10 - DONE
 
 11
 
-12
+12 - DONE
 
-13
+13 - DONE
 
-14
+14 - DONE
 
-15
+15 - DONE
 
-16
+16 - DONE
 
-17
+17 - DONE
 
 18
 
-19
+19 - DONE
 
 20
 
-21
+21 - DONE
 
-22
+22 - DONE
 
 23
 
