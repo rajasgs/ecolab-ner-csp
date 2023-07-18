@@ -115,15 +115,9 @@ def pattern_2_maker_single(address):
     content = ""
 
     for c_item in address_parts:
-
-        content += f"{c_item}"
-        content += f"{get_spaces(c_item)}"
-        content += "STREET_NAME"
-        content += "\n"
+        content += get_single_content(c_item, "STREET_NAME")
 
     return content
-
-
 
 
 def pattern_3_maker_single(address):
@@ -177,29 +171,13 @@ def pattern_4_maker_single(address):
 
     sub_parts = address_parts[0].split("-")
 
-    content += f"{sub_parts[0]}"
-    content += f"{get_spaces(sub_parts[0])}"
-    content += "SUITE_NO"
-    content += "\n"
 
-    content += f"-"
-    content += f"{get_spaces('-')}"
-    content += "0"
-    content += "\n"
+    content += get_single_content(sub_parts[0], "SUITE_NO")
+    content += get_single_content("-", "0")
+    content += get_single_content(sub_parts[1], "HOUSE_NO")
 
-    content += f"{sub_parts[1]}"
-    content += f"{get_spaces(sub_parts[1])}"
-    content += "HOUSE_NO"
-    content += "\n"
-
-    content += f"{address_parts[1]}"
-    content += f"{get_spaces(address_parts[1])}"
-    content += "STREET_NAME"
-    content += "\n"
-
-    content += f"{address_parts[2]}"
-    content += f"{get_spaces(address_parts[2])}"
-    content += "STREET_NAME"
+    content += get_single_content(address_parts[1], "STREET_NAME")
+    content += get_single_content(address_parts[2], "STREET_NAME")
 
     return content
 
@@ -231,25 +209,11 @@ def pattern_5_maker_single(address):
 
             sub_parts = c_item.split("/")
 
-            content += f"{sub_parts[0]}"
-            content += f"{get_spaces(sub_parts[0])}"
-            content += "SUITE_NO"
-            content += "\n"
-
-            content += f"-"
-            content += f"{get_spaces('/')}"
-            content += "0"
-            content += "\n"
-
-            content += f"{sub_parts[1]}"
-            content += f"{get_spaces(sub_parts[1])}"
-            content += "HOUSE_NO"
-            content += "\n"
+            content += get_single_content(sub_parts[0], "SUITE_NO")
+            content += get_single_content("-", "0")
+            content += get_single_content(sub_parts[1], "HOUSE_NO")
         else:
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
@@ -284,31 +248,16 @@ def pattern_6_maker_single(address):
         if(c_index == 0):
             
             if(isinstance(c_item, int)):
-                content += f"{c_item}"
-                content += f"{get_spaces(c_item)}"
-                content += "SUITE_NO"
-                content += "\n"
+                content += get_single_content(c_item, "SUITE_NO")
             else:
-                content += f"{c_item}"
-                content += f"{get_spaces(c_item)}"
-                content += "STREET_NAME"
-                content += "\n"
+                content += get_single_content(c_item, "STREET_NAME")
+
         else:
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
+            content += get_single_content(c_item, "STREET_NAME")
         
     
-    content += f"#"
-    content += f"{get_spaces('#')}"
-    content += "0"
-    content += "\n"
-
-    content += f"{address_full_parts[1]}"
-    content += f"{get_spaces(address_full_parts[1])}"
-    content += "0"
-    content += "\n"
+    content += get_single_content("#", "0")
+    content += get_single_content(address_full_parts[1], "0")
 
     return content
 
@@ -374,21 +323,9 @@ def pattern_10_maker_single(address):
 
     content = ""
 
-    content += f"{address_parts[0]}"
-    content += f"{get_spaces(address_parts[0])}"
-    content += "HOUSE_NO"
-    content += "\n"
-
-    content += f"{address_parts[1]}"
-    content += f"{get_spaces(address_parts[1])}"
-    content += "STREET_NAME"
-    content += "\n"
-
-    content += f"{address_parts[2]}"
-    content += f"{get_spaces(address_parts[2])}"
-    content += "STREET_NAME"
-
-    # print(content)
+    content += get_single_content(address_parts[0], "HOUSE_NO")
+    content += get_single_content(address_parts[1], "STREET_NAME")
+    content += get_single_content(address_parts[2], "STREET_NAME")
 
     return content
 
@@ -405,7 +342,24 @@ def pattern_11_maker_single(address):
         Redundant
     '''
 
-    pass
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+
+        if(c_index == 0):
+                
+            sub_parts = address_parts[0].split("-")
+
+            content += get_single_content(sub_parts[0], "SUITE_NO")
+            content += get_single_content("-", "0")
+            content += get_single_content(sub_parts[1], "HOUSE_NO")
+
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
+
+    return content
 
 def pattern_12_maker_single(address):
 
@@ -428,25 +382,15 @@ def pattern_12_maker_single(address):
         # print(c_index, c_item)
 
         if(c_index == 0):
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "SUITE_NO"
-            content += "\n"
+            content += get_single_content(c_item, "SUITE_NO")
 
         elif(c_index == 1):
 
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "HOUSE_NO"
-            content += "\n"
+            content += get_single_content(c_item, "HOUSE_NO")
 
         else:
+            content += get_single_content(c_item, "STREET_NAME")
 
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
 
     # print(content)
 
@@ -468,31 +412,11 @@ def pattern_13_maker_single(address):
 
     content = ""
 
-    content += f"{address_parts[0]}"
-    content += f"{get_spaces(address_parts[0])}"
-    content += "HOUSE_NO"
-    content += "\n"
-
-    content += f"{address_parts[1]}"
-    content += f"{get_spaces(address_parts[1])}"
-    content += "STREET_NAME"
-    content += "\n"
-
-    content += f"{address_parts[2]}"
-    content += f"{get_spaces(address_parts[2])}"
-    content += "STREET_NAME"
-    content += "\n"
-
-    content += f"{address_parts[3]}"
-    content += f"{get_spaces(address_parts[3])}"
-    content += "SUITE_NO"
-    content += "\n"
-
-    content += f"{address_parts[4]}"
-    content += f"{get_spaces(address_parts[4])}"
-    content += "SUITE_NO"
-
-    # print(content)
+    content += get_single_content(address_parts[0], "HOUSE_NO")
+    content += get_single_content(address_parts[1], "STREET_NAME")
+    content += get_single_content(address_parts[2], "STREET_NAME")
+    content += get_single_content(address_parts[3], "SUITE_NO")
+    content += get_single_content(address_parts[4], "SUITE_NO")
 
     return content
 
@@ -513,19 +437,9 @@ def pattern_14_maker_single(address):
 
     content = ""
 
-    content += f"{address_parts[0]}"
-    content += f"{get_spaces(address_parts[0])}"
-    content += "HOUSE_NO"
-    content += "\n"
-
-    content += f"{address_parts[1]}"
-    content += f"{get_spaces(address_parts[1])}"
-    content += "STREET_NAME"
-    content += "\n"
-
-    content += f"{address_parts[2]}"
-    content += f"{get_spaces(address_parts[2])}"
-    content += "STREET_NAME"
+    content += get_single_content(address_parts[0], "HOUSE_NO")
+    content += get_single_content(address_parts[1], "STREET_NAME")
+    content += get_single_content(address_parts[2], "STREET_NAME")
 
     return content
 
@@ -552,18 +466,10 @@ def pattern_15_maker_single(address):
         # print(c_index, c_item)
 
         if(c_index == 0):
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "HOUSE_NO"
-            content += "\n"
+            content += get_single_content(c_item, "HOUSE_NO")
 
         else:
-
-            content += f"{c_item}"
-            content += f"{get_spaces(c_item)}"
-            content += "STREET_NAME"
-            content += "\n"
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
@@ -1156,7 +1062,7 @@ def startpy():
     # print(pattern_maker_multiple(2))
 
     # Pattern 3
-    print(pattern_maker_multiple(3))
+    # print(pattern_maker_multiple(3))
 
     # Pattern 4
     # print(pattern_maker_multiple(4))
@@ -1181,7 +1087,7 @@ def startpy():
     # print(pattern_maker_multiple(10))
 
     # Pattern 11
-    # print(pattern_maker_multiple(11))
+    print(pattern_maker_multiple(11))
 
     # Pattern 12
     # print(pattern_maker_multiple(12))
@@ -1251,17 +1157,17 @@ Can't do:
 
 05 - DONE
 
-06
+06 - DONE 
 
-07
+07 - CANT DO
 
-08
+08 - CANT DO
 
-09
+09 - CANT DO
 
 10 - DONE
 
-11
+11 - DONE
 
 12 - DONE
 
