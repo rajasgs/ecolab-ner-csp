@@ -62,6 +62,17 @@ def find_digit_index_in_list(address_list):
 
     return 0
 
+def get_single_content(item, tag):
+
+    content = ""
+
+    content += f"{item}"
+    content += f"{get_spaces(item)}"
+    content += f"{tag}"
+    content += "\n"
+
+    return content
+
 def pattern_1_maker_single(address):
 
     '''
@@ -78,19 +89,9 @@ def pattern_1_maker_single(address):
 
     content = ""
 
-    content += f"{address_parts[0]}"
-    content += f"{get_spaces(address_parts[0])}"
-    content += "HOUSE_NO"
-    content += "\n"
-
-    content += f"{address_parts[1]}"
-    content += f"{get_spaces(address_parts[1])}"
-    content += "STREET_NAME"
-    content += "\n"
-
-    content += f"{address_parts[2]}"
-    content += f"{get_spaces(address_parts[2])}"
-    content += "STREET_NAME"
+    content += get_single_content(address_parts[0], "HOUSE_NO")
+    content += get_single_content(address_parts[1], "STREET_NAME")
+    content += get_single_content(address_parts[2], "STREET_NAME")
 
     # print(content)
 
@@ -1158,7 +1159,7 @@ def startpy():
     # pattern_1_maker_single("12A WEST STREET")
 
     # Pattern 1
-    # print(pattern_maker_multiple(1))
+    print(pattern_maker_multiple(1))
 
     # Pattern 2
     # print(pattern_maker_multiple(2))
