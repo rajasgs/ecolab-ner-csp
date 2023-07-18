@@ -38,6 +38,30 @@ def get_spaces(content):
 
     return ""
 
+def convert_num(s):
+    try:
+        return int(s)
+    except ValueError:
+        return s
+    
+def is_int(c_item):
+
+    c_item = convert_num(c_item.strip())
+
+    return (isinstance(c_item, int))
+
+
+def find_digit_index_in_list(address_list):
+
+    for c_index, c_item in enumerate(address_list):
+
+        # print(f'{c_index} : [{c_item}] : {isinstance(c_item, numbers.Number)}')
+
+        if(is_int(c_item)):
+            return c_index
+
+    return 0
+
 def pattern_1_maker_single(address):
 
     '''
@@ -719,29 +743,7 @@ def pattern_20_maker_single(address):
 
     pass
 
-def convert_num(s):
-    try:
-        return int(s)
-    except ValueError:
-        return s
-    
-def is_int(c_item):
 
-    c_item = convert_num(c_item.strip())
-
-    return (isinstance(c_item, int))
-
-
-def find_digit_index_in_list(address_list):
-
-    for c_index, c_item in enumerate(address_list):
-
-        # print(f'{c_index} : [{c_item}] : {isinstance(c_item, numbers.Number)}')
-
-        if(is_int(c_item)):
-            return c_index
-
-    return 0
 
 def pattern_21_maker_single(address):
 
