@@ -558,7 +558,19 @@ def pattern_18_maker_single(address):
         
     '''
 
-    pass
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, "HOUSE_NO")
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
+
+    return content
 
 
 def pattern_19_maker_single(address):
@@ -688,7 +700,17 @@ def pattern_23_maker_single(address):
         
     '''
     
-    pass
+    ad_list = address.split(" ")
+    content = "" 
+
+    for c_index, c_item in enumerate(ad_list):
+
+        if(c_index == 0):
+            content += get_single_content(c_item, "HOUSE_NO")
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
+
+    return content
 
 
 def pattern_24_maker_single(address):
@@ -903,12 +925,16 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_16_maker_single(c_line)
     elif(pattern_index == 17):
         return pattern_17_maker_single(c_line)
+    elif(pattern_index == 18):
+        return pattern_18_maker_single(c_line)
     elif(pattern_index == 19):
         return pattern_19_maker_single(c_line)
     elif(pattern_index == 21):
         return pattern_21_maker_single(c_line)
     elif(pattern_index == 22):
         return pattern_22_maker_single(c_line)
+    elif(pattern_index == 23):
+        return pattern_23_maker_single(c_line)
     elif(pattern_index == 26):
         return pattern_26_maker_single(c_line)
     elif(pattern_index == 27):
@@ -979,7 +1005,7 @@ def startpy():
     # print(pattern_maker_multiple(10))
 
     # Pattern 11
-    print(pattern_maker_multiple(11))
+    # print(pattern_maker_multiple(11))
 
     # Pattern 12
     # print(pattern_maker_multiple(12))
@@ -999,6 +1025,9 @@ def startpy():
     # Pattern 17
     # print(pattern_maker_multiple(17))
 
+    # Pattern 18
+    # print(pattern_maker_multiple(18))
+
     # Pattern 19
     # print(pattern_maker_multiple(19))
 
@@ -1008,6 +1037,9 @@ def startpy():
 
     # Pattern 22
     # print(pattern_maker_multiple(22))
+
+    # Pattern 23
+    print(pattern_maker_multiple(23))
 
     # Pattern 26
     # print(pattern_maker_multiple(26))
@@ -1073,19 +1105,19 @@ Can't do:
 
 17 - DONE
 
-18
+18 - DONE
 
 19 - DONE
 
-20
+20 - PENDING
 
 21 - DONE
 
 22 - DONE
 
-23
+23 - ? 
 
-24
+24 - ?
 
 25 - CAN'T DO
 
