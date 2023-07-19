@@ -716,22 +716,31 @@ def pattern_23_maker_single(address):
 def pattern_24_maker_single(address):
 
     '''
-        Pattern 17:
+        Pattern 24:
 
-        
+        24	
+        (Post_Box) (Post_Box_No)	
 
         Sample:
-        
-
-        
+        PO BOX 2247
+    
     '''
 
-    
+    ad_list = address.split(" ")
+    content = "" 
 
-    # print(content)
+    for c_index, c_item in enumerate(ad_list):
 
-    pass
+        content += get_single_content(c_item, "HOUSE_NO")
 
+        # if(c_index == 0):
+        #     content += get_single_content(c_item, "HOUSE_NO")
+        # elif(c_index == 0):
+        #     content += get_single_content(c_item, "HOUSE_NO")
+        # else:
+        #     content += get_single_content(c_item, "HOUSE_NO")
+
+    return content
 
 def pattern_25_maker_single(address):
 
@@ -935,6 +944,8 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_22_maker_single(c_line)
     elif(pattern_index == 23):
         return pattern_23_maker_single(c_line)
+    elif(pattern_index == 24):
+        return pattern_24_maker_single(c_line)
     elif(pattern_index == 26):
         return pattern_26_maker_single(c_line)
     elif(pattern_index == 27):
@@ -1039,7 +1050,10 @@ def startpy():
     # print(pattern_maker_multiple(22))
 
     # Pattern 23
-    print(pattern_maker_multiple(23))
+    # print(pattern_maker_multiple(23))
+
+    # Pattern 24
+    print(pattern_maker_multiple(24))
 
     # Pattern 26
     # print(pattern_maker_multiple(26))
