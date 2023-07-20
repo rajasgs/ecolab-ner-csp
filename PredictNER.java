@@ -43,7 +43,7 @@ import org.jsoup.select.Elements;
 public class PredictNER {
 
     static String MODEL_PATH        = "ecolab_address_ner_model.model.ser.gz";
-    static String INPUT_FILEPATH    = "input.csv";
+    static String INPUT_FILEPATH    = "input2.csv";
 
     static String STREET_NAME       = "STREET_NAME";
     static String HOUSE_NO          = "HOUSE_NO";
@@ -140,6 +140,8 @@ public class PredictNER {
                     fileWriter.write("\n");
                     
                 }
+
+                print("rows count : "+lineCount);
 
                 fileWriter.close();
 
@@ -274,6 +276,9 @@ public class PredictNER {
         // HashMap<String, String> result = getEntities(model, tests[0]);
         // print(result);
 
+        java.util.Date date = new java.util.Date();
+        Timestamp timestamp1 = new Timestamp(date.getTime());
+
         readAndWriteCSV(model, INPUT_FILEPATH);
 
         // java.util.Date date2 = new java.util.Date();
@@ -287,6 +292,17 @@ public class PredictNER {
         // System.out.println("Timestamp2: "+date2);
 
         print("Done");
+
+        java.util.Date date2 = new java.util.Date();
+        Timestamp timestamp2 = new Timestamp(date2.getTime());
+
+        long milliseconds = timestamp2.getTime() - timestamp1.getTime();
+        double seconds = (double)milliseconds/1000;
+
+        print("Time Taken (milliseconds): "+milliseconds);
+        print("Time Taken (seconds): "+seconds);
+        print("Timestamp1: "+date);
+        print("Timestamp2: "+date2);
     }
 }
 
