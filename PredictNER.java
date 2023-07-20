@@ -14,6 +14,7 @@ Source:
 
 
 import java.util.Properties;
+
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.sequences.SeqClassifierFlags;
@@ -32,6 +33,12 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.io.FileWriter;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class PredictNER {
 
@@ -126,7 +133,7 @@ public class PredictNER {
 
                     // print("User["+ String.join(", ", columns) +"]");
 
-                    HashMap<String, String> resultMap = getEntities(model, columns[0]);
+                    HashMap<String, String> resultMap = getEntities2(model, columns[0]);
 
                     String newVal = String.join(", ", columns) + ", " + resultMap.get(STREET_NAME) + ", " + resultMap.get(HOUSE_NO);
                     fileWriter.write(newVal);
@@ -204,6 +211,46 @@ public class PredictNER {
         return resultMap;
     }
 
+    public static HashMap<String, String> getEntities2(CRFClassifier model, String input){
+        
+        String xmlContent = model.classifyWithInlineXML(input);
+
+        // print(xmlContent);
+
+        HashMap<String, String> resultMap = string2XMLDocument(xmlContent);
+
+        return resultMap;
+    }
+
+    static HashMap<String, String> string2XMLDocument(String content){
+        String xml = "<item>" + content+"</item>";
+
+        HashMap<String, String> resultMap = new HashMap<String, String>();
+
+        Document doc = Jsoup.parse(xml, "", Parser.xmlParser());
+        for (Element item : doc.select("item")) {
+            Elements children = item.children();
+            for (Element child : children) {
+                // System.out.println(child.tag() + " : " + child.text());
+                // System.out.println(child.text());
+
+                String cTag     = ""+child.tag();
+                String cValue   = child.text();
+
+                if(resultMap.containsKey(cTag)){
+                    cValue = "" + resultMap.get(cTag) + " " + cValue;
+                    resultMap.put(cTag, cValue);
+                } else{
+                    resultMap.put(cTag, cValue);
+                }
+
+                
+            }
+        }
+
+        return resultMap;
+    }
+
     // static 
 
     public static void main(String[] args){
@@ -238,5 +285,20 @@ public class PredictNER {
         // System.out.println("Time Taken: "+milliseconds);
         // System.out.println("Timestamp1: "+date);
         // System.out.println("Timestamp2: "+date2);
+
+        print("Done");
     }
 }
+
+
+/*
+ * 
+
+# Compiling the Java file
+
+
+# Running the class
+java -cp "jars/*:." PredictNER.java
+
+
+ */
