@@ -1053,7 +1053,7 @@ def startpy():
     # print(pattern_maker_multiple(23))
 
     # Pattern 24
-    print(pattern_maker_multiple(24))
+    # print(pattern_maker_multiple(24))
 
     # Pattern 26
     # print(pattern_maker_multiple(26))
@@ -1129,9 +1129,9 @@ Can't do:
 
 22 - DONE
 
-23 - ? 
+23 - DONE
 
-24 - ?
+24 - DONE
 
 25 - CAN'T DO
 
