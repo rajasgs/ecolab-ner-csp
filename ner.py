@@ -139,11 +139,13 @@ def ner_extract(ner_model_file: str,
 def startpy():
 
     #train_model("ecolab_address_NER", ["coreNLP_training_dataset.txt"], ["stanford_training_datatset.txt"], True, classpath)
-    train_model("ecolab_address_ner_model_csp", ["Ecolab_Address_Training.txt"], ["Ecolab_Address_Test_2.txt"], True, classpath)
+    # train_model("ecolab_address_ner_model_csp", ["Ecolab_Address_Training.txt"], ["Ecolab_Address_Test_2.txt"], True, classpath)
+    train_model("ecolab_address_20230720", ["Ecolab_Address_Training_Ver1.txt"], ["Ecolab_Address_Testing_Ver1.txt"], True, classpath)
 
     #result = ner_extract("/home/ashish/Documents/NER/ecolab_address_NER.model.ser.gz", ["2 The Square", "188 Belmont Road", "Deltaweg 76"], True)
 
     #print(result)
+    pass
     
 
 if __name__ == '__main__':
