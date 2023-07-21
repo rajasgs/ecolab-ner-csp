@@ -43,14 +43,14 @@ import org.jsoup.select.Elements;
 public class PredictNERMultipleCols {
 
     static String MODEL_PATH        = "Ecolab_address_ner_model_Ver1.model.ser.gz";
-    static String INPUT_FILEPATH    = "ver-2023-01_train.csv";
-    static String OUTPUT_FILEPATH   = "ver-2023-01_train_output.csv";
+    static String INPUT_FILEPATH    = "ver-2023-01_test.csv";
+    static String OUTPUT_FILEPATH   = "ver-2023-01_test_output.csv";
 
     static String STREET_NAME       = "STREET_NAME";
     static String HOUSE_NO          = "HOUSE_NO";
     static String SUITE_NO          = "SUITE_NO";
 
-    static boolean INCLUDE_ADDRESS  = true;
+    static boolean INCLUDE_ADDRESS  = false;
 
     public static CRFClassifier getModel(String modelPath) {
         return CRFClassifier.getClassifierNoExceptions(modelPath);
