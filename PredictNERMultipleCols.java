@@ -40,15 +40,17 @@ import org.jsoup.parser.Parser;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class PredictNER {
+public class PredictNERMultipleCols {
 
     static String MODEL_PATH        = "Ecolab_address_ner_model_Ver1.model.ser.gz";
-    static String INPUT_FILEPATH    = "input.csv";
-    static String OUTPUT_FILEPATH   = "output.csv";
+    static String INPUT_FILEPATH    = "ver-2023-01_train.csv";
+    static String OUTPUT_FILEPATH   = "ver-2023-01_train_output.csv";
 
     static String STREET_NAME       = "STREET_NAME";
     static String HOUSE_NO          = "HOUSE_NO";
     static String SUITE_NO          = "SUITE_NO";
+
+    static boolean INCLUDE_ADDRESS  = true;
 
     public static CRFClassifier getModel(String modelPath) {
         return CRFClassifier.getClassifierNoExceptions(modelPath);
@@ -124,7 +126,22 @@ public class PredictNER {
 
                     if(lineCount == 1){
 
-                        String newCols  = String.join(", ", columns) + ", STREET_NAME, HOUSE_NO, SUITE_NO";
+                        String newCols  = "";
+                        for (int col_index = 0; col_index < columns.length; col_index++){
+                            String currentCol = columns[col_index];
+
+                            if(col_index == 1){ // ADDRESS
+                                if(INCLUDE_ADDRESS){
+                                    newCols += ", ADDRESS";
+                                }
+                                newCols += ", STREET_NAME, HOUSE_NO, SUITE_NO";
+                            } else if(col_index == 7){
+                                newCols += ", STREET_NAME_RIGHT, HOUSE_NO_RIGHT, SUITE_NO_RIGHT";
+                            } else {
+                                newCols += ", " +currentCol;
+                            }
+                            
+                        }   
 
                         fileWriter.write(String.join(", ", newCols));
                         fileWriter.write("\n");
@@ -134,9 +151,28 @@ public class PredictNER {
 
                     // print("User["+ String.join(", ", columns) +"]");
 
-                    HashMap<String, String> resultMap = getEntities2(model, columns[0]);
+                    String newVal = "";
+                    for (int col_index = 0; col_index < columns.length; col_index++){
+                        String currentCol = columns[col_index];
 
-                    String newVal = String.join(", ", columns) + ", " + resultMap.get(STREET_NAME) + ", " + resultMap.get(HOUSE_NO);
+                        if(col_index == 1){ // ADDRESS
+
+                            if(INCLUDE_ADDRESS){
+                                newVal += ", "+currentCol;
+                            }
+
+                            HashMap<String, String> resultMap = getEntities2(model, currentCol);
+                            newVal +=  ", " + resultMap.get(STREET_NAME) + ", " + resultMap.get(HOUSE_NO) + ", " + resultMap.get(SUITE_NO);
+                        } else if(col_index == 7){
+                            HashMap<String, String> resultMap = getEntities2(model, currentCol);
+                            newVal +=  ", " + resultMap.get(STREET_NAME) + ", " + resultMap.get(HOUSE_NO) + ", " + resultMap.get(SUITE_NO);
+                        } else {
+                            newVal += ", " +currentCol;
+                        }
+                        
+                    }
+
+                    // String newVal = String.join(", ", columns) + ", " + resultMap.get(STREET_NAME) + ", " + resultMap.get(HOUSE_NO);
                     fileWriter.write(newVal);
                     fileWriter.write("\n");
                     
@@ -315,7 +351,7 @@ public class PredictNER {
 
 
 # Running the class
-java -cp "jars/*:." PredictNER.java
+java -cp "jars/*:." PredictNERMultipleCols.java
 
 
  */

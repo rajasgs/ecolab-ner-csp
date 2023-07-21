@@ -172,3 +172,6 @@ input.csv
 
 
 *_output.txt
+
+ver-*_train*.csv
+ver-*_test*.csv
