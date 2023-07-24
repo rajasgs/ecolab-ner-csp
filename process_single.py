@@ -17,7 +17,7 @@ import os
 import subprocess
 
 import pandas as pd
-
+import random
 
 java_file   = "SimplePredictNER.java"
 
@@ -59,12 +59,34 @@ def get_tokens(address):
 
     return token_dict
 
+def get_random_entry(part):
+
+    return f'{part}_{random.randint(1, 1000)}'
+
 def startpy():
     
     result = get_tokens('1980 Rue St Patrice E')
     print(result)
 
-    df = pd.read_csv('ver-2023-01_test.csv')
+    df = pd.read_csv('ver-2023-01_test2.csv')
+
+    street_name_list = []
+    house_no_list = []
+    suite_no_list = []
+    for index, row in df.iterrows():
+        # print(f'{index} : {row["ADDRESS"]}')
+
+        token_dict = get_tokens(row["ADDRESS"])
+
+        street_name_list.append(token_dict['STREET_NAME'])
+        house_no_list.append(token_dict['HOUSE_NO'])
+        suite_no_list.append(token_dict['SUITE_NO'])
+
+    df.insert(3,'STREET_NAME', street_name_list)
+    df.insert(3,'HOUSE_NO', house_no_list)
+    df.insert(3,'SUITE_NO', suite_no_list)
+
+    df.to_csv('ver-2023-01_test2_output.csv', index=False)
 
 if __name__ == '__main__':
     startpy()
