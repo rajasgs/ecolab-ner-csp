@@ -16,6 +16,8 @@ source:
 import os
 import subprocess
 
+import pandas as pd
+
 
 java_file   = "SimplePredictNER.java"
 
@@ -61,6 +63,8 @@ def startpy():
     
     result = get_tokens('1980 Rue St Patrice E')
     print(result)
+
+    df = pd.read_csv('ver-2023-01_test.csv')
 
 if __name__ == '__main__':
     startpy()
