@@ -19,33 +19,24 @@ import subprocess
 import pandas as pd
 import random
 from datetime import datetime
-
-java_file   = "SimplePredictNER.java"
-
-jc_cmd      = 'javac -cp "jars/*" SimplePredictNER.java ' + java_file + ';'
-
-cmd         = jc_cmd + 'java -cp "jars/*:." SimplePredictNER.java '
-
+import jpype
 
 def get_tokens(address):
 
-    address = address.replace("'", "")
-    address = address.replace("&", "and")
+    
+
+    SampleClass = jpype.JClass("SimplePredictNER")
+
+    # address = address.replace("'", "")
+    # address = address.replace("&", "and")
 
     INPUT = address.replace("'", "")
 
-    s = subprocess.check_output(
-        cmd + INPUT,
-        shell=True,
-    )
+    result = SampleClass.getTokens(address)
 
-    result = s.decode("utf-8")
-    # result = result.strip('').replace('\n', '').strip()
+    # print(result)
 
-    # result = result[1:]
-    # result = result[:-1]
-
-    result_parts = result.split('\n')[:-1]
+    result_parts = result.split('\n')
 
     street_name = result_parts[0].replace('STREET_NAME=', '')
     house_no    = result_parts[1].replace('HOUSE_NO=', '')
@@ -70,6 +61,9 @@ def get_random_entry(part):
 def startpy():
 
     start_time = datetime.now()
+
+    jvm_dir = "/home/rajaraman/rprojects/ecolab-ner-csp/"
+    jpype.startJVM(classpath = ['jars/*', "/home/rajaraman/rprojects/ecolab-ner-csp/"])
     
     # result = get_tokens("152 ST ANNE'S RD")
     # print(result)
@@ -94,7 +88,7 @@ def startpy():
     df.insert(4,'HOUSE_NO', house_no_list)
     df.insert(5,'SUITE_NO', suite_no_list)
 
-    df.to_csv('ver-2023-01_test2_output.csv', index=False)
+    df.to_csv('ver-2023-01_test_output.csv', index=False)
 
     _secs = (datetime.now() - start_time).total_seconds()
     print('Time : ', _secs)

@@ -1,4 +1,4 @@
-package ner_work;
+// package ner_work;
 
 /*
  * 
@@ -216,10 +216,26 @@ public class SimplePredictNER {
     }
 
     // static 
+    static CRFClassifier model = getModel(MODEL_PATH);
+
+    public static String getTokens(String content){
+        // String content = String.join(" ", args);
+
+        // doTagging(model, content);
+        HashMap<String, String> result = getEntities2(model, content);
+        // print(result);
+        // printMap(result);
+
+        StringBuffer sb = new StringBuffer("");
+
+        sb.append("STREET_NAME="+result.get(STREET_NAME));
+        sb.append("\nHOUSE_NO="+result.get(HOUSE_NO));
+        sb.append("\nSUITE_NO="+result.get(SUITE_NO));
+
+        return sb.toString();
+    }
 
     public static void main(String[] args){
-
-        CRFClassifier model = getModel(MODEL_PATH);
 
         // String content = "55/57 BAHNHOFSTRASSE";
 
@@ -246,7 +262,7 @@ public class SimplePredictNER {
  * 
 
 # Compiling the Java file
-
+javac -cp "jars/*:." SimplePredictNER.java
 
 # Running the class
 java -cp "jars/*:." SimplePredictNER.java
