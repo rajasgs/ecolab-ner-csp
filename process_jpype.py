@@ -21,6 +21,9 @@ import random
 from datetime import datetime
 import jpype
 
+FROM_FILE   = 'ver-2023-01_test.csv'
+TO_FILE     = 'ver-2023-01_test_output.csv'
+
 def get_tokens(address):
 
     
@@ -69,7 +72,7 @@ def startpy():
 
     # return
 
-    df = pd.read_csv('ver-2023-01_test.csv')
+    df = pd.read_csv(FROM_FILE)
 
     street_name_list    = []
     house_no_list       = []
@@ -97,11 +100,11 @@ def startpy():
     df.insert(9,'HOUSE_NO_RIGHT', house_no_right_list)
     df.insert(10,'SUITE_NO_RIGHT', suite_no_right_list)
 
-    df.insert(3,'STREET_NAME', street_name_list)
-    df.insert(4,'HOUSE_NO', house_no_list)
-    df.insert(5,'SUITE_NO', suite_no_list)
+    df.insert(2,'STREET_NAME', street_name_list)
+    df.insert(3,'HOUSE_NO', house_no_list)
+    df.insert(4,'SUITE_NO', suite_no_list)
 
-    df.to_csv('ver-2023-01_test_output.csv', index=False)
+    df.to_csv(TO_FILE, index=False)
 
     _secs = (datetime.now() - start_time).total_seconds()
     print('Time : ', _secs)
