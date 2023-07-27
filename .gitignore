@@ -175,3 +175,6 @@ input.csv
 
 ver-*_train*.csv
 ver-*_test*.csv
+
+
+*output.csv

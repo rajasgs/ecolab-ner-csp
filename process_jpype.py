@@ -24,6 +24,9 @@ import jpype
 FROM_FILE   = 'ver-2023-01_test.csv'
 TO_FILE     = 'ver-2023-01_test_output.csv'
 
+# FROM_FILE   = 'International Addresses with Premise number.csv'
+# TO_FILE     = 'International Addresses with Premise number output.csv'
+
 def get_tokens(address):
 
     
@@ -84,6 +87,7 @@ def startpy():
     for index, row in df.iterrows():
         # print(f'{index} : {row["ADDRESS"]}')
 
+        # Option 1
         address_token_dict = get_tokens(row["ADDRESS"])
 
         street_name_list.append(address_token_dict['STREET_NAME'])
@@ -96,13 +100,24 @@ def startpy():
         house_no_right_list.append(address_right_token_dict['HOUSE_NO'])
         suite_no_right_list.append(address_right_token_dict['SUITE_NO'])
 
+
+        # option 2
+        # address_token_dict = get_tokens(row["Address Line 1 Cleansed"])
+
+        # street_name_list.append(address_token_dict['STREET_NAME'])
+        # house_no_list.append(address_token_dict['HOUSE_NO'])
+        # suite_no_list.append(address_token_dict['SUITE_NO'])
+
+        if(index % 50 == 0):
+            print(f'Reached {index}')
+
     df.insert(8,'STREET_NAME_RIGHT', street_name_right_list)
     df.insert(9,'HOUSE_NO_RIGHT', house_no_right_list)
     df.insert(10,'SUITE_NO_RIGHT', suite_no_right_list)
 
-    df.insert(2,'STREET_NAME', street_name_list)
-    df.insert(3,'HOUSE_NO', house_no_list)
-    df.insert(4,'SUITE_NO', suite_no_list)
+    df.insert(5,'STREET_NAME', street_name_list)
+    df.insert(6,'HOUSE_NO', house_no_list)
+    df.insert(7,'SUITE_NO', suite_no_list)
 
     df.to_csv(TO_FILE, index=False)
 
