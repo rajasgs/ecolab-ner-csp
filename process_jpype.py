@@ -21,24 +21,24 @@ import random
 from datetime import datetime
 import jpype
 
-FROM_FILE   = 'ver-2023-01_test.csv'
-TO_FILE     = 'ver-2023-01_test_output.csv'
+FROM_FILE   = 'ver-2023-01_train.csv'
+TO_FILE     = 'ver-2023-01_train_output_20230728.csv'
 
 # FROM_FILE   = 'International Addresses with Premise number.csv'
 # TO_FILE     = 'International Addresses with Premise number output.csv'
 
-def get_tokens(address):
+def get_tokens(singleton_predict, address):
 
     
 
-    SampleClass = jpype.JClass("SimplePredictNER")
+    # SampleClass = jpype.JClass("SimplePredictNER")
 
     # address = address.replace("'", "")
     # address = address.replace("&", "and")
 
     # INPUT = address.replace("'", "")
 
-    result = SampleClass.getTokens(str(address))
+    result = singleton_predict.getTokens(str(address))
 
     # print(result)
 
@@ -68,7 +68,11 @@ def startpy():
 
     start_time = datetime.now()
 
-    jpype.startJVM(classpath = ['jars/*', "/home/rajaraman/rprojects/ecolab-ner-csp/"])
+    # jpype.startJVM(classpath = ['jars/*', "./"])
+
+    jpype.startJVM(classpath = ['jars/*', "./"])
+    simple_predict_class = jpype.JClass("SimplePredictNER")
+    singleton_predict = simple_predict_class.getInstance("Ecolab_address_ner_model_Ver2.model.ser.gz")
     
     # result = get_tokens("152 ST ANNE'S RD")
     # print(result)
@@ -88,13 +92,13 @@ def startpy():
         # print(f'{index} : {row["ADDRESS"]}')
 
         # Option 1
-        address_token_dict = get_tokens(row["ADDRESS"])
+        address_token_dict = get_tokens(singleton_predict, row["ADDRESS"])
 
         street_name_list.append(address_token_dict['STREET_NAME'])
         house_no_list.append(address_token_dict['HOUSE_NO'])
         suite_no_list.append(address_token_dict['SUITE_NO'])
 
-        address_right_token_dict = get_tokens(row["ADDRESS_RIGHT"])
+        address_right_token_dict = get_tokens(singleton_predict, row["ADDRESS_RIGHT"])
 
         street_name_right_list.append(address_right_token_dict['STREET_NAME'])
         house_no_right_list.append(address_right_token_dict['HOUSE_NO'])
@@ -115,9 +119,9 @@ def startpy():
     df.insert(9,'HOUSE_NO_RIGHT', house_no_right_list)
     df.insert(10,'SUITE_NO_RIGHT', suite_no_right_list)
 
-    df.insert(5,'STREET_NAME', street_name_list)
-    df.insert(6,'HOUSE_NO', house_no_list)
-    df.insert(7,'SUITE_NO', suite_no_list)
+    df.insert(2,'STREET_NAME', street_name_list)
+    df.insert(3,'HOUSE_NO', house_no_list)
+    df.insert(4,'SUITE_NO', suite_no_list)
 
     df.to_csv(TO_FILE, index=False)
 

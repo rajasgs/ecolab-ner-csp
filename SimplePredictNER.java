@@ -259,12 +259,14 @@ public class SimplePredictNER {
 
         // String content = "55/57 BAHNHOFSTRASSE";
 
-        String content = String.join(" ", args);
+        // String content = String.join(" ", args);
 
-        // doTagging(model, content);
-        // HashMap<String, String> result = getEntities2(model, content);
+        // SimplePredictNER singletonInstance = SimplePredictNER.getInstance(args[0]);
+
+        // // doTagging(model, content);
+        // HashMap<String, String> result = singletonInstance.getEntities2(singletonInstance.model, content);
         // // print(result);
-        // // printMap(result);
+        // printMap(result);
 
         // print("STREET_NAME="+result.get(STREET_NAME));
         // print("HOUSE_NO="+result.get(HOUSE_NO));
@@ -285,7 +287,7 @@ public class SimplePredictNER {
 javac -cp "jars/*:." SimplePredictNER.java
 
 # Running the class
-java -cp "jars/*:." SimplePredictNER.java
+java -cp "jars/*:." SimplePredictNER.java Ecolab_address_ner_model_Ver1.model.ser.gz
 
 
  */
