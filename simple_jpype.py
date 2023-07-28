@@ -11,11 +11,9 @@ source:
 import jpype
 
 
-def get_tokens(address):
+def get_tokens(singleton_predict, address):
 
-    SampleClass = jpype.JClass("SimplePredictNER")
-
-    result = SampleClass.getTokens(str(address))
+    result = singleton_predict.getTokens(str(address))
 
     # print(result)
 
@@ -33,12 +31,27 @@ def get_tokens(address):
 
     return token_dict
 
+def singleton_test(filename):
+
+    singleton_class = jpype.JClass("SingletonTest")
+
+    singleton_instance = singleton_class.getInstance("two.txt")
+    singleton_instance.printFilename()
+
 def startpy():
     
     jpype.startJVM(classpath = ['jars/*', "./"])
+
+    simple_predict_class = jpype.JClass("SimplePredictNER")
+
+    singleton_predict = simple_predict_class.getInstance("Ecolab_address_ner_model_Ver1.model.ser.gz")
     
-    result = get_tokens("152 ST ANNE'S RD")
-    print(result)
+    print(get_tokens(singleton_predict, "152 ST ANNE'S RD"))
+    print(get_tokens(singleton_predict, "254 Spadina Road"))
+
+    # print(singleton_test("one.txt"))
+
+    # singleton_test("two.txt")
 
 if __name__ == '__main__':
     startpy()

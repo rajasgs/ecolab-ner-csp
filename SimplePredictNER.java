@@ -43,14 +43,14 @@ import org.jsoup.select.Elements;
 
 public class SimplePredictNER {
 
-    static String MODEL_PATH            = "Ecolab_address_ner_model_Ver1.model.ser.gz";
+    // 
 
     static String STREET_NAME           = "STREET_NAME";
     static String HOUSE_NO              = "HOUSE_NO";
     static String SUITE_NO              = "SUITE_NO";
     // static String SUITE_AND_HOUSE_NO    = "SUITE_AND_HOUSE_NO";
 
-    public static CRFClassifier getModel(String modelPath) {
+    private CRFClassifier getModel(String modelPath) {
         return CRFClassifier.getClassifierNoExceptions(modelPath);
     }
 
@@ -82,6 +82,10 @@ public class SimplePredictNER {
     }
 
     static HashMap<String, String> string2XMLDocument(String content){
+
+        // print("content: "+content);
+
+
         String xml = "<item>" + content+"</item>";
 
         HashMap<String, String> resultMap = new HashMap<String, String>();
@@ -189,7 +193,7 @@ public class SimplePredictNER {
         return resultMap;
     }
 
-    public static HashMap<String, String> getEntities2(CRFClassifier model, String input){
+    public HashMap<String, String> getEntities2(CRFClassifier model, String input){
         
         String xmlContent = model.classifyWithInlineXML(input);
 
@@ -215,10 +219,9 @@ public class SimplePredictNER {
         }
     }
 
-    // static 
-    static CRFClassifier model = getModel(MODEL_PATH);
+    // static String MODEL_PATH            = "Ecolab_address_ner_model_Ver1.model.ser.gz";
 
-    public static String getTokens(String content){
+    public String getTokens(String content){
         // String content = String.join(" ", args);
 
         // doTagging(model, content);
@@ -235,6 +238,23 @@ public class SimplePredictNER {
         return sb.toString();
     }
 
+    private static SimplePredictNER instance;
+
+    private String modelFilename = null;
+    private CRFClassifier model = null;
+
+    public static SimplePredictNER getInstance(String modelFilename) {
+        if(instance == null) {
+            instance                    = new SimplePredictNER();
+            instance.modelFilename      = modelFilename;
+            instance.model              = instance.getModel(instance.modelFilename);
+
+            print("Getting singleton instance");
+        }
+        
+        return instance;
+    }
+
     public static void main(String[] args){
 
         // String content = "55/57 BAHNHOFSTRASSE";
@@ -242,13 +262,13 @@ public class SimplePredictNER {
         String content = String.join(" ", args);
 
         // doTagging(model, content);
-        HashMap<String, String> result = getEntities2(model, content);
-        // print(result);
-        // printMap(result);
+        // HashMap<String, String> result = getEntities2(model, content);
+        // // print(result);
+        // // printMap(result);
 
-        print("STREET_NAME="+result.get(STREET_NAME));
-        print("HOUSE_NO="+result.get(HOUSE_NO));
-        print("SUITE_NO="+result.get(SUITE_NO));
+        // print("STREET_NAME="+result.get(STREET_NAME));
+        // print("HOUSE_NO="+result.get(HOUSE_NO));
+        // print("SUITE_NO="+result.get(SUITE_NO));
         
 
         // string2XMLDocument("<HOUSE_NO>150</HOUSE_NO> <STREET_NAME>GLADSTONE AVE N</STREET_NAME>");
