@@ -32,7 +32,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
-// import java.io.FileWriter;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -40,20 +39,20 @@ import org.jsoup.parser.Parser;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-
 public class SimplePredictNER {
-
-    // 
 
     static String STREET_NAME           = "STREET_NAME";
     static String HOUSE_NO              = "HOUSE_NO";
     static String SUITE_NO              = "SUITE_NO";
-    // static String SUITE_AND_HOUSE_NO    = "SUITE_AND_HOUSE_NO";
 
     private CRFClassifier getModel(String modelPath) {
+        /*
+         * This returns a classifier model
+         */
         return CRFClassifier.getClassifierNoExceptions(modelPath);
     }
 
+    @Deprecated
     public static void doTagging(CRFClassifier model, String input){
         input = input.trim();
         // System.out.println(input+" ==> "+model.classifyToString(input));
@@ -68,23 +67,15 @@ public class SimplePredictNER {
         System.out.println(obj);
     }
 
-    public static HashMap<String, String> getEntities_2(CRFClassifier model, String input){
-
-        input = input.trim();
-        // System.out.println(input+" ==> "+model.classifyToString(input));
-        String result = model.classifyToString(input);
-
-        print(result);
-
-        String result1 = model.classifyWithInlineXML(input);
-
-        return null;
-    }
-
     static HashMap<String, String> string2XMLDocument(String content){
 
-        // print("content: "+content);
+        /*
+         * 
+         * 
+         * 
+         */
 
+        // print("content: "+content);
 
         String xml = "<item>" + content+"</item>";
 
@@ -106,8 +97,6 @@ public class SimplePredictNER {
                 } else{
                     resultMap.put(cTag, cValue);
                 }
-
-                
             }
         }
 
@@ -115,23 +104,23 @@ public class SimplePredictNER {
     }
 
     public static HashMap<String, String> getEntities(CRFClassifier model, String input){
+
+        /*
+         * 
+         * 
+         * 
+         */
+        
         input = input.trim();
         // System.out.println(input+" ==> "+model.classifyToString(input));
         String result = model.classifyToString(input);
 
-        // print(result);
-
-        
-
-
-        // print();
         // <HOUSE_NO>1626</HOUSE_NO><STREET_NAME>-1630 NESS AVE</STREET_NAME>
 
         List<String> resultParts = Arrays.asList(result.split(" "));
         // print(resultParts);
 
         HashMap<String, String> resultMap = new HashMap<String, String>();
-
 
         resultMap.put(STREET_NAME, "");
         resultMap.put(HOUSE_NO, "");
@@ -169,31 +158,26 @@ public class SimplePredictNER {
 
                 String newValue = prevValue + " " + value; 
                 resultMap.put(SUITE_NO, newValue);
-
-            } 
-            
-            // else if (key.equalsIgnoreCase(SUITE_AND_HOUSE_NO)){
-
-            //     String prevValue = resultMap.get(SUITE_AND_HOUSE_NO);
-
-            //     String newValue = prevValue + " " + value; 
-            //     resultMap.put(SUITE_AND_HOUSE_NO, newValue);
-
-            // }
+            }
             
         }
 
         resultMap.put(STREET_NAME, (resultMap.getOrDefault(STREET_NAME, "")).trim());
         resultMap.put(HOUSE_NO, (resultMap.getOrDefault(HOUSE_NO, "")).trim());
         resultMap.put(SUITE_NO, (resultMap.getOrDefault(SUITE_NO, "")).trim());
-        // resultMap.put(SUITE_AND_HOUSE_NO, (resultMap.getOrDefault(SUITE_AND_HOUSE_NO, "")).trim());
 
-        print("");
+        // print("");
 
         return resultMap;
     }
 
     public HashMap<String, String> getEntities2(CRFClassifier model, String input){
+
+        /*
+         * 
+         * 
+         * 
+         */
         
         String xmlContent = model.classifyWithInlineXML(input);
 
@@ -205,6 +189,12 @@ public class SimplePredictNER {
     }
 
     static void printMap(HashMap<String, String> map){
+
+        /*
+         * 
+         * 
+         * 
+         */
 
 
         for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -222,6 +212,13 @@ public class SimplePredictNER {
     // static String MODEL_PATH            = "Ecolab_address_ner_model_Ver1.model.ser.gz";
 
     public String getTokens(String content){
+
+        /*
+         * 
+         * 
+         * 
+         */
+
         // String content = String.join(" ", args);
 
         // doTagging(model, content);
@@ -244,13 +241,21 @@ public class SimplePredictNER {
     private CRFClassifier model = null;
 
     public static SimplePredictNER getInstance(String modelFilename) {
-        if(instance == null) {
-            instance                    = new SimplePredictNER();
-            instance.modelFilename      = modelFilename;
-            instance.model              = instance.getModel(instance.modelFilename);
 
-            print("Getting singleton instance");
-        }
+        /*
+         * 
+         * 
+         * 
+         */
+
+        if(instance != null)
+            return instance
+            
+        instance                    = new SimplePredictNER();
+        instance.modelFilename      = modelFilename;
+        instance.model              = instance.getModel(instance.modelFilename);
+
+        print("Getting singleton instance");
         
         return instance;
     }

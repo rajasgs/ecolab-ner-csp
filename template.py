@@ -12,10 +12,6 @@ source:
     
 '''
 
-
-
-
-
 def startpy():
     pass
 
