@@ -1,0 +1,17 @@
+Pattern 1:
+1/78 Spadina road
+	standardized: 178 spadina
+
+	input:
+	178 HOUSE_NO
+    spadina STREET_NAME
+
+
+Pattern 2:
+2/89 Spadina Road
+	standardized: 2 89 spadina
+
+    input:
+    2   SUITE_NO
+    89  HOUSE_NO
+    spadina STREET_NAME

@@ -1,0 +1,67 @@
+
+
+
+https://github.com/riversandtechnologies/ecolab-match-quality/blob/dev/ecolab/ver-2023-02/draft/data/Ecolab_Address_Testing_Ver2.txt
+
+
+Pattern 1:
+1/78 Spadina road
+	after cleaning: 178 Spadina
+
+	input:
+	178     
+    
+Pattern 2:
+2/89 Spadina Road
+	2 89 Spadina Road
+
+
+
+Anurag:
+Training:
+Start 181: Företagsgatan 40
+End 226: W34/2-50 Murray Road
+
+
+Testing:
+Start 65: Lübecker Straße 2
+End 80: 16 / 16-20 Fort Street
+
+
+
+Raja:
+Training:
+Start 91: 2825 1st
+End 135: Bldg 349 Howe Road Bldg 349
+
+Testing:
+Start 33: 5151 Citrus Blvd
+End 48: BLDG 4D744
+
+Raja - 91 - 135
+Raja - 33 - 48
+
+
+HOUSE_NO
+
+
+STREET_NAME
+
+SUITE_NO
+
+
+
+
+AFB - Air Force Base
+STE - SUITE
+
+
+
+
+<pattern>-<part>-<originalfilename>
+
+
+Pattern1-Part3-Ecolab_Address_Training_Ver2.txt
+
+
+Pattern1-Part3-Ecolab_Address_Testing_Ver2.txt

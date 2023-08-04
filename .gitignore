@@ -180,3 +180,9 @@ ver-*_test*.csv
 *output.csv
 
 temp.txt
+
+
+
+cache_dir/
+outputs/
+runs/
