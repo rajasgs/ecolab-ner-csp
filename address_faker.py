@@ -24,7 +24,7 @@ from faker import Faker
 
 fake = Faker('en_CA')
 
-MAX_LIMIT = 200
+MAX_LIMIT = 80
 
 def create_address_pattern_30():
 

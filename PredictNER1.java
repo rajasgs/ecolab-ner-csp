@@ -31,6 +31,8 @@ public class PredictNER1 {
         String[] tests = new String[]{
             "Cannon Estates 0690"
             ,"Jefferson Avenue 8500"
+            ,"johnson 3646"
+            ,"briggs center 436"
         };
         
         // java.util.Date date = new java.util.Date();

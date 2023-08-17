@@ -1099,7 +1099,7 @@ def startpy():
     # Pattern 29
     # print(pattern_maker_multiple(29))
 
-    # Pattern 29
+    # Pattern 30
     print(pattern_maker_multiple(30))
 
     pass
