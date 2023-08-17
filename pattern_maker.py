@@ -19,6 +19,8 @@ source:
 
 import numbers
 
+PATTERNS_FOLDER = 'patterns/'
+
 def get_spaces(content):
 
     if(len(content) < 3):
@@ -898,6 +900,33 @@ def pattern_29_maker_single(address):
 
     return content
 
+def pattern_30_maker_single(address):
+
+    '''
+        Pattern 30:
+
+        30	
+        (Street_Name)(House_No)     
+
+        Sample:
+        Spadina Road 29
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    count = len(address_parts)
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+        if(c_index == (count - 1)):
+            content += get_single_content(c_item, "HOUSE_NO")
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
+
+    return content
+
 def pattern_maker_single(c_line, pattern_index):
 
     if(pattern_index == 1):
@@ -954,12 +983,14 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_28_maker_single(c_line)
     elif(pattern_index == 29):
         return pattern_29_maker_single(c_line)
+    elif(pattern_index == 30):
+        return pattern_30_maker_single(c_line)
 
     return 0
 
 def pattern_maker_multiple(pattern_index):
 
-    file = f'pattern{pattern_index}.txt'
+    file = f'{PATTERNS_FOLDER}pattern{pattern_index}.txt'
 
     lines = None
     with open(file) as f:
@@ -974,7 +1005,7 @@ def pattern_maker_multiple(pattern_index):
 
         content += pattern_maker_single(c_line, pattern_index)
 
-        content += "\n\n"
+        content += "\n"
 
     # print(content)
 
@@ -1068,6 +1099,9 @@ def startpy():
     # Pattern 29
     # print(pattern_maker_multiple(29))
 
+    # Pattern 29
+    print(pattern_maker_multiple(30))
+
     pass
 
 
@@ -1143,4 +1177,5 @@ Can't do:
 
 29 - DONE
 
+30 - ?
 '''
