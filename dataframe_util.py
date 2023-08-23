@@ -89,8 +89,24 @@ def append_to_csv(
     )
     df = pd.concat([df2, df])
 
+    df = df.astype({
+        "street_name_original" : str,
+        "house_no_original" : int,
+        "suite_no_original" : str,
+    })
+
     df.to_csv(REVIEW_CSV_FILENAME, index = False)
 
+
+def convert_data(content):
+
+    if(not content):
+        return content
+    
+    if(content == 'null'):
+        return content
+    
+    return str(int(content))
 
 def fill_predicted(
         c_index,
@@ -105,9 +121,20 @@ def fill_predicted(
     df = pd.read_csv(REVIEW_CSV_FILENAME)
 
     df.loc[c_index, 'street_name_predicted'] = street_name_predicted
-    df.loc[c_index, 'suite_no_predicted'] = suite_no_predicted
-    df.loc[c_index, 'house_no_predicted'] = house_no_predicted
+    df.loc[c_index, 'suite_no_predicted'] = convert_data(suite_no_predicted)
+    df.loc[c_index, 'house_no_predicted'] = convert_data(house_no_predicted)
 
+    df.loc[c_index, 'predicted_right'] = predicted_right
+
+    print(f'house_no_predicted : {house_no_predicted}')
+
+    df = df.astype({
+        "street_name_predicted" : str,
+        "suite_no_predicted" : int,
+        "house_no_predicted" : int,
+
+        "predicted_right": int,
+    })
 
     df.to_csv(REVIEW_CSV_FILENAME, index = False)
 

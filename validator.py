@@ -83,6 +83,70 @@ def fill_addresses(limit = 5):
     for _index in range(limit):
         add_dummy_original_address()
 
+def isNaN(num):
+    return num != num
+
+def convert_2(content):
+
+    if(not content):
+        return content
+    
+    if(isNaN(content)):
+        return content
+    
+    if('null' == content):
+        return content
+    
+    if(None == content):
+        return content
+    
+    if('None' == content):
+        return content
+
+    return str(int(str(content)))
+
+def is_predicted_right(
+    c_street_name_original,
+    c_house_no_original,
+    c_suite_no_original,
+
+    c_street_name_predicted,
+    c_house_no_predicted,
+    c_suite_no_predicted
+):
+    
+    if(c_street_name_original != c_street_name_predicted):
+        return 0
+    
+    c_house_no_original = convert_2(c_house_no_original)
+    c_house_no_predicted = convert_2(c_house_no_predicted)
+
+    c_suite_no_original = convert_2(c_suite_no_original)
+    c_suite_no_predicted = convert_2(c_suite_no_predicted)
+    
+    # print(f'c_house_no_original : {c_house_no_original} type : {type(c_house_no_original)}, \
+    #       c_house_no_predicted : {c_house_no_predicted} type : {type(c_house_no_predicted)}')
+    
+    if(c_house_no_original != c_house_no_predicted):
+        return 0
+    
+    print(f'c_suite_no_original : {c_suite_no_original}, type : {type(c_suite_no_original)} \
+          ')
+    if(c_suite_no_original != c_suite_no_predicted):
+        return 0
+
+    return 1
+
+def convert_data(content):
+
+    if(not content):
+        return content
+    
+    if(content == 'null'):
+        return content
+    
+    return int(str(content))
+
 def predict_single_address_with_model(c_index):
 
     c_row = du.get_row(c_index)
@@ -104,9 +168,9 @@ def predict_single_address_with_model(c_index):
 
     address_dict = get_tokens(singleton_predict, c_address)
 
-    c_street_name_predicted  = address_dict['STREET_NAME']
-    c_house_no_predicted     = address_dict['HOUSE_NO']
-    c_suite_no_predicted     = address_dict['SUITE_NO']
+    c_street_name_predicted  = str(address_dict['STREET_NAME'])
+    c_house_no_predicted     = convert_data(address_dict['HOUSE_NO'])
+    c_suite_no_predicted     = convert_data(address_dict['SUITE_NO'])
 
     print(f' \
           \nstreet_name_p   : {c_street_name_predicted} \
@@ -116,26 +180,38 @@ def predict_single_address_with_model(c_index):
 
     print(f'\n')
 
+    predicted = is_predicted_right(
+        c_street_name_original,
+        c_house_no_original,
+        c_suite_no_original,
+
+        c_street_name_predicted,
+        c_house_no_predicted,
+        c_suite_no_predicted
+    )
+
     du.fill_predicted(
         c_index,
 
         c_street_name_predicted,
         c_house_no_predicted,
         c_suite_no_predicted,
+
+        predicted
     )
 
 def startpy():
 
     initiate()
     
-    # fill_addresses(10)
+    # fill_addresses(1)
 
     # return
 
     df = du.get_df()
 
     for idx in range(len(df)):
-        print(f'idx : {idx}')
+        # print(f'idx : {idx}')
         predict_single_address_with_model(idx)    
     
     # print(get_tokens(singleton_predict, "152 ST ANNE'S RD"))
