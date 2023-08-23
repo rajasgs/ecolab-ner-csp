@@ -1,0 +1,103 @@
+
+'''
+Created on 
+
+@author: Raja CSP Raman
+
+source:
+    
+'''
+
+import jpype
+import dataframe_util as du
+import faker_util as fu
+
+MODEL_PATH = "ecolab_address_20230817.model.ser.gz"
+
+def get_tokens(singleton_predict, address):
+
+    result = singleton_predict.getTokens(str(address))
+
+    # print(result)
+
+    result_parts = result.split('\n')
+
+    street_name = result_parts[0].replace('STREET_NAME=', '')
+    house_no    = result_parts[1].replace('HOUSE_NO=', '')
+    suite_no    = result_parts[2].replace('SUITE_NO=', '')
+
+    token_dict = {
+        'STREET_NAME'   : street_name,
+        'HOUSE_NO'      : house_no,
+        'SUITE_NO'      : suite_no,
+    }
+
+    return token_dict
+
+def singleton_test(filename):
+
+    singleton_class = jpype.JClass("SingletonTest")
+
+    singleton_instance = singleton_class.getInstance("two.txt")
+    singleton_instance.printFilename()
+
+
+def add_dummy_original_address():
+
+    address, street_name, house_no, suite_no = fu.create_address_pattern_30()
+
+    du.append_original_to_csv(
+        address = address,
+        street_name_original= street_name,
+        house_no_original= house_no,
+        suite_no_original= suite_no
+    )
+
+    print(f'Added : {address}')
+
+jpype.startJVM(classpath = ['jars/*', "./"])
+simple_predict_class = jpype.JClass("SimplePredictNER")
+singleton_predict = simple_predict_class.getInstance(MODEL_PATH)
+
+def startpy():
+    
+    # for _index in range(3):
+    #     add_dummy_original_address()
+
+    c_row = du.get_row(0)
+
+    # print(c_row)
+    # print(type(c_row))
+
+    c_address               = c_row['address']
+    c_street_name_original  = c_row['street_name_original']
+    c_house_no_original     = c_row['house_no_original']
+    c_suite_no_original     = c_row['suite_no_original']
+
+    print(f'address         : {c_address} \
+          \nstreet_name_o   : {c_street_name_original} \
+          \nhouse_no_o      : {c_house_no_original} \
+          \nsuite_no_o      : {c_suite_no_original} \
+    ')
+
+    address_dict = get_tokens(singleton_predict, c_address)
+
+    c_street_name_predicted  = c_row['street_name_original']
+    c_house_no_predicted     = c_row['house_no_original']
+    c_suite_no_predicted     = c_row['suite_no_original']
+
+    print(f' \
+          \nstreet_name_p   : {c_street_name_predicted} \
+          \nhouse_no_p      : {c_house_no_predicted} \
+          \nsuite_no_p      : {c_suite_no_predicted} \
+    ')    
+    
+    # print(get_tokens(singleton_predict, "152 ST ANNE'S RD"))
+    # print(get_tokens(singleton_predict, "254 Spadina Road"))
+
+    # print(singleton_test("one.txt"))
+
+    # singleton_test("two.txt")
+
+if __name__ == '__main__':
+    startpy()

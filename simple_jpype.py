@@ -10,6 +10,7 @@ source:
 
 import jpype
 
+MODEL_PATH = "Ecolab_address_ner_model_Ver1.model.ser.gz"
 
 def get_tokens(singleton_predict, address):
 
@@ -42,7 +43,7 @@ def startpy():
     
     jpype.startJVM(classpath = ['jars/*', "./"])
     simple_predict_class = jpype.JClass("SimplePredictNER")
-    singleton_predict = simple_predict_class.getInstance("Ecolab_address_ner_model_Ver1.model.ser.gz")
+    singleton_predict = simple_predict_class.getInstance(MODEL_PATH)
     
     print(get_tokens(singleton_predict, "152 ST ANNE'S RD"))
     print(get_tokens(singleton_predict, "254 Spadina Road"))
