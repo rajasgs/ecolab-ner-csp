@@ -6,6 +6,18 @@ Created on
 
 source:
     
+
+address,street_name_original,house_no_original,suite_no_original,street_name_predicted,house_no_predicted,suite_no_predicted,predicted_right
+
+
+address
+street_name_original
+house_no_original
+suite_no_original
+street_name_predicted
+house_no_predicted
+suite_no_predicted
+predicted_right
 '''
 
 import jpype
@@ -71,15 +83,9 @@ def fill_addresses(limit = 5):
     for _index in range(limit):
         add_dummy_original_address()
 
-def startpy():
+def predict_single_address_with_model(c_index):
 
-    initiate()
-    
-    # fill_addresses(10)
-
-    # return
-
-    c_row = du.get_row(0)
+    c_row = du.get_row(c_index)
 
     # print(c_row)
     # print(type(c_row))
@@ -106,7 +112,31 @@ def startpy():
           \nstreet_name_p   : {c_street_name_predicted} \
           \nhouse_no_p      : {c_house_no_predicted} \
           \nsuite_no_p      : {c_suite_no_predicted} \
-    ')    
+    ')
+
+    print(f'\n')
+
+    du.fill_predicted(
+        c_index,
+
+        c_street_name_predicted,
+        c_house_no_predicted,
+        c_suite_no_predicted,
+    )
+
+def startpy():
+
+    initiate()
+    
+    # fill_addresses(10)
+
+    # return
+
+    df = du.get_df()
+
+    for idx in range(len(df)):
+        print(f'idx : {idx}')
+        predict_single_address_with_model(idx)    
     
     # print(get_tokens(singleton_predict, "152 ST ANNE'S RD"))
     # print(get_tokens(singleton_predict, "254 Spadina Road"))

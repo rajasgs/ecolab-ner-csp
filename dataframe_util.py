@@ -8,6 +8,16 @@ source:
 
 
 address,street_name_original,house_no_original,suite_no_original,street_name_predicted,house_no_predicted,suite_no_predicted,predicted_right
+
+address
+street_name_original
+house_no_original
+suite_no_original
+
+street_name_predicted
+house_no_predicted
+suite_no_predicted
+predicted_right
 '''
 
 
@@ -81,6 +91,31 @@ def append_to_csv(
 
     df.to_csv(REVIEW_CSV_FILENAME, index = False)
 
+
+def fill_predicted(
+        c_index,
+
+        street_name_predicted,
+        house_no_predicted = None,
+        suite_no_predicted = None,
+        predicted_right = None
+
+    ):
+
+    df = pd.read_csv(REVIEW_CSV_FILENAME)
+
+    df.loc[c_index, 'street_name_predicted'] = street_name_predicted
+    df.loc[c_index, 'suite_no_predicted'] = suite_no_predicted
+    df.loc[c_index, 'house_no_predicted'] = house_no_predicted
+
+
+    df.to_csv(REVIEW_CSV_FILENAME, index = False)
+
+def get_df():
+
+    df = pd.read_csv(REVIEW_CSV_FILENAME)
+
+    return df
 
 def get_row(c_index):
 
