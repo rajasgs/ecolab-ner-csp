@@ -82,9 +82,9 @@ def startpy():
 
     address_dict = get_tokens(singleton_predict, c_address)
 
-    c_street_name_predicted  = c_row['street_name_original']
-    c_house_no_predicted     = c_row['house_no_original']
-    c_suite_no_predicted     = c_row['suite_no_original']
+    c_street_name_predicted  = address_dict['STREET_NAME']
+    c_house_no_predicted     = address_dict['HOUSE_NO']
+    c_suite_no_predicted     = address_dict['suite_no_original']
 
     print(f' \
           \nstreet_name_p   : {c_street_name_predicted} \
