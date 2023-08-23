@@ -55,14 +55,29 @@ def add_dummy_original_address():
 
     print(f'Added : {address}')
 
-jpype.startJVM(classpath = ['jars/*', "./"])
-simple_predict_class = jpype.JClass("SimplePredictNER")
-singleton_predict = simple_predict_class.getInstance(MODEL_PATH)
+
+singleton_predict = None
+
+def initiate():
+
+    global singleton_predict
+
+    jpype.startJVM(classpath = ['jars/*', "./"])
+    simple_predict_class = jpype.JClass("SimplePredictNER")
+    singleton_predict = simple_predict_class.getInstance(MODEL_PATH)
+
+def fill_addresses(limit = 5):
+
+    for _index in range(limit):
+        add_dummy_original_address()
 
 def startpy():
+
+    initiate()
     
-    # for _index in range(3):
-    #     add_dummy_original_address()
+    # fill_addresses(10)
+
+    # return
 
     c_row = du.get_row(0)
 
@@ -75,6 +90,7 @@ def startpy():
     c_suite_no_original     = c_row['suite_no_original']
 
     print(f'address         : {c_address} \
+          \n \
           \nstreet_name_o   : {c_street_name_original} \
           \nhouse_no_o      : {c_house_no_original} \
           \nsuite_no_o      : {c_suite_no_original} \
@@ -84,7 +100,7 @@ def startpy():
 
     c_street_name_predicted  = address_dict['STREET_NAME']
     c_house_no_predicted     = address_dict['HOUSE_NO']
-    c_suite_no_predicted     = address_dict['suite_no_original']
+    c_suite_no_predicted     = address_dict['SUITE_NO']
 
     print(f' \
           \nstreet_name_p   : {c_street_name_predicted} \
