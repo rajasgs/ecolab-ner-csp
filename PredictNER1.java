@@ -84,12 +84,7 @@ public class PredictNER1 {
         //String[] tests = new String[]{"552 The Holloway Street Rd", "1 CALLE SAN GERONIMO"};
 
         String[] tests = new String[]{
-            "Pec Pod Sněžkou 354"
-            , "A Ramél 31"
-            , "Pec Pod Sněžkou 354"
-            , "Moravské Náměstí 9"
-            , "Okružní 1462"
-            , "Verovškova Ulica 57"
+            "Castillo Ports 520"
         };
         
         // java.util.Date date = new java.util.Date();
@@ -113,9 +108,19 @@ public class PredictNER1 {
         // System.out.println("Timestamp2: "+date2);
     }
 
+    public static void analyzeWithArgs(String address){
+
+        CRFClassifier model = getModel(MODEL_PATH);
+        doTagging(model, address);
+    }
+
     public static void main(String[] args){
 
-        analyzeWithFile();
+        analyzeWithArgs(args[0]);
+
+        // analyzeWithVanillaData();
+
+        // analyzeWithFile();
     }
 }
 
@@ -125,10 +130,10 @@ public class PredictNER1 {
  * 
 
 # Compiling the Java file
-
+javac -cp "jars/*:." PredictNER1.java
 
 # Running the class
 java -cp "jars/*:." PredictNER1.java
 
-
+java -cp "jars/*:." PredictNER1 "564 Spadina"  
  */

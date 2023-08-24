@@ -106,7 +106,7 @@ def convert_data(content):
     if(content == 'null'):
         return content
     
-    return str(int(content))
+    return str((content))
 
 def fill_predicted(
         c_index,
@@ -114,7 +114,9 @@ def fill_predicted(
         street_name_predicted,
         house_no_predicted = None,
         suite_no_predicted = None,
-        predicted_right = None
+        predicted_right = None,
+
+        reason = None
 
     ):
 
@@ -125,6 +127,7 @@ def fill_predicted(
     df.loc[c_index, 'house_no_predicted'] = convert_data(house_no_predicted)
 
     df.loc[c_index, 'predicted_right'] = predicted_right
+    df.loc[c_index, 'reason'] = reason
 
     print(f'house_no_predicted : {house_no_predicted}')
 

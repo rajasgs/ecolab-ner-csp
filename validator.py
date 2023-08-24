@@ -103,7 +103,7 @@ def convert_2(content):
     if('None' == content):
         return content
 
-    return str(content)
+    return str(int(content))
 
 def is_predicted_right(
     c_street_name_original,
@@ -116,7 +116,7 @@ def is_predicted_right(
 ):
     
     if(c_street_name_original != c_street_name_predicted):
-        return 0
+        return 0, 'street_name_mismatch'
     
     c_house_no_original = convert_2(c_house_no_original)
     c_house_no_predicted = convert_2(c_house_no_predicted)
@@ -128,14 +128,14 @@ def is_predicted_right(
     #       c_house_no_predicted : {c_house_no_predicted} type : {type(c_house_no_predicted)}')
     
     if(c_house_no_original != c_house_no_predicted):
-        return 0
+        return 0, f'house_no_mismatch {c_house_no_original} : {c_house_no_predicted}'
     
     print(f'c_suite_no_original : {c_suite_no_original}, type : {type(c_suite_no_original)} \
           ')
     # if(c_suite_no_original != c_suite_no_predicted):
     #     return 0
 
-    return 1
+    return 1, None
 
 def convert_data(content):
 
@@ -145,7 +145,8 @@ def convert_data(content):
     if(content == 'null'):
         return content
     
-    return str(int(str(content)))
+    # return str(int(str(content)))
+    return str(content)
 
 def predict_single_address_with_model(c_index):
 
@@ -170,8 +171,8 @@ def predict_single_address_with_model(c_index):
 
     c_street_name_predicted  = str(address_dict['STREET_NAME'])
     c_house_no_predicted     = convert_data(address_dict['HOUSE_NO'])
-    # c_suite_no_predicted     = convert_data(address_dict['SUITE_NO'])
-    c_suite_no_predicted     = ''
+    c_suite_no_predicted     = convert_data(address_dict['SUITE_NO'])
+    # c_suite_no_predicted     = ''
 
     print(f' \
           \nstreet_name_p   : {c_street_name_predicted} \
@@ -181,7 +182,7 @@ def predict_single_address_with_model(c_index):
 
     print(f'\n')
 
-    predicted = is_predicted_right(
+    predicted, reason = is_predicted_right(
         c_street_name_original,
         c_house_no_original,
         c_suite_no_original,
@@ -198,15 +199,16 @@ def predict_single_address_with_model(c_index):
         c_house_no_predicted,
         c_suite_no_predicted,
 
-        predicted
+        predicted,
+
+        reason
     )
 
 def startpy():
 
     initiate()
     
-    # fill_addresses(3)
-
+    # fill_addresses(2000)
     # return
 
     df = du.get_df()
