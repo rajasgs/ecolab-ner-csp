@@ -23,6 +23,7 @@ predicted_right
 import jpype
 import dataframe_util as du
 import faker_util as fu
+import json_util as ju
 
 MODEL_PATH = "ecolab_address_20230817.model.ser.gz"
 
@@ -58,11 +59,11 @@ def add_dummy_original_address():
 
     address, street_name, house_no, suite_no = fu.create_address_pattern_30()
 
-    du.append_original_to_csv(
-        address = address,
-        street_name_original= street_name,
-        house_no_original= house_no,
-        suite_no_original= suite_no
+    ju.add_address_base(
+        address, 
+        street_name, 
+        house_no, 
+        suite_no
     )
 
     print(f'Added : {address}')
@@ -130,8 +131,8 @@ def is_predicted_right(
     if(c_house_no_original != c_house_no_predicted):
         return 0
     
-    print(f'c_suite_no_original : {c_suite_no_original}, type : {type(c_suite_no_original)} \
-          ')
+    # print(f'c_suite_no_original : {c_suite_no_original}, type : {type(c_suite_no_original)} \
+    #       ')
     # if(c_suite_no_original != c_suite_no_predicted):
     #     return 0
 
@@ -145,19 +146,14 @@ def convert_data(content):
     if(content == 'null'):
         return content
     
-    return str(int(str(content)))
+    return (str(content))
 
-def predict_single_address_with_model(c_index):
+def predict_single_address_with_model(entry):
 
-    c_row = du.get_row(c_index)
-
-    # print(c_row)
-    # print(type(c_row))
-
-    c_address               = c_row['address']
-    c_street_name_original  = c_row['street_name_original']
-    c_house_no_original     = c_row['house_no_original']
-    c_suite_no_original     = c_row['suite_no_original']
+    c_address               = entry['address']
+    c_street_name_original  = entry['street_name_original']
+    c_house_no_original     = entry['house_no_original']
+    c_suite_no_original     = entry['suite_no_original']
 
     print(f'address         : {c_address} \
           \n \
@@ -168,9 +164,14 @@ def predict_single_address_with_model(c_index):
 
     address_dict = get_tokens(singleton_predict, c_address)
 
+    print(f'address_dict : {address_dict}')
+
+    # c_street_name_predicted  = str(address_dict['STREET_NAME'])
+    # c_house_no_predicted     = convert_data(address_dict['HOUSE_NO'])
+    # c_suite_no_predicted     = convert_data(address_dict['SUITE_NO'])
+
     c_street_name_predicted  = str(address_dict['STREET_NAME'])
     c_house_no_predicted     = convert_data(address_dict['HOUSE_NO'])
-    # c_suite_no_predicted     = convert_data(address_dict['SUITE_NO'])
     c_suite_no_predicted     = ''
 
     print(f' \
@@ -191,36 +192,57 @@ def predict_single_address_with_model(c_index):
         c_suite_no_predicted
     )
 
-    du.fill_predicted(
-        c_index,
+    dict_2 = {
+        "address" : c_address,
+        
+        "street_name_original" : c_street_name_original,
+        "house_no_original" : c_house_no_original,
+        "suite_no_original" :  c_suite_no_original,
 
-        c_street_name_predicted,
-        c_house_no_predicted,
-        c_suite_no_predicted,
+        "street_name_predicted" : c_street_name_predicted,
+        "house_no_predicted" : c_house_no_predicted,
+        "suite_no_predicted" : c_suite_no_predicted,
 
-        predicted
-    )
+        "predicted_right" : predicted
+    }
+
+    return dict_2
+
+
 
 def startpy():
 
     initiate()
     
-    # fill_addresses(3)
+    # fill_addresses(2)
 
     # return
 
-    df = du.get_df()
+    # df = du.get_df()
 
-    for idx in range(len(df)):
+    data = ju.get_json_data()
+
+    new_data = {
+        'entries' : []
+    }
+
+    for idx, entry in enumerate(data['entries']):
+        print(entry)
         # print(f'idx : {idx}')
-        predict_single_address_with_model(idx)    
-    
+        new_dict = predict_single_address_with_model(entry)  
+
+        new_data['entries'].append(new_dict)
+
+    ju.update_all(new_data)
+
     # print(get_tokens(singleton_predict, "152 ST ANNE'S RD"))
     # print(get_tokens(singleton_predict, "254 Spadina Road"))
 
     # print(singleton_test("one.txt"))
 
     # singleton_test("two.txt")
+
+    pass
 
 if __name__ == '__main__':
     startpy()

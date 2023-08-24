@@ -25,3 +25,14 @@ def create_address_pattern_30():
     address = f"{street_name} {house_no}"
 
     return address, street_name, house_no, suite_no
+
+def get_details_1():
+
+    return fake.first_name(), fake.city()
+
+def startpy():
+
+    print(get_details_1())
+
+if __name__ == '__main__':
+    startpy()

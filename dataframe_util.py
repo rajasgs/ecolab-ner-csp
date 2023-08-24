@@ -130,10 +130,10 @@ def fill_predicted(
 
     df = df.astype({
         "street_name_predicted" : str,
-        "suite_no_predicted" : int,
-        "house_no_predicted" : int,
+        "suite_no_predicted" : str,
+        "house_no_predicted" : str,
 
-        "predicted_right": int,
+        "predicted_right": str,
     })
 
     df.to_csv(REVIEW_CSV_FILENAME, index = False)
