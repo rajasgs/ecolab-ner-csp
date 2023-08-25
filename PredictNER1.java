@@ -25,7 +25,7 @@ import java.util.List;
 
 public class PredictNER1 {
 
-    private static final String MODEL_PATH = "ecolab_address_20230817.model.ser.gz";
+    private static final String MODEL_PATH = "ecolab_address_20230825.model.ser.gz";
 
     static void print(Object obj){
         System.out.println(obj);
