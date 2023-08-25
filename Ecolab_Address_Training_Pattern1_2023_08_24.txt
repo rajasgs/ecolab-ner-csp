@@ -16,7 +16,7 @@ dundas  STREET_NAME
 e   STREET_NAME
 
 1206200    HOUSE_NO
-mckay   STREET_NAMEw
+mckay   STREET_NAME
 
 0344 HOUSE_NO
 glendale    STREET_NAME

@@ -24,7 +24,9 @@ from faker import Faker
 
 fake = Faker('en_CA')
 
-MAX_LIMIT = 80
+MAX_LIMIT = 2000
+
+DIVIDE_TRAIN_AND_TEST = True
 
 def create_address_pattern_30():
 
@@ -35,14 +37,29 @@ def create_address_pattern_30():
 
     return address
 
-def startpy():
 
-    pass
+def create_multiple_addresses():
+
+    training_end = int(0.67 * MAX_LIMIT)
+
+    # print(f'training_end : {training_end}')
 
     # Faker.seed(0)
-    for _ in range(MAX_LIMIT):
+    for idx in range(MAX_LIMIT):
         # print(fake.street_address(), '\n')
+
+        # print(idx)
         print(create_address_pattern_30())
+
+        if(idx == training_end):
+            print("-" * 100)
+
+
+def startpy():
+
+    create_multiple_addresses()
+
+    
 
 if __name__ == '__main__':
     startpy()
