@@ -414,11 +414,18 @@ def pattern_13_maker_single(address):
 
     content = ""
 
-    content += get_single_content(address_parts[0], "HOUSE_NO")
-    content += get_single_content(address_parts[1], "STREET_NAME")
-    content += get_single_content(address_parts[2], "STREET_NAME")
-    content += get_single_content(address_parts[3], "SUITE_NO")
-    content += get_single_content(address_parts[4], "SUITE_NO")
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, "HOUSE_NO")
+
+        elif(len(address_parts)-1 == c_index):
+
+            content += get_single_content(c_item, "SUITE_NO")
+
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
@@ -849,7 +856,7 @@ def pattern_27_maker_single(address):
 def pattern_28_maker_single(address):
 
     '''
-        Pattern 17:
+        Pattern 28:
 
         
 
@@ -868,6 +875,8 @@ def pattern_28_maker_single(address):
 
         if(c_index == 0):
             content += get_single_content(c_item, "HOUSE_NO")
+        elif(len(address_parts)-1 == c_index):
+            content += get_single_content(c_item, "SUITE_NO")
         else:
             content += get_single_content(c_item, "STREET_NAME")
 
@@ -1094,13 +1103,13 @@ def startpy():
     # print(pattern_maker_multiple(27))
 
     # Pattern 28
-    # print(pattern_maker_multiple(28))
+    print(pattern_maker_multiple(28))
 
     # Pattern 29
     # print(pattern_maker_multiple(29))
 
     # Pattern 30
-    print(pattern_maker_multiple(30))
+    # print(pattern_maker_multiple(30))
 
     pass
 

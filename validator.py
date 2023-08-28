@@ -24,7 +24,7 @@ import jpype
 import dataframe_util as du
 import faker_util as fu
 
-MODEL_PATH = "ecolab_address_20230817.model.ser.gz"
+MODEL_PATH = "ecolab_address_20230828_3.model.ser.gz"
 
 def get_tokens(singleton_predict, address):
 

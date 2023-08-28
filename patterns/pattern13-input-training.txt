@@ -1,0 +1,96 @@
+272     HOUSE_NO
+chanute STREET_NAME
+102     SUITE_NO
+
+23  HOUSE_NO
+chevin  STREET_NAME
+90  SUITE_NO
+
+4   HOUSE_NO
+brocklebank STREET_NAME
+c   SUITE_NO
+
+243     HOUSE_NO
+fernander   STREET_NAME
+102     SUITE_NO
+
+199     HOUSE_NO
+laniuma STREET_NAME
+place   STREET_NAME
+102     SUITE_NO
+
+191     HOUSE_NO
+ahamaka STREET_NAME
+104     SUITE_NO
+
+1939    HOUSE_NO
+maybank STREET_NAME
+a   SUITE_NO
+
+152     HOUSE_NO
+young   STREET_NAME
+106     SUITE_NO
+
+162     HOUSE_NO
+warren  STREET_NAME
+102     SUITE_NO
+
+166     HOUSE_NO
+pai     STREET_NAME
+circle  STREET_NAME
+202     SUITE_NO
+
+184     HOUSE_NO
+leva    STREET_NAME
+106     SUITE_NO
+
+311     HOUSE_NO
+abbott  STREET_NAME
+102     SUITE_NO
+
+181     HOUSE_NO
+sudut   STREET_NAME
+102     SUITE_NO
+
+123     HOUSE_NO
+example STREET_NAME
+201     SUITE_NO
+
+456     HOUSE_NO
+sample  STREET_NAME
+304     SUITE_NO
+
+789     HOUSE_NO
+mock    STREET_NAME
+505     SUITE_NO
+
+987     HOUSE_NO
+demo    STREET_NAME
+1020    SUITE_NO
+
+654     HOUSE_NO
+trial   STREET_NAME
+908     SUITE_NO
+
+321     HOUSE_NO
+test    STREET_NAME
+way     STREET_NAME
+703     SUITE_NO
+
+246     HOUSE_NO
+instance    STREET_NAME
+306     SUITE_NO
+
+135     HOUSE_NO
+simulation  STREET_NAME
+409     SUITE_NO
+
+864     HOUSE_NO
+practice    STREET_NAME
+place   STREET_NAME
+607     SUITE_NO
+
+579     HOUSE_NO
+trial   STREET_NAME
+run     STREET_NAME
+1012    SUITE_NO

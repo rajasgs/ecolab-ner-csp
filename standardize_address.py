@@ -105,7 +105,7 @@ def startpy():
 
     # files = ["Ecolab_Address_Training_Ver2_1.txt", "Ecolab_Address_Testing_Ver2_1.txt"]
 
-    files = ["Ecolab_Address_Training_Ver2_2.txt", "Ecolab_Address_Training_Ver2_2.txt"]
+    files = ["pattern28-training.txt", "pattern28-testing.txt"]
     
     for filename in files:
         standardize_dataset(filename)
