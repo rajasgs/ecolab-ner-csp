@@ -25,13 +25,14 @@ import java.util.List;
 
 public class PredictNER1 {
 
-    private static final String MODEL_PATH = "ecolab_address_20230825.model.ser.gz";
+    private static final String MODEL_PATH = "ecolab_address_20230828_2.model.ser.gz";
 
     static void print(Object obj){
         System.out.println(obj);
     }
 
     public static CRFClassifier getModel(String modelPath) {
+        print("Used "+MODEL_PATH);
         return CRFClassifier.getClassifierNoExceptions(modelPath);
     }
 
@@ -116,7 +117,9 @@ public class PredictNER1 {
 
     public static void main(String[] args){
 
-        analyzeWithArgs(args[0]);
+        String address = args[0];
+
+        analyzeWithArgs(address);
 
         // analyzeWithVanillaData();
 
