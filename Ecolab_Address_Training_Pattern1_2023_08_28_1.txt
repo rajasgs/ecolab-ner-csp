@@ -24,8 +24,7 @@ row     STREET_NAME
 christopher STREET_NAME
 junctions   STREET_NAME
 5215    HOUSE_NO
-
-bauer   STREET_NAME
+STREET_NAME
 extensions  STREET_NAME
 9171    HOUSE_NO
 
