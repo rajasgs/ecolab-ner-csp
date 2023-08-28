@@ -245,7 +245,6 @@ calle	STREET_NAME
 victoria	STREET_NAME
 1	HOUSE_NO
 
-calle felipe asenjo 20
 calle	STREET_NAME
 felipe	STREET_NAME
 asenjo	STREET_NAME

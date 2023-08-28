@@ -145,7 +145,7 @@ def startpy():
     train_model(
         "ecolab_address_20230828_3", 
         ["Ecolab_Address_Training_Pattern1_2023_08_28_4.txt"], 
-        ["Ecolab_Address_Testing_Pattern1_2023_08_28_1.txt"], 
+        ["Ecolab_Address_Testing_Pattern1_2023_08_28_4.txt"], 
         True, 
         classpath
     )
