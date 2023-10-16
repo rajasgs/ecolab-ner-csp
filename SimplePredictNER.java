@@ -249,7 +249,7 @@ public class SimplePredictNER {
          */
 
         if(instance != null)
-            return instance
+            return instance;
             
         instance                    = new SimplePredictNER();
         instance.modelFilename      = modelFilename;
