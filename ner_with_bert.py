@@ -63,12 +63,12 @@ def train_and_save():
         train_data,
         eval_data       = test_data,
         acc             = accuracy_score,
-        output_dir      = 'nermodel'
+        # output_dir      = 'nermodel'
     )
 
 def load_and_predict():
     
-    model = NERModel('bert', 'nermodel/', use_cuda = False)
+    model = NERModel('bert', 'outputs/', use_cuda = False)
 
     prediction, model_output = model.predict(["130-300 Spadina Road"])
 
@@ -79,7 +79,9 @@ def startpy():
     # prediction, model_output = model.predict(["254 Spadina Road"])
     # print(prediction)
 
-    load_and_predict()
+    train_and_save()
+
+    # load_and_predict()
 
     print("Training Done")
 
