@@ -9,7 +9,7 @@ class ValidatorSingleton:
 
 
     @staticmethod 
-    def getInstance(model_version = "v1"):
+    def getInstance(model_version = "v5"):
         """ Static access method. """
         if ValidatorSingleton.__instance == None:
             ValidatorSingleton(model_version)
@@ -29,7 +29,7 @@ class ValidatorSingleton:
         simple_predict_class        = jpype.JClass("SimplePredictNER")
         self.singleton_predict      = simple_predict_class.getInstance(self.model)
 
-        ValidatorSingleton.__instance = self
+        # ValidatorSingleton.__instance = self
 
         return ValidatorSingleton.__instance
     
