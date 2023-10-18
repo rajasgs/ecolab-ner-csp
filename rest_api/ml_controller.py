@@ -14,6 +14,8 @@ import business.predict as pr
 
 from custom_flask import render_template
 
+LATEST_VERSION = 2
+
 '''
     /
 '''
@@ -21,7 +23,8 @@ from custom_flask import render_template
 def index():   
 
     return render_template(
-        'index.html'
+        'index.html',
+        version_number = LATEST_VERSION
     )
 
 @api.route('/', methods=['POST'])
@@ -35,52 +38,46 @@ def result():
 
     return render_template(
         'index.html', 
+        version_number = LATEST_VERSION,
         result = result
     )
 
 
 
 '''
-    /ml/base
+    /
 '''
-@api.route('/ml/regular')
-def api_regular():  
-
-    address = request.values.get('address')
-    
-    result = pr.predict(address)
-
-    colog.info(result)
-
-    result_json = {
-        'result': int(result),
-        
-        'api_error': 0
-    }
-    
-    # return success_json(result_json)
+@api.route('/<version_number>')
+def index_with_version(version_number):   
 
     return render_template(
-        'index.html'
+        'index_with_version.html',
+        version_number = version_number,
     )
 
 
 '''
     /ml/base
 '''
-@api.route('/ml/<version_number>/predict')
+@api.route('/<version_number>', methods=['POST'])
 def api_dynamic_versions(version_number):   
 
     print(f'version_number  : {version_number}')
 
-    result = pr.predict()
+    address = request.values.get('address')
+    
+    result = pr.predict(address)
+
+    result = pr.predict(
+        version_number      = version_number,
+        address             = address
+    )
 
     colog.info(result)
 
-    result_json = {
-        'result': int(result),
-        
-        'api_error': 0
-    }
+    return render_template(
+        'index_with_version.html', 
+        version_number = LATEST_VERSION,
+        result = result
+    )
     
-    return success_json(result_json)

@@ -35,7 +35,8 @@ def get_tokens(singleton_predict, address):
 
     return token_dict
 
-def predict(c_address):
+def predict(
+    c_address):
 
     address_dict = get_tokens(singleton_predict, c_address)
 
