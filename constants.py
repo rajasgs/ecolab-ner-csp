@@ -16,4 +16,4 @@ load_dotenv()
 # APP_TITLE   = os.getenv("APP_TITLE")
 
 PORT_NO     = 8262
-APP_TITLE   = "Local App"
+APP_TITLE   = "Custom NER - Riversand"

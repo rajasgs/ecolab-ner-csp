@@ -15,8 +15,8 @@ from .response_utils import JSON_MIME_TYPE, success_, success_json
 
 '''
 '''
-@api.route('/')
-def index():   
+@api.route('/template')
+def template_index():   
     
     r_number = random.randint(0, 1000)
 

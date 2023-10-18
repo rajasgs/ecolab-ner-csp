@@ -15,10 +15,10 @@ import business.predict as pr
 from custom_flask import render_template
 
 '''
-    /ml/base
+    /
 '''
-@api.route('/ml/base')
-def api_base():   
+@api.route('/')
+def index():   
     
     result = pr.predict()
 
@@ -36,26 +36,21 @@ def api_base():
         'index.html'
     )
 
+@api.route('/', methods=['POST'])
+def result():
 
-# def get_request_values(request):
+    address = request.values.get('address')
+    
+    result = address
 
-#     rargs = request.args 
+    print(f'result : {result}')
 
-#     marks                       = rargs.get('marks', type = int)
-#     projects                    = rargs.get('projects', type = int)
-#     articles                    = rargs.get('articles', type = int)
-#     network                     = rargs.get('network', type = int)
-#     relatives                   = rargs.get('relatives', type = int)
-#     trendy_topic_knowledge      = rargs.get('trendy_topic_knowledge', type = int)
-#     research_work               = rargs.get('research_work', type = int)
-#     personality_mirroring       = rargs.get('personality_mirroring', type = int)
-#     luck                        = rargs.get('luck', type = int)
-#     demand_and_supply_factor    = rargs.get('demand_and_supply_factor', type = int)
+    return render_template(
+        'index.html', 
+        result = result
+    )
 
-#     return \
-#         marks, projects, articles, network, relatives, \
-#         trendy_topic_knowledge, research_work, personality_mirroring, \
-#         luck, demand_and_supply_factor
+
 
 '''
     /ml/base
