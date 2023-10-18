@@ -19,18 +19,6 @@ from custom_flask import render_template
 '''
 @api.route('/')
 def index():   
-    
-    result = pr.predict()
-
-    colog.info(result)
-
-    result_json = {
-        'result': int(result),
-        
-        'api_error': 0
-    }
-    
-    # return success_json(result_json)
 
     return render_template(
         'index.html'
@@ -41,7 +29,7 @@ def result():
 
     address = request.values.get('address')
     
-    result = address
+    result = pr.predict(address)
 
     print(f'result : {result}')
 
@@ -60,7 +48,7 @@ def api_regular():
 
     address = request.values.get('address')
     
-    result = pr.predict()
+    result = pr.predict(address)
 
     colog.info(result)
 
