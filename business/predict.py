@@ -30,6 +30,7 @@ def get_tokens(singleton_predict, address):
         'STREET_NAME'   : street_name,
         'HOUSE_NO'      : house_no,
         'SUITE_NO'      : suite_no,
+        'FULL'          : result
     }
 
     return token_dict
