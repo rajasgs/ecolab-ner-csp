@@ -66,11 +66,9 @@ def api_dynamic_versions(version_number):
 
     address = request.values.get('address')
     
-    result = pr.predict(address)
-
-    result = pr.predict(
-        version_number      = version_number,
-        address             = address
+    result = pr.classify_address(
+        address, 
+        model_version = version_number
     )
 
     colog.info(result)

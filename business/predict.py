@@ -1,45 +1,27 @@
 
 
-import jpype
 
-MODEL_PATH = "ecolab_address_20230828_3.model.ser.gz"
 
-singleton_predict = None
+# def predict(
+#     c_address):
 
-def initiate():
+#     address_dict = get_tokens(singleton_predict, c_address)
 
-    global singleton_predict
+#     print(f'address_dict : {address_dict}')
 
-    jpype.startJVM(classpath = ['jars/*', "./"])
-    simple_predict_class = jpype.JClass("SimplePredictNER")
-    singleton_predict = simple_predict_class.getInstance(MODEL_PATH)
+#     return address_dict
 
-def get_tokens(singleton_predict, address):
+# Local import
+# import constants.constants as c
+import business.validator_single as vas
 
-    result = singleton_predict.getTokens(str(address))
+def classify_address(
+    address,
+    model_version = "v1"
+):
+    vas_singledon = vas.ValidatorSingleton.getInstance(model_version)
 
-    # print(result)
+    result = vas_singledon.get_tokens(address)
+    print(f'result : {result}')
 
-    result_parts = result.split('\n')
-
-    street_name = result_parts[0].replace('STREET_NAME=', '')
-    house_no    = result_parts[1].replace('HOUSE_NO=', '')
-    suite_no    = result_parts[2].replace('SUITE_NO=', '')
-
-    token_dict = {
-        'STREET_NAME'   : street_name,
-        'HOUSE_NO'      : house_no,
-        'SUITE_NO'      : suite_no,
-        'FULL'          : result
-    }
-
-    return token_dict
-
-def predict(
-    c_address):
-
-    address_dict = get_tokens(singleton_predict, c_address)
-
-    print(f'address_dict : {address_dict}')
-
-    return address_dict
+    return result
