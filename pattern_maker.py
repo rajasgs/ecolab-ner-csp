@@ -7,7 +7,7 @@ Created on
 
 source:
     
-    Address-CNER
+    Address-CNER-Riversand
     https://docs.google.com/spreadsheets/d/1QH_T6C3MAJNj5f_1gL1dZtLRUjFbwJ4wcHpPwlCfylI/edit#gid=968221325
 
     https://www.kaggle.com/rajacsp/address-pattern/
@@ -18,6 +18,7 @@ source:
 '''
 
 import numbers
+from sklearn.model_selection import train_test_split
 
 PATTERNS_FOLDER = 'patterns/'
 
@@ -91,11 +92,15 @@ def pattern_1_maker_single(address):
 
     content = ""
 
-    content += get_single_content(address_parts[0], "HOUSE_NO")
-    content += get_single_content(address_parts[1], "STREET_NAME")
-    content += get_single_content(address_parts[2], "STREET_NAME")
+    for c_index, c_item in enumerate(address_parts):
 
-    # print(content)
+        if(c_index == 0):
+            content += get_single_content(c_item, "HOUSE_NO")
+        else:
+            sub_parts = c_item.split(" ")
+
+            for item in sub_parts:
+                content += get_single_content(item, "STREET_NAME")
 
     return content
 
@@ -1009,8 +1014,23 @@ def pattern_maker_multiple(pattern_index):
 
     content = ""
 
-    for c_line in lines:
+    train_list, test_list = train_test_split(lines, train_size=0.8)
+
+    for c_line in train_list:
         c_line = c_line.replace('\n', '')
+
+        c_line = c_line.lower()
+
+        content += pattern_maker_single(c_line, pattern_index)
+
+        content += "\n"
+
+    content += str(f'-' * 50 + "\n")
+
+    for c_line in test_list:
+        c_line = c_line.replace('\n', '')
+
+        c_line = c_line.lower()
 
         content += pattern_maker_single(c_line, pattern_index)
 
@@ -1025,7 +1045,7 @@ def startpy():
     # pattern_1_maker_single("12A WEST STREET")
 
     # Pattern 1
-    # print(pattern_maker_multiple(1))
+    print(pattern_maker_multiple(1))
 
     # Pattern 2
     # print(pattern_maker_multiple(2))
@@ -1103,7 +1123,7 @@ def startpy():
     # print(pattern_maker_multiple(27))
 
     # Pattern 28
-    print(pattern_maker_multiple(28))
+    # print(pattern_maker_multiple(28))
 
     # Pattern 29
     # print(pattern_maker_multiple(29))
@@ -1114,9 +1134,23 @@ def startpy():
     pass
 
 
+def test_split():
+
+    main_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    train_list, test_list = train_test_split(main_list, train_size=0.8)
+
+    print(train_list)
+    print(test_list)
+
 if __name__ == '__main__':
+    
+    
     startpy()
 
+    # test_split()
+
+    pass
 
 
 '''
