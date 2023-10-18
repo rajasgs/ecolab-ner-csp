@@ -19,6 +19,20 @@ class ValidatorSingleton:
 
         return ValidatorSingleton.__instance
     
+    def getFreshInstance(self):
+
+        print('calling fresh init by reloading')
+
+        print(f'self.model_version : {self.model_version}')
+        print(f'self.model : {self.model}')
+
+        simple_predict_class        = jpype.JClass("SimplePredictNER")
+        self.singleton_predict      = simple_predict_class.getInstance(self.model)
+
+        ValidatorSingleton.__instance = self
+
+        return ValidatorSingleton.__instance
+    
     def __init__(self, model_version):
         
         self.model_version  = model_version
@@ -46,7 +60,7 @@ class ValidatorSingleton:
         simple_predict_class        = jpype.JClass("SimplePredictNER")
         self.singleton_predict      = simple_predict_class.getInstance(self.model)
 
-        ValidatorSingleton.__instance = self
+        ValidatorSingleton.__instance = self.getFreshInstance()
 
 
     def display (self):  
