@@ -194,3 +194,5 @@ validator.csv
 validator.json
 
 nermodel/
+
+static/images/*
