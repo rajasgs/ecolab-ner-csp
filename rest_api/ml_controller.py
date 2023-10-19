@@ -4,7 +4,7 @@
 
 '''
 import random
-from flask import request
+from flask import request, redirect
 
 # Local import
 from .response_utils import JSON_MIME_TYPE, success_, success_json
@@ -22,25 +22,27 @@ LATEST_VERSION = 2
 @api.route('/')
 def index():   
 
-    return render_template(
-        'index.html',
-        version_number = LATEST_VERSION
-    )
+    # return render_template(
+    #     'index.html',
+    #     version_number = LATEST_VERSION
+    # )
 
-@api.route('/', methods=['POST'])
-def result():
+    return redirect(f"/v1")
 
-    address = request.values.get('address')
+# @api.route('/', methods=['POST'])
+# def result():
+
+#     address = request.values.get('address')
     
-    result = pr.predict(address)
+#     result = pr.predict(address)
 
-    print(f'result : {result}')
+#     print(f'result : {result}')
 
-    return render_template(
-        'index.html', 
-        version_number = LATEST_VERSION,
-        result = result
-    )
+#     return render_template(
+#         'index.html', 
+#         version_number = LATEST_VERSION,
+#         result = result
+#     )
 
 
 
