@@ -222,7 +222,7 @@ def pattern_5_maker_single(address):
             sub_parts = c_item.split("/")
 
             content += get_single_content(sub_parts[0], "SUITE_NO")
-            content += get_single_content("-", "0")
+            content += get_single_content("/", "0")
             content += get_single_content(sub_parts[1], "HOUSE_NO")
         else:
             content += get_single_content(c_item, "STREET_NAME")
@@ -1059,11 +1059,11 @@ def startpy():
     # print(pattern_maker_multiple(3))
 
     # Pattern 4
-    print(pattern_maker_multiple(4))
+    # print(pattern_maker_multiple(4))
 
     # Pattern 5
     # pattern_5_maker_single("1/3 WESTGATE PARK FODDERWICK")
-    # print(pattern_maker_multiple(5))
+    print(pattern_maker_multiple(5))
 
     # Pattern 6
     # print(pattern_maker_multiple(6))
