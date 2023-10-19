@@ -7,6 +7,7 @@
 from flask import Flask
 from rest_api import *
 import os
+import sys
 
 # import business.predict as pr
 import business.validator_single as vas
@@ -20,9 +21,16 @@ if __name__ == "__main__":
     host = os.environ.get('IP', '0.0.0.0')
     port = int(os.environ.get('PORT', 8071))
 
+    model_version   = sys.argv[1]
+    user_port       = sys.argv[2]
+
+    port = int(os.environ.get('PORT', user_port))
+
     # pr.initiate()
 
-    vas_singlton = vas.ValidatorSingleton.getInstance()
+    print(f'model_version : {model_version}')
+
+    vas_singlton = vas.ValidatorSingleton.getInstance(model_version = model_version)
     
     app.run(
         host            = host, 

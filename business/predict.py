@@ -17,7 +17,7 @@ import business.validator_single as vas
 
 def classify_address(
     address,
-    model_version = "v1"
+    model_version
 ):
     vas_singleton = vas.ValidatorSingleton.getInstance(model_version)
 

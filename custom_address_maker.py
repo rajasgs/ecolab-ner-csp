@@ -18,7 +18,7 @@ dover, beacon, sylvester, winn, winnmere, sunnyside
 """
 
 address_part_10002_str = """
-drive, circle, cresent, road, ave, avenue
+3200 e sky harbor blvd
 """
 
 def get_random_part(content):

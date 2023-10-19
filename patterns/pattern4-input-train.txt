@@ -1,0 +1,454 @@
+26  SUITE_NO
+-   0
+30  HOUSE_NO
+eteläranta  STREET_NAME
+
+18  SUITE_NO
+-   0
+20  HOUSE_NO
+siltasaarenkatu STREET_NAME
+
+16  SUITE_NO
+-   0
+18  HOUSE_NO
+vattuniemenkatu STREET_NAME
+
+1900    SUITE_NO
+-   0
+1998    HOUSE_NO
+elmcrest    STREET_NAME
+road    STREET_NAME
+
+75  SUITE_NO
+-   0
+79  HOUSE_NO
+lakeshore   STREET_NAME
+lane    STREET_NAME
+
+120     SUITE_NO
+-   0
+124     HOUSE_NO
+korkeavuorenkatu    STREET_NAME
+
+125     SUITE_NO
+-   0
+129     HOUSE_NO
+beachfront  STREET_NAME
+court   STREET_NAME
+
+2700    SUITE_NO
+-   0
+2798    HOUSE_NO
+lakeshore   STREET_NAME
+drive   STREET_NAME
+
+2300    SUITE_NO
+-   0
+2398    HOUSE_NO
+cedar   STREET_NAME
+lane    STREET_NAME
+
+1200    SUITE_NO
+-   0
+1298    HOUSE_NO
+lakeside    STREET_NAME
+avenue  STREET_NAME
+
+2000    SUITE_NO
+-   0
+2098    HOUSE_NO
+birchwood   STREET_NAME
+lane    STREET_NAME
+
+135     SUITE_NO
+-   0
+139     HOUSE_NO
+waterfront  STREET_NAME
+lane    STREET_NAME
+
+300     SUITE_NO
+-   0
+398     HOUSE_NO
+cedarwood   STREET_NAME
+street  STREET_NAME
+
+55  SUITE_NO
+-   0
+59  HOUSE_NO
+beachfront  STREET_NAME
+drive   STREET_NAME
+
+85  SUITE_NO
+-   0
+89  HOUSE_NO
+waterside   STREET_NAME
+drive   STREET_NAME
+
+70  SUITE_NO
+-   0
+74  HOUSE_NO
+coastal STREET_NAME
+road    STREET_NAME
+
+60  SUITE_NO
+-   0
+68  HOUSE_NO
+cedarwood   STREET_NAME
+street  STREET_NAME
+
+1   SUITE_NO
+-   0
+5   HOUSE_NO
+merihaka    STREET_NAME
+
+36  SUITE_NO
+-   0
+38  HOUSE_NO
+kultalantie STREET_NAME
+
+20  SUITE_NO
+-   0
+24  HOUSE_NO
+marshfield  STREET_NAME
+street  STREET_NAME
+
+140     SUITE_NO
+-   0
+144     HOUSE_NO
+sompasaarenlaituri  STREET_NAME
+
+105     SUITE_NO
+-   0
+109     HOUSE_NO
+tammasaarenlaituri  STREET_NAME
+
+100     SUITE_NO
+-   0
+104     HOUSE_NO
+katajanokankatu STREET_NAME
+
+1201    SUITE_NO
+-   0
+1299    HOUSE_NO
+pinecrest   STREET_NAME
+avenue  STREET_NAME
+
+900     SUITE_NO
+-   0
+998     HOUSE_NO
+bayview STREET_NAME
+court   STREET_NAME
+
+150     SUITE_NO
+-   0
+154     HOUSE_NO
+vattuniemenkatu STREET_NAME
+
+2500    SUITE_NO
+-   0
+2598    HOUSE_NO
+riverside   STREET_NAME
+road    STREET_NAME
+
+600     SUITE_NO
+-   0
+698     HOUSE_NO
+lakeshore   STREET_NAME
+drive   STREET_NAME
+
+145     SUITE_NO
+-   0
+149     HOUSE_NO
+lakeside    STREET_NAME
+street  STREET_NAME
+
+28  SUITE_NO
+-   0
+30  HOUSE_NO
+hietasaarenkatu STREET_NAME
+
+35  SUITE_NO
+-   0
+39  HOUSE_NO
+elmwood STREET_NAME
+avenue  STREET_NAME
+
+901     SUITE_NO
+-   0
+999     HOUSE_NO
+oceanview   STREET_NAME
+court   STREET_NAME
+
+16  SUITE_NO
+-   0
+20  HOUSE_NO
+kruunuvuorenranta   STREET_NAME
+
+16  SUITE_NO
+-   0
+20  HOUSE_NO
+kruunuvuorenranta   STREET_NAME
+
+800     SUITE_NO
+-   0
+898     HOUSE_NO
+elmwood STREET_NAME
+court   STREET_NAME
+
+1000    SUITE_NO
+-   0
+1098    HOUSE_NO
+beachside   STREET_NAME
+lane    STREET_NAME
+
+1300    SUITE_NO
+-   0
+1398    HOUSE_NO
+bayside STREET_NAME
+road    STREET_NAME
+
+1401    SUITE_NO
+-   0
+1499    HOUSE_NO
+sunflower   STREET_NAME
+street  STREET_NAME
+
+1   SUITE_NO
+-   0
+5   HOUSE_NO
+merisatama  STREET_NAME
+
+80  SUITE_NO
+-   0
+88  HOUSE_NO
+lakeshore   STREET_NAME
+drive   STREET_NAME
+
+90  SUITE_NO
+-   0
+94  HOUSE_NO
+kaisaniemenkatu STREET_NAME
+
+90  SUITE_NO
+-   0
+98  HOUSE_NO
+elmwood STREET_NAME
+court   STREET_NAME
+
+11  SUITE_NO
+-   0
+15  HOUSE_NO
+elmcrest    STREET_NAME
+avenue  STREET_NAME
+
+1800    SUITE_NO
+-   0
+1898    HOUSE_NO
+riverside   STREET_NAME
+avenue  STREET_NAME
+
+10  SUITE_NO
+-   0
+12  HOUSE_NO
+keskuskatu  STREET_NAME
+
+601     SUITE_NO
+-   0
+699     HOUSE_NO
+waterside   STREET_NAME
+avenue  STREET_NAME
+
+24  SUITE_NO
+-   0
+26  HOUSE_NO
+korkeavuorenkatu    STREET_NAME
+
+5   SUITE_NO
+-   0
+7   HOUSE_NO
+katajanokankatu STREET_NAME
+
+101     SUITE_NO
+-   0
+199     HOUSE_NO
+seafront    STREET_NAME
+drive   STREET_NAME
+
+1400    SUITE_NO
+-   0
+1498    HOUSE_NO
+seashore    STREET_NAME
+drive   STREET_NAME
+
+115     SUITE_NO
+-   0
+119     HOUSE_NO
+cliffside   STREET_NAME
+lane    STREET_NAME
+
+1600    SUITE_NO
+-   0
+1698    HOUSE_NO
+riverside   STREET_NAME
+street  STREET_NAME
+
+50  SUITE_NO
+-   0
+54  HOUSE_NO
+lakeside    STREET_NAME
+blvd    STREET_NAME
+
+1601    SUITE_NO
+-   0
+1699    HOUSE_NO
+highway STREET_NAME
+3   STREET_NAME
+e   STREET_NAME
+
+401     SUITE_NO
+-   0
+499     HOUSE_NO
+pier    STREET_NAME
+lane    STREET_NAME
+
+1   SUITE_NO
+-   0
+3   HOUSE_NO
+tammasaarenlaituri  STREET_NAME
+
+1301    SUITE_NO
+-   0
+1399    HOUSE_NO
+maple   STREET_NAME
+drive   STREET_NAME
+
+65  SUITE_NO
+-   0
+69  HOUSE_NO
+harbourview STREET_NAME
+lane    STREET_NAME
+
+40  SUITE_NO
+-   0
+44  HOUSE_NO
+willow  STREET_NAME
+street  STREET_NAME
+
+801     SUITE_NO
+-   0
+899     HOUSE_NO
+bayview STREET_NAME
+road    STREET_NAME
+
+701     SUITE_NO
+-   0
+799     HOUSE_NO
+beachside   STREET_NAME
+court   STREET_NAME
+
+2100    SUITE_NO
+-   0
+2198    HOUSE_NO
+oakwood STREET_NAME
+court   STREET_NAME
+
+21  SUITE_NO
+-   0
+25  HOUSE_NO
+kultalantie STREET_NAME
+
+1700    SUITE_NO
+-   0
+1798    HOUSE_NO
+lakeside    STREET_NAME
+drive   STREET_NAME
+
+1101    SUITE_NO
+-   0
+1199    HOUSE_NO
+redwood STREET_NAME
+drive   STREET_NAME
+
+1500    SUITE_NO
+-   0
+1598    HOUSE_NO
+beachfront  STREET_NAME
+lane    STREET_NAME
+
+501     SUITE_NO
+-   0
+599     HOUSE_NO
+dockside    STREET_NAME
+court   STREET_NAME
+
+15  SUITE_NO
+-   0
+17  HOUSE_NO
+kaivokatu   STREET_NAME
+
+1501    SUITE_NO
+-   0
+1599    HOUSE_NO
+ocean   STREET_NAME
+avenue  STREET_NAME
+
+31  SUITE_NO
+-   0
+35  HOUSE_NO
+katajanokankatu STREET_NAME
+
+1100    SUITE_NO
+-   0
+1198    HOUSE_NO
+ocean   STREET_NAME
+lane    STREET_NAME
+
+20  SUITE_NO
+-   0
+22  HOUSE_NO
+merihaka    STREET_NAME
+
+165     SUITE_NO
+-   0
+169     HOUSE_NO
+waterfront  STREET_NAME
+road    STREET_NAME
+
+70  SUITE_NO
+-   0
+78  HOUSE_NO
+maplewood   STREET_NAME
+lane    STREET_NAME
+
+160     SUITE_NO
+-   0
+164     HOUSE_NO
+coastal STREET_NAME
+lane    STREET_NAME
+
+500     SUITE_NO
+-   0
+598     HOUSE_NO
+elmcrest    STREET_NAME
+avenue  STREET_NAME
+
+30  SUITE_NO
+-   0
+34  HOUSE_NO
+park    STREET_NAME
+lane    STREET_NAME
+
+95  SUITE_NO
+-   0
+99  HOUSE_NO
+hernesaarenranta    STREET_NAME
+
+155     SUITE_NO
+-   0
+159     HOUSE_NO
+korkeavuorenkatu    STREET_NAME
+
+12  SUITE_NO
+-   0
+14  HOUSE_NO
+hernesaarenkatu STREET_NAME

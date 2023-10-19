@@ -174,17 +174,22 @@ def pattern_4_maker_single(address):
 
     address_parts = address.split(" ")
 
+    # print(len(address_parts))
+
     content = ""
 
-    sub_parts = address_parts[0].split("-")
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
 
+        if(c_index == 0):
 
-    content += get_single_content(sub_parts[0], "SUITE_NO")
-    content += get_single_content("-", "0")
-    content += get_single_content(sub_parts[1], "HOUSE_NO")
+            sub_parts = c_item.split("-")
 
-    content += get_single_content(address_parts[1], "STREET_NAME")
-    content += get_single_content(address_parts[2], "STREET_NAME")
+            content += get_single_content(sub_parts[0], "SUITE_NO")
+            content += get_single_content("-", "0")
+            content += get_single_content(sub_parts[1], "HOUSE_NO")
+        else:
+            content += get_single_content(c_item, "STREET_NAME")
 
     return content
 
@@ -1045,7 +1050,7 @@ def startpy():
     # pattern_1_maker_single("12A WEST STREET")
 
     # Pattern 1
-    print(pattern_maker_multiple(1))
+    # print(pattern_maker_multiple(1))
 
     # Pattern 2
     # print(pattern_maker_multiple(2))
@@ -1054,7 +1059,7 @@ def startpy():
     # print(pattern_maker_multiple(3))
 
     # Pattern 4
-    # print(pattern_maker_multiple(4))
+    print(pattern_maker_multiple(4))
 
     # Pattern 5
     # pattern_5_maker_single("1/3 WESTGATE PARK FODDERWICK")

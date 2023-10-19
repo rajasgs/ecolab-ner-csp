@@ -555,3 +555,428 @@ drive   STREET_NAME
 57  HOUSE_NO
 beacon  STREET_NAME
 ave     STREET_NAME
+
+66  HOUSE_NO
+sunnyside   STREET_NAME
+road    STREET_NAME
+
+4540    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+4540    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+84  HOUSE_NO
+winn    STREET_NAME
+ave     STREET_NAME
+
+545     HOUSE_NO
+n   STREET_NAME
+albert  STREET_NAME
+st  STREET_NAME
+
+34  HOUSE_NO
+winnmere    STREET_NAME
+drive   STREET_NAME
+
+87  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+99  HOUSE_NO
+sylvester   STREET_NAME
+avenue  STREET_NAME
+
+3134    HOUSE_NO
+8th     STREET_NAME
+st  STREET_NAME
+e   STREET_NAME
+
+36  HOUSE_NO
+sylvester   STREET_NAME
+avenue  STREET_NAME
+
+38  HOUSE_NO
+sylvester   STREET_NAME
+circle  STREET_NAME
+
+2660    HOUSE_NO
+e   STREET_NAME
+quance  STREET_NAME
+st  STREET_NAME
+
+42  HOUSE_NO
+sylvester   STREET_NAME
+cresent STREET_NAME
+
+84  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+80  HOUSE_NO
+sylvester   STREET_NAME
+road    STREET_NAME
+
+37  HOUSE_NO
+sylvester   STREET_NAME
+drive   STREET_NAME
+
+57  HOUSE_NO
+beacon  STREET_NAME
+ave     STREET_NAME
+
+9584    HOUSE_NO
+n   STREET_NAME
+birchwood   STREET_NAME
+avenue  STREET_NAME
+
+3579    HOUSE_NO
+s   STREET_NAME
+redwood STREET_NAME
+lane    STREET_NAME
+
+23  HOUSE_NO
+sylvester   STREET_NAME
+cresent STREET_NAME
+
+4863    HOUSE_NO
+n   STREET_NAME
+maple   STREET_NAME
+avenue  STREET_NAME
+
+34  HOUSE_NO
+winnmere    STREET_NAME
+drive   STREET_NAME
+
+47  HOUSE_NO
+sylvester   STREET_NAME
+road    STREET_NAME
+
+40  HOUSE_NO
+sylvester   STREET_NAME
+circle  STREET_NAME
+
+49  HOUSE_NO
+main    STREET_NAME
+st  STREET_NAME
+
+95  HOUSE_NO
+winnmere    STREET_NAME
+avenue  STREET_NAME
+
+52  HOUSE_NO
+winn    STREET_NAME
+ave     STREET_NAME
+
+14  HOUSE_NO
+winnmere    STREET_NAME
+avenue  STREET_NAME
+
+60  HOUSE_NO
+dover   STREET_NAME
+circle  STREET_NAME
+
+3134    HOUSE_NO
+8th     STREET_NAME
+st  STREET_NAME
+e   STREET_NAME
+
+4540    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+84  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+3929    HOUSE_NO
+8th     STREET_NAME
+st  STREET_NAME
+e   STREET_NAME
+
+2101    HOUSE_NO
+w   STREET_NAME
+elmwood STREET_NAME
+drive   STREET_NAME
+
+4125    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+66  HOUSE_NO
+sunnyside   STREET_NAME
+circle  STREET_NAME
+
+3134    HOUSE_NO
+8th     STREET_NAME
+st  STREET_NAME
+e   STREET_NAME
+
+28  HOUSE_NO
+winn    STREET_NAME
+drive   STREET_NAME
+
+42  HOUSE_NO
+sylvester   STREET_NAME
+cresent STREET_NAME
+
+5274    HOUSE_NO
+w   STREET_NAME
+cedarcrest  STREET_NAME
+drive   STREET_NAME
+
+6174    HOUSE_NO
+s   STREET_NAME
+cedarcrest  STREET_NAME
+lane    STREET_NAME
+
+87  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+4286    HOUSE_NO
+s   STREET_NAME
+maple   STREET_NAME
+lane    STREET_NAME
+
+86  HOUSE_NO
+beacon  STREET_NAME
+circle  STREET_NAME
+
+4125    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+7349    HOUSE_NO
+n   STREET_NAME
+spruce  STREET_NAME
+avenue  STREET_NAME
+
+5310    HOUSE_NO
+w   STREET_NAME
+redwood STREET_NAME
+court   STREET_NAME
+
+7   HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+2365    HOUSE_NO
+e   STREET_NAME
+cedarwood   STREET_NAME
+road    STREET_NAME
+
+7349    HOUSE_NO
+w   STREET_NAME
+spruce  STREET_NAME
+drive   STREET_NAME
+
+15  HOUSE_NO
+winn    STREET_NAME
+drive   STREET_NAME
+
+70  HOUSE_NO
+winnmere    STREET_NAME
+road    STREET_NAME
+
+4321    HOUSE_NO
+e   STREET_NAME
+maple   STREET_NAME
+lane    STREET_NAME
+
+1620    HOUSE_NO
+e   STREET_NAME
+elm     STREET_NAME
+lane    STREET_NAME
+
+9   HOUSE_NO
+sunnyside   STREET_NAME
+cresent STREET_NAME
+
+2903    HOUSE_NO
+e   STREET_NAME
+cedarwood   STREET_NAME
+lane    STREET_NAME
+
+2137    HOUSE_NO
+s   STREET_NAME
+pinecrest   STREET_NAME
+street  STREET_NAME
+
+20  HOUSE_NO
+winnmere    STREET_NAME
+circle  STREET_NAME
+
+2660    HOUSE_NO
+e   STREET_NAME
+quance  STREET_NAME
+st  STREET_NAME
+
+40  HOUSE_NO
+sylvester   STREET_NAME
+circle  STREET_NAME
+
+3929    HOUSE_NO
+8th     STREET_NAME
+st  STREET_NAME
+e   STREET_NAME
+
+61  HOUSE_NO
+sylvester   STREET_NAME
+road    STREET_NAME
+
+5768    HOUSE_NO
+e   STREET_NAME
+cedar   STREET_NAME
+drive   STREET_NAME
+
+9010    HOUSE_NO
+w   STREET_NAME
+oak     STREET_NAME
+road    STREET_NAME
+
+52  HOUSE_NO
+winn    STREET_NAME
+ave     STREET_NAME
+
+66  HOUSE_NO
+sunnyside   STREET_NAME
+road    STREET_NAME
+
+27  HOUSE_NO
+winn    STREET_NAME
+cresent STREET_NAME
+
+2365    HOUSE_NO
+w   STREET_NAME
+oakhill STREET_NAME
+blvd    STREET_NAME
+
+84  HOUSE_NO
+winn    STREET_NAME
+ave     STREET_NAME
+
+94  HOUSE_NO
+beacon  STREET_NAME
+circle  STREET_NAME
+
+71  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+32  SUITE_NO
+-   0
+34  HOUSE_NO
+eteläranta  STREET_NAME
+
+6   SUITE_NO
+-   0
+10  HOUSE_NO
+hernesaarenkatu STREET_NAME
+
+200     SUITE_NO
+-   0
+298     HOUSE_NO
+pinecrest   STREET_NAME
+road    STREET_NAME
+
+700     SUITE_NO
+-   0
+798     HOUSE_NO
+riverside   STREET_NAME
+road    STREET_NAME
+
+1701    SUITE_NO
+-   0
+1799    HOUSE_NO
+highway STREET_NAME
+2   STREET_NAME
+w   STREET_NAME
+
+130     SUITE_NO
+-   0
+134     HOUSE_NO
+coastal STREET_NAME
+avenue  STREET_NAME
+
+1001    SUITE_NO
+-   0
+1099    HOUSE_NO
+spruce  STREET_NAME
+lane    STREET_NAME
+
+11  SUITE_NO
+-   0
+15  HOUSE_NO
+merikannontie   STREET_NAME
+
+45  SUITE_NO
+-   0
+49  HOUSE_NO
+forest  STREET_NAME
+road    STREET_NAME
+
+80  SUITE_NO
+-   0
+84  HOUSE_NO
+sompasaarenlaituri  STREET_NAME
+
+60  SUITE_NO
+-   0
+64  HOUSE_NO
+cliffside   STREET_NAME
+street  STREET_NAME
+
+8   SUITE_NO
+-   0
+10  HOUSE_NO
+kruunuvuorenranta   STREET_NAME
+
+110     SUITE_NO
+-   0
+114     HOUSE_NO
+vattuniemenkatu STREET_NAME
+
+100     SUITE_NO
+-   0
+198     HOUSE_NO
+riverside   STREET_NAME
+lane    STREET_NAME
+
+201     SUITE_NO
+-   0
+299     HOUSE_NO
+harborview  STREET_NAME
+street  STREET_NAME
+
+301     SUITE_NO
+-   0
+399     HOUSE_NO
+lighthouse  STREET_NAME
+lane    STREET_NAME
+
+25  SUITE_NO
+-   0
+29  HOUSE_NO
+waterfront  STREET_NAME
+drive   STREET_NAME
+
+400     SUITE_NO
+-   0
+498     HOUSE_NO
+maplewood   STREET_NAME
+lane    STREET_NAME
+
+2920    SUITE_NO
+-   0
+2092    HOUSE_NO
+humber  STREET_NAME
+blvd    STREET_NAME
+
+6   SUITE_NO
+-   0
+10  HOUSE_NO
+beachfront  STREET_NAME
+drive   STREET_NAME
