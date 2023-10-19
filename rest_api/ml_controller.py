@@ -66,16 +66,19 @@ def api_dynamic_versions(version_number):
 
     address = request.values.get('address')
     
-    result = pr.classify_address(
+    result, modelpath = pr.classify_address(
         address, 
         model_version = version_number
     )
 
-    colog.info(result)
+    # colog.info(result)
+
+    print(f'modelpath : {modelpath}')
 
     return render_template(
         'index_with_version.html', 
-        version_number = LATEST_VERSION,
-        result = result
+        version_number  = version_number,
+        result          = result, 
+        modelpath       = modelpath
     )
     

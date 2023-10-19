@@ -1,0 +1,70 @@
+66  HOUSE_NO
+sunnyside   STREET_NAME
+road    STREET_NAME
+
+4540    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+4540    HOUSE_NO
+rae     STREET_NAME
+st  STREET_NAME
+
+84  HOUSE_NO
+winn    STREET_NAME
+ave     STREET_NAME
+
+545     HOUSE_NO
+n   STREET_NAME
+albert  STREET_NAME
+st  STREET_NAME
+
+34  HOUSE_NO
+winnmere    STREET_NAME
+drive   STREET_NAME
+
+87  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+99  HOUSE_NO
+sylvester   STREET_NAME
+avenue  STREET_NAME
+
+3134    HOUSE_NO
+8th     STREET_NAME
+st  STREET_NAME
+e   STREET_NAME
+
+36  HOUSE_NO
+sylvester   STREET_NAME
+avenue  STREET_NAME
+
+38  HOUSE_NO
+sylvester   STREET_NAME
+circle  STREET_NAME
+
+2660    HOUSE_NO
+e   STREET_NAME
+quance  STREET_NAME
+st  STREET_NAME
+
+42  HOUSE_NO
+sylvester   STREET_NAME
+cresent STREET_NAME
+
+84  HOUSE_NO
+dover   STREET_NAME
+cresent STREET_NAME
+
+80  HOUSE_NO
+sylvester   STREET_NAME
+road    STREET_NAME
+
+37  HOUSE_NO
+sylvester   STREET_NAME
+drive   STREET_NAME
+
+57  HOUSE_NO
+beacon  STREET_NAME
+ave     STREET_NAME

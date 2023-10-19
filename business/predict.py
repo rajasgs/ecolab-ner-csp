@@ -19,9 +19,11 @@ def classify_address(
     address,
     model_version = "v1"
 ):
-    vas_singledon = vas.ValidatorSingleton.getInstance(model_version)
+    vas_singleton = vas.ValidatorSingleton.getInstance(model_version)
 
-    result = vas_singledon.get_tokens(address)
+    result = vas_singleton.get_tokens(address)
     print(f'result : {result}')
 
-    return result
+    print(f'vas_singleton.model : {vas_singleton.model}')
+
+    return result, vas_singleton.model

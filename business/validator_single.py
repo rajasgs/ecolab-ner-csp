@@ -9,7 +9,7 @@ class ValidatorSingleton:
 
 
     @staticmethod 
-    def getInstance(model_version = "v5"):
+    def getInstance(model_version = "v1"):
         """ Static access method. """
         if ValidatorSingleton.__instance == None:
             ValidatorSingleton(model_version)

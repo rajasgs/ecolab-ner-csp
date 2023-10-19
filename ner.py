@@ -142,10 +142,18 @@ def startpy():
     # train_model("ecolab_address_ner_model_csp", ["Ecolab_Address_Training.txt"], ["Ecolab_Address_Test_2.txt"], True, classpath)
     # train_model("ecolab_address_20230720", ["Ecolab_Address_Training_Ver1.txt"], ["Ecolab_Address_Testing_Ver1.txt"], True, classpath)
 
+    # train_model(
+    #     "ecolab_address_20231018_3", 
+    #     ["Ecolab_Address_Training_Pattern1_2023_08_28_4.txt"], 
+    #     ["Ecolab_Address_Testing_Pattern1_2023_08_28_4.txt"], 
+    #     True, 
+    #     classpath
+    # )
+
     train_model(
-        "ecolab_address_20230828_3", 
-        ["Ecolab_Address_Training_Pattern1_2023_08_28_4.txt"], 
-        ["Ecolab_Address_Testing_Pattern1_2023_08_28_4.txt"], 
+        "ecolab_address_20231018_1", 
+        ["Ecolab_Address_Training_Pattern1_2023_10_18_1.txt"], 
+        ["Ecolab_Address_Testing_Pattern1_2023_10_18_1.txt"], 
         True, 
         classpath
     )
