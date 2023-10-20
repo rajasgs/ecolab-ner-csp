@@ -1,0 +1,23 @@
+strandgatan STREET_NAME
+8   HOUSE_NO
+
+potravinárska   STREET_NAME
+6   HOUSE_NO
+
+zahradní    STREET_NAME
+428     HOUSE_NO
+
+věstonická  STREET_NAME
+1   HOUSE_NO
+
+oosterpas   STREET_NAME
+20  HOUSE_NO
+
+römer   STREET_NAME
+10  HOUSE_NO
+
+mahlerstraße    STREET_NAME
+15  HOUSE_NO
+
+långgatan   STREET_NAME
+7   HOUSE_NO

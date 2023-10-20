@@ -38,6 +38,12 @@ def get_spaces(content):
     
     if(len(content) < 20):
         return (" " * (20 - len(content)))
+    
+    if(len(content) < 24):
+        return (" " * (24 - len(content)))
+    
+    if(len(content) < 28):
+        return (" " * (28 - len(content)))
 
     return ""
 
@@ -946,6 +952,34 @@ def pattern_30_maker_single(address):
 
     return content
 
+def pattern_31_maker_single(address):
+
+    pass
+
+def pattern_32_maker_single(address):
+
+    '''
+        Pattern 32:
+
+        1	
+        (Street_Name_Single_Word)(House_No)
+        
+        Sample:
+        drottninggatan 7
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    if(len(address_parts) > 2):
+        return ""
+    
+    content += get_single_content(address_parts[0], "STREET_NAME")
+    content += get_single_content(address_parts[1], "HOUSE_NO")
+
+    return content
+
 def pattern_maker_single(c_line, pattern_index):
 
     if(pattern_index == 1):
@@ -1004,6 +1038,10 @@ def pattern_maker_single(c_line, pattern_index):
         return pattern_29_maker_single(c_line)
     elif(pattern_index == 30):
         return pattern_30_maker_single(c_line)
+    elif(pattern_index == 31):
+        return pattern_31_maker_single(c_line)
+    elif(pattern_index == 32):
+        return pattern_32_maker_single(c_line)
 
     return 0
 
@@ -1063,7 +1101,7 @@ def startpy():
 
     # Pattern 5
     # pattern_5_maker_single("1/3 WESTGATE PARK FODDERWICK")
-    print(pattern_maker_multiple(5))
+    # print(pattern_maker_multiple(5))
 
     # Pattern 6
     # print(pattern_maker_multiple(6))
@@ -1135,6 +1173,12 @@ def startpy():
 
     # Pattern 30
     # print(pattern_maker_multiple(30))
+
+    # Pattern 31
+    # print(pattern_maker_multiple(30))
+
+    # Pattern 32
+    print(pattern_maker_multiple(32))
 
     pass
 
