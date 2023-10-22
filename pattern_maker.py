@@ -574,7 +574,7 @@ def pattern_17_maker_single(address):
 def pattern_18_maker_single(address):
 
     '''
-        Pattern 17:
+        Pattern 18:
 
         18		
 
@@ -823,11 +823,6 @@ def pattern_26_maker_single(address):
     return content
     
 
-    # print(content)
-
-    pass
-
-
 def pattern_27_maker_single(address):
 
     '''
@@ -983,69 +978,6 @@ def pattern_32_maker_single(address):
 
 def pattern_maker_single(c_line, pattern_index):
 
-    # dyn_method = 
-
-    # if(pattern_index == 1):
-    #     return pattern_1_maker_single(c_line)
-    # elif(pattern_index == 2):
-    #     return pattern_2_maker_single(c_line)
-    # elif(pattern_index == 3):
-    #     return pattern_3_maker_single(c_line)
-    # elif(pattern_index == 4):
-    #     return pattern_4_maker_single(c_line)
-    # elif(pattern_index == 5):
-    #     return pattern_5_maker_single(c_line)
-    # elif(pattern_index == 6):
-    #     return pattern_6_maker_single(c_line)
-    # elif(pattern_index == 7):
-    #     return pattern_7_maker_single(c_line)
-    # elif(pattern_index == 8):
-    #     return pattern_8_maker_single(c_line)
-    # elif(pattern_index == 9):
-    #     return pattern_9_maker_single(c_line)
-    # elif(pattern_index == 10):
-    #     return pattern_10_maker_single(c_line)
-    # elif(pattern_index == 11):
-    #     return pattern_11_maker_single(c_line)
-    # elif(pattern_index == 12):
-    #     return pattern_12_maker_single(c_line)
-    # elif(pattern_index == 13):
-    #     return pattern_13_maker_single(c_line)
-    # elif(pattern_index == 14):
-    #     return pattern_14_maker_single(c_line)
-    # elif(pattern_index == 15):
-    #     return pattern_15_maker_single(c_line)
-    # elif(pattern_index == 16):
-    #     return pattern_16_maker_single(c_line)
-    # elif(pattern_index == 17):
-    #     return pattern_17_maker_single(c_line)
-    # elif(pattern_index == 18):
-    #     return pattern_18_maker_single(c_line)
-    # elif(pattern_index == 19):
-    #     return pattern_19_maker_single(c_line)
-    # elif(pattern_index == 21):
-    #     return pattern_21_maker_single(c_line)
-    # elif(pattern_index == 22):
-    #     return pattern_22_maker_single(c_line)
-    # elif(pattern_index == 23):
-    #     return pattern_23_maker_single(c_line)
-    # elif(pattern_index == 24):
-    #     return pattern_24_maker_single(c_line)
-    # elif(pattern_index == 26):
-    #     return pattern_26_maker_single(c_line)
-    # elif(pattern_index == 27):
-    #     return pattern_27_maker_single(c_line)
-    # elif(pattern_index == 28):
-    #     return pattern_28_maker_single(c_line)
-    # elif(pattern_index == 29):
-    #     return pattern_29_maker_single(c_line)
-    # elif(pattern_index == 30):
-    #     return pattern_30_maker_single(c_line)
-    # elif(pattern_index == 31):
-    #     return pattern_31_maker_single(c_line)
-    # elif(pattern_index == 32):
-    #     return pattern_32_maker_single(c_line)
-
     dynamic_module  = import_module(f"pattern_maker")
     dynamic_method  = getattr(dynamic_module, f"pattern_{pattern_index}_maker_single")
 
@@ -1112,13 +1044,13 @@ def startpy():
     # Pattern 6
     # print(pattern_maker_multiple(6))
 
-    # Pattern 7
+    # Pattern 7: Not implemented
     # print(pattern_maker_multiple(7))
 
-    # Pattern 8
+    # Pattern 8: Not implemented
     # print(pattern_maker_multiple(8))
 
-    # Pattern 9
+    # Pattern 9: Not implemented
     # print(pattern_maker_multiple(9))
 
     # Pattern 10
@@ -1151,6 +1083,8 @@ def startpy():
     # Pattern 19
     # print(pattern_maker_multiple(19))
 
+    # 20 : Not implemented
+
     # print(pattern_21_maker_single("KAMPUNG MUHHIBAH 14981 JALAN PUCHONG"))
     # Pattern 21
     # print(pattern_maker_multiple(21))
@@ -1163,6 +1097,8 @@ def startpy():
 
     # Pattern 24
     # print(pattern_maker_multiple(24))
+
+    # : Not implemented
 
     # Pattern 26
     # print(pattern_maker_multiple(26))
@@ -1184,7 +1120,7 @@ def startpy():
     # print(pattern_maker_multiple(30))
 
     # Pattern 32
-    print(pattern_maker_multiple(32))
+    # print(pattern_maker_multiple(32))
 
     pass
 
