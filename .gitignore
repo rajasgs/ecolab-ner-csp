@@ -201,3 +201,4 @@ static/images/*
 .~lock.*
 
 outputs1/
+address_*_bert_*.csv
