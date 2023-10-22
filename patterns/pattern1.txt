@@ -1,36 +1,16 @@
-1440 14TH AVE
-49 MAIN ST
-260 SUNSET DR
-260 SUNSET DR
-545 N ALBERT ST
-545 N ALBERT ST
-545 N ALBERT ST
-3929 8TH ST E
-3929 8TH ST E
-3929 8TH ST E
-3929 8TH ST E
-4540 RAE ST
-4540 RAE ST
-4540 RAE ST
-4540 RAE ST
-1840 E VICTORIA AVE
-1840 E VICTORIA AVE
-1840 E VICTORIA AVE
-2660 E QUANCE ST
-2660 E QUANCE ST
-2660 E QUANCE ST
-2660 E QUANCE ST
-1880 SASKATCHEWAN DR
-1601 8TH ST E
-1601 8TH ST E
-1601 8TH ST E
-4125 RAE ST
-4125 RAE ST
-3134 8TH ST E
-3134 8TH ST E
-3134 8TH ST E
-3134 8TH ST E
-710 SASKATCHEWAN AVE E
+1440 14th ave
+49 main st
+260 sunset dr
+545 n albert st
+3929 8th st e
+4540 rae st
+1840 e victoria ave
+2660 e quance st
+1880 saskatchewan dr
+1601 8th st e
+4125 rae st
+3134 8th st e
+710 saskatchewan ave e
 47 sylvester road
 60 dover circle
 94 beacon circle
@@ -81,76 +61,76 @@
 95 winnmere avenue
 27 winn cresent
 9 sunnyside cresent
-3200 E Sky Harbor Blvd
-3200 Sky Harbor Blvd
-28 W Sky Harbor Blvd
-1234 N Main Street
-5678 S Elm Avenue
-9010 W Oak Road
-4321 E Maple Lane
-7890 N Pine Drive
-2468 S Birch Court
-1357 W Cedar Street
-8642 E Willow Blvd
-6420 N Oakwood Blvd
-3579 S Redwood Lane
-2101 W Elmwood Drive
-7536 E Pinecrest Blvd
-9584 N Birchwood Avenue
-6283 S Oakhill Road
-3692 W Spruce Street
-1745 E Forest Lane
-4863 N Maple Avenue
-9207 S Cedarwood Blvd
-5310 W Redwood Court
-2731 E Oak Ridge Lane
-5241 N Willow Street
-6723 S Oak Avenue
-1569 W Birchwood Lane
-8457 E Redwood Drive
-3498 N Cedar Court
-7012 S Pinecrest Road
-2365 W Oakhill Blvd
-9834 E Elmwood Road
-4286 S Maple Lane
-1620 N Birch Avenue
-7349 W Spruce Drive
-2903 E Cedarwood Lane
-6174 S Forest Street
-4591 N Pine Lane
-8256 W Oak Ridge Avenue
-2137 S Redwood Court
-5768 E Cedar Drive
-3845 N Elm Lane
-9630 S Willow Avenue
-1402 W Pinecrest Blvd
-6853 E Oakwood Lane
-3419 N Birch Road
-1796 S Elm Street
-5274 W Cedarcrest Drive
-2650 E Redwood Avenue
-8921 N Spruce Lane
-6432 S Maplewood Drive
-4098 W Forest Avenue
-1267 E Oak Avenue
-7510 N Pine Road
-5241 S Cedarwood Lane
-6723 E Willow Drive
-1569 N Oak Ridge Blvd
-8457 W Forest Lane
-3498 S Elmcrest Avenue
-7012 N Pinecrest Court
-2365 E Cedarwood Road
-9834 S Redwood Street
-4286 W Birchwood Drive
-1620 E Elm Lane
-7349 N Spruce Avenue
-2903 W Oakwood Blvd
-6174 S Cedarcrest Lane
-4591 N Oak Ridge Road
-8256 E Forest Drive
-2137 S Pinecrest Street
-5768 W Elmwood Lane
-3845 N Redwood Avenue
-9630 S Birch Lane
-1402 W Willow Road
+3200 e sky harbor blvd
+3200 sky harbor blvd
+28 w sky harbor blvd
+1234 n main street
+5678 s elm avenue
+9010 w oak road
+4321 e maple lane
+7890 n pine drive
+2468 s birch court
+1357 w cedar street
+8642 e willow blvd
+6420 n oakwood blvd
+3579 s redwood lane
+2101 w elmwood drive
+7536 e pinecrest blvd
+9584 n birchwood avenue
+6283 s oakhill road
+3692 w spruce street
+1745 e forest lane
+4863 n maple avenue
+9207 s cedarwood blvd
+5310 w redwood court
+2731 e oak ridge lane
+5241 n willow street
+6723 s oak avenue
+1569 w birchwood lane
+8457 e redwood drive
+3498 n cedar court
+7012 s pinecrest road
+2365 w oakhill blvd
+9834 e elmwood road
+4286 s maple lane
+1620 n birch avenue
+7349 w spruce drive
+2903 e cedarwood lane
+6174 s forest street
+4591 n pine lane
+8256 w oak ridge avenue
+2137 s redwood court
+5768 e cedar drive
+3845 n elm lane
+9630 s willow avenue
+1402 w pinecrest blvd
+6853 e oakwood lane
+3419 n birch road
+1796 s elm street
+5274 w cedarcrest drive
+2650 e redwood avenue
+8921 n spruce lane
+6432 s maplewood drive
+4098 w forest avenue
+1267 e oak avenue
+7510 n pine road
+5241 s cedarwood lane
+6723 e willow drive
+1569 n oak ridge blvd
+8457 w forest lane
+3498 s elmcrest avenue
+7012 n pinecrest court
+2365 e cedarwood road
+9834 s redwood street
+4286 w birchwood drive
+1620 e elm lane
+7349 n spruce avenue
+2903 w oakwood blvd
+6174 s cedarcrest lane
+4591 n oak ridge road
+8256 e forest drive
+2137 s pinecrest street
+5768 w elmwood lane
+3845 n redwood avenue
+9630 s birch lane
+1402 w willow road

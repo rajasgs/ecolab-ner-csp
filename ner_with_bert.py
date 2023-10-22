@@ -69,6 +69,8 @@ def train_and_save():
         # output_dir      = 'nermodel'
     )
 
+    # result, model_outputs, preds_list = model.eval_model(test_data)
+
 def load_and_predict():
     
     model = NERModel('bert', 'outputs/', use_cuda = False)

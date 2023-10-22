@@ -18,6 +18,14 @@ py app.py v1 8080
 py app.py v2 9090
 ```
 
+### How to run bert flask app?
+```
+py bert_app.py 9095
+
+how to train a model?
+py ner_with_bert.py
+```
+
 
 
 ### Address - Patterns - Raja
