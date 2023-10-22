@@ -25,9 +25,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import pandas as pd
 
+ADDRESS_INPUT_BERT_CSV_PATH = "address_training_bert_1.csv"
+
 def train_and_save():
 
-    data = pd.read_csv("address_training_bert_1.csv",encoding = "latin1" )
+    data = pd.read_csv(ADDRESS_INPUT_BERT_CSV_PATH,encoding = "latin1" )
     data.rename(
         columns = {
             "Sentence#" : "sentence_id", 
