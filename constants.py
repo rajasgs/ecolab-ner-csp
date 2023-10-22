@@ -17,3 +17,6 @@ load_dotenv()
 
 PORT_NO     = 8262
 APP_TITLE   = "Custom NER - Riversand"
+
+
+ADDRESS_INPUT_BERT_CSV_PATH = os.getenv("ADDRESS_INPUT_BERT_CSV_PATH")
