@@ -137,8 +137,8 @@ def pattern_maker_multiple(pattern_index):
 def get_current_index():
 
     with open('address_training_bert_2.csv', 'r') as f:
-        lines = f.read().splitlines()
-        last_line = lines[-1]
+        lines       = f.read().splitlines()
+        last_line   = lines[-1]
 
         try:
             cu_index = int(last_line.split(CSV_DELIM)[0])
