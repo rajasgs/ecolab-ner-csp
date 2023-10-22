@@ -196,3 +196,6 @@ validator.json
 nermodel/
 
 static/images/*
+
+
+.~lock.*
