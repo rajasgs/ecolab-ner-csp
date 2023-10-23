@@ -14,8 +14,9 @@ source:
 import random
 import sys
 from importlib import import_module
+import string
 
-MAX_ADDRESS_COUNT = 50
+MAX_ADDRESS_COUNT = 100
 
 dynamic_module  = import_module(f"custom_address_maker")
 
@@ -29,7 +30,7 @@ address_part_10002_str = """
 
 address_part_13_20231023_1 = """
 chanute, travis, main, elm, maple, oak, birch, cedar, spruce, pine, redwood, spruce, willow, marshfield, terrace, wyresdale, 
-neville, laity, temple, shaftesbury, hills, patrick, bentrim
+neville, laity, temple, shaftesbury, hills, patrick, bentrim, westgate, park, 
 """
 
 address_part_13_20231023_2 = """
@@ -39,6 +40,8 @@ rd, road, st, street, ave, avenue, lane, crt, court, drive, dr, causeway,
 address_part_13_20231023_3 = """
 unit, unt, unit, unit
 """
+
+
 
 def get_random_part(content):
 
@@ -58,9 +61,26 @@ def get_random_part(content):
 
     return str(random.choice(new_content_list)).strip()
 
-def get_house_no():
+def get_random_no():
 
     return random.randint(1, 1000)
+
+def get_random_character():
+
+    return str(random.choice(string.ascii_letters)).lower()
+
+def get_house_no():
+
+    return get_random_no()
+
+def get_random_boolean():
+
+    rno = get_random_no()
+
+    if(rno % 2 == 0):
+        return True
+    
+    return False
 
 grp = get_random_part
 
@@ -100,9 +120,61 @@ def pattern_2_maker_single():
 
     return f"{part1} {part2}"
 
+def pattern_5_maker_single():
+
+    '''
+        1/3 westgate park fodderwick
+    '''
+
+    part1 = grp(address_part_13_20231023_1)
+    part2 = grp(address_part_13_20231023_1)
+
+    final_part = f"{get_random_no()}/{get_random_no()} {part1} {part2}"
+
+    if(get_random_boolean()):
+        final_part = f"{final_part} {grp(address_part_13_20231023_2)}"
+
+    return final_part
+
+def pattern_6_maker_single():
+
+    '''
+        calle nueva york # 301
+        5535 irwin simpson rd # 5535
+        808 cosby hwy # 1540
+    '''
+
+    part1 = grp(address_part_13_20231023_1)
+    part2 = grp(address_part_13_20231023_2)
+
+    final_part = f""
+
+    if(get_random_boolean()):
+        final_part += f"{part1} "
+    
+    final_part += f"{part1} {part2} # {get_random_no()}"
+
+    return final_part
+
+def pattern_10_maker_single():
+
+    '''
+        172a robinhood ave
+    '''
+
+    part1 = f"{get_random_no()}{get_random_character()}"
+
+    part2 = grp(address_part_13_20231023_1)
+    part3 = grp(address_part_13_20231023_2)
+
+    final_part = f""
+    
+    final_part += f"{part1} {part2} {part3}"
+
+    return final_part
+
 def get_multiple_addresses(pattern_index):
 
-    
     dynamic_method  = getattr(dynamic_module, f"pattern_{pattern_index}_maker_single")
     
     for _ in range(MAX_ADDRESS_COUNT):

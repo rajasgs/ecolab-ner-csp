@@ -20,3 +20,9 @@ APP_TITLE   = "Custom NER - Riversand"
 
 
 ADDRESS_INPUT_BERT_CSV_PATH = os.getenv("ADDRESS_INPUT_BERT_CSV_PATH")
+PATTERN_DEBUG               = True if int(os.getenv("PATTERN_DEBUG") == 1) else False
+
+STREET_NAME                 = "STREET_NAME"
+HOUSE_NO                    = "HOUSE_NO"
+SUITE_NO                    = "SUITE_NO"
+EMPTY                       = "0"
