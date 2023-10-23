@@ -1,13 +1,15 @@
 
 
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 from importlib import import_module
+import sys
+
+# Local
+import constants as con
 
 PATTERNS_FOLDER = 'patterns/'
 
 CSV_DELIM = ','
-
-BERT_CSV_FILEPATH = ''
 
 spaces_mapping = {
         1: 3,
@@ -188,7 +190,7 @@ def pattern_4_maker_single(current_index, address):
             content += get_single_content(current_index, "-", "0")
             content += get_single_content(current_index, sub_parts[1], "HOUSE_NO")
         else:
-            content += get_single_content(c_item, "STREET_NAME")
+            content += get_single_content(current_index, c_item, "STREET_NAME")
 
     return content
 
@@ -273,7 +275,7 @@ def pattern_6_maker_single(current_index, address):
     return content
 
 
-def pattern_7_maker_single(address):
+def pattern_7_maker_single(current_index, address):
 
     '''
         Pattern 7:
@@ -287,9 +289,9 @@ def pattern_7_maker_single(address):
         Not clear
     '''
 
-    pass
+    raise Exception("Not Implemented")
 
-def pattern_8_maker_single(address):
+def pattern_8_maker_single(current_index, address):
 
     '''
         Pattern :
@@ -302,9 +304,9 @@ def pattern_8_maker_single(address):
         Not clear
     '''
 
-    pass
+    raise Exception("Not Implemented")
 
-def pattern_9_maker_single(address):
+def pattern_9_maker_single(current_index, address):
 
     '''
         Pattern :
@@ -316,7 +318,7 @@ def pattern_9_maker_single(address):
         Not clear
     '''
 
-    pass
+    raise Exception("Not Implemented")
 
 def pattern_10_maker_single(current_index, address):
 
@@ -537,7 +539,7 @@ def pattern_17_maker_single(current_index, address):
         
     '''
 
-    main_address_parts = address.split("PO BOX")
+    main_address_parts = address.split("po box")
 
     address_parts = main_address_parts[0].split(" ")
 
@@ -635,7 +637,7 @@ def pattern_20_maker_single(current_index, address):
 
     # print(content)
 
-    pass
+    raise Exception("Not Implemented")
 
 def pattern_21_maker_single(current_index, address):
 
@@ -1001,7 +1003,7 @@ def pattern_maker_multiple(pattern_index):
 
 def get_current_index():
 
-    with open('address_training_bert_2.csv', 'r') as f:
+    with open(con.ADDRESS_INPUT_BERT_CSV_PATH, 'r') as f:
         lines       = f.read().splitlines()
         last_line   = lines[-1]
 
@@ -1016,6 +1018,10 @@ current_index = get_current_index()
 
 def startpy():
 
+    pattern = int(sys.argv[1])
+
+    print(pattern_maker_multiple(pattern))    
+
     # pattern_1_maker_single("12A WEST STREET")
 
     # Pattern 1
@@ -1028,7 +1034,7 @@ def startpy():
     # print(pattern_maker_multiple(3))
 
     # Pattern 4
-    print(pattern_maker_multiple(4))    
+    # print(pattern_maker_multiple(4))    
 
     # Pattern 5
     # pattern_5_maker_single("1/3 WESTGATE PARK FODDERWICK")

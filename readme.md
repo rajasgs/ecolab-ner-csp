@@ -34,3 +34,10 @@ https://docs.google.com/spreadsheets/d/1RuTw-ycDOy2EUHf0qDp3kVvoZ0_s-bjd4eeRAyZn
 
 ### Generate Address
 [Generate Address](https://chat.openai.com/share/dcb468e2-904d-45f8-85e8-2371a3f20505)
+
+# BERT Dataset
+```
+VAP/RS/ecolab-ner-csp/address_training_bert_2.csv
+
+
+```

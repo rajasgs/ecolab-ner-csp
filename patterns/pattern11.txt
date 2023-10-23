@@ -1,2 +1,7 @@
-200A-200B LAKESHORE DR
-4A-4C FISCHMARKT
+200a-200b lakeshore dr
+4a-4c fischmarkt
+200a-10c lakeshore dr
+200b-22c lakeshore dr
+200c-11c lakeshore dr
+4a-38c fischmarkt
+4b-22c fischmarkt
