@@ -18,6 +18,18 @@ py app.py v1 8080
 py app.py v2 9090
 ```
 
+### How to make inputs?
+```
+for CoreNLP:
+
+
+for BERT:
+py bert_pattern_maker.py <pattern_no>
+py bert_pattern_maker.py 31
+
+
+```
+
 ### How to run bert flask app?
 ```
 py bert_app.py 9095

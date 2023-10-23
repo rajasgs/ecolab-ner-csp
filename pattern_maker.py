@@ -20,6 +20,7 @@ source:
 # import numbers
 from sklearn.model_selection import train_test_split
 from importlib import import_module
+import sys
 
 PATTERNS_FOLDER = 'patterns/'
 
@@ -1024,6 +1025,10 @@ def pattern_maker_multiple(pattern_index):
 def startpy():
     
     # pattern_1_maker_single("12A WEST STREET")
+
+    pattern = int(sys.argv[1])
+
+    print(pattern_maker_multiple(pattern))
 
     # Pattern 1
     # print(pattern_maker_multiple(1))
