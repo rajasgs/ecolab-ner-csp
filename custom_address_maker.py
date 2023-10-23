@@ -42,7 +42,7 @@ unit, unt, unit, unit
 
 def get_random_part(content):
 
-    contents = content.lower().strip()
+    content = content.lower().strip()
 
     content = ','.join(word for word in content.split(',') if len(word)>0)
     content_list = content.split(',')
@@ -112,11 +112,7 @@ def startpy():
 
     pattern = int(sys.argv[1])
     
-    # get_multiple_addresses(pattern)
-
-    for _ in range(100):
-
-        print(grp(address_part_13_20231023_2))
+    get_multiple_addresses(pattern)
 
 if __name__ == '__main__':
     startpy()
