@@ -24,7 +24,8 @@ def classify_address(
 
     prediction, model_output = model.predict([address])
     
-    # print(type(prediction[0]))
+    print(f'prediction : {prediction[0]}')
+    print(f'model_output : {model_output}')
 
     new_dict = {
         'STREET_NAME' : '',
