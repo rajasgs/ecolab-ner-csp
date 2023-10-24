@@ -24,6 +24,8 @@ from simpletransformers.ner import NERModel, NERArgs
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import pandas as pd
+from datetime import datetime
+import time
 
 # Local
 import constants as con
@@ -84,11 +86,22 @@ def startpy():
     # prediction, model_output = model.predict(["254 Spadina Road"])
     # print(prediction)
 
+    start_time = datetime.now()
+
     train_and_save()
+
+    # time.sleep(2)
 
     # load_and_predict()
 
     print("Training Done")
 
+    _secs = (datetime.now() - start_time).total_seconds()
+    print('Time : ', _secs)
+
 if __name__ == '__main__':
     startpy()
+
+'''
+python ner_with_bert.py
+'''

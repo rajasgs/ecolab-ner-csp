@@ -154,6 +154,7 @@ def pattern_3_maker_single(current_index, address):
             sub_parts = c_item.split("-")
 
             content += get_single_content(current_index, sub_parts[0], SUITE_NO)
+            content += get_single_content(current_index, "-", EMPTY)
             content += get_single_content(current_index, sub_parts[1], HOUSE_NO)
 
         else:
@@ -1006,7 +1007,7 @@ def get_current_index():
         try:
             cu_index = int(last_line.split(CSV_DELIM)[0])
         except:
-            return -1
+            return 19000000
 
         return cu_index
     
