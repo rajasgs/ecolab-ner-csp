@@ -18,9 +18,12 @@ load_dotenv()
 PORT_NO     = 8262
 APP_TITLE   = "Custom NER - Riversand"
 
-
 ADDRESS_INPUT_BERT_CSV_PATH = os.getenv("ADDRESS_INPUT_BERT_CSV_PATH")
-PATTERN_DEBUG               = True if int(os.getenv("PATTERN_DEBUG") == 1) else False
+PATTERN_DEBUG               = True if (int(os.getenv("PATTERN_DEBUG")) == 1) else False
+
+CORE_NLP_TRAINING_FILEPATH  = os.getenv("CORE_NLP_TRAINING_FILEPATH")
+CORE_NLP_TESTING_FILEPATH   = os.getenv("CORE_NLP_TESTING_FILEPATH")
+CORE_NLP_MODELNAME          = os.getenv("CORE_NLP_MODELNAME")
 
 STREET_NAME                 = "STREET_NAME"
 HOUSE_NO                    = "HOUSE_NO"

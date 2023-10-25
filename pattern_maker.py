@@ -550,7 +550,7 @@ def pattern_17_maker_single(address):
         
     '''
 
-    main_address_parts = address.split("PO BOX")
+    main_address_parts = address.split("po box")
 
     address_parts = main_address_parts[0].split(" ")
 
@@ -569,10 +569,11 @@ def pattern_17_maker_single(address):
         else:
             content += get_single_content(c_item, STREET_NAME)
 
-    content += get_single_content("PO BOX", HOUSE_NO)
+    content += get_single_content("po", SUITE_NO)
+    content += get_single_content("box", SUITE_NO)
 
     sub_address = main_address_parts[1].strip()
-    content += get_single_content(sub_address, HOUSE_NO)
+    content += get_single_content(sub_address, SUITE_NO)
 
     return content
 
@@ -1001,6 +1002,11 @@ def pattern_maker_multiple(pattern_index):
     content = ""
 
     train_list, test_list = train_test_split(lines, train_size=0.8)
+
+    if(con.PATTERN_DEBUG):
+        print('Using Debug mode\n')
+        train_list = [train_list[0]]
+        test_list = [test_list[0]]
 
     for c_line in train_list:
         c_line = c_line.replace('\n', '')

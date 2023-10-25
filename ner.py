@@ -19,6 +19,9 @@ import re
 import subprocess
 #from stanza.server import CoreNLPClient
 
+# Local
+from constants import (CORE_NLP_TRAINING_FILEPATH, CORE_NLP_TESTING_FILEPATH, CORE_NLP_MODELNAME)
+
 '''
 Below line, installs the stanfordCore NLP JARS. As it is already installed separately, commenting out the line.
 '''
@@ -151,9 +154,9 @@ def startpy():
     # )
 
     train_model(
-        "ecolab_address_20231025_1", 
-        ["Ecolab_Address_Training_Pattern1_2023_10_25_1.txt"], 
-        ["Ecolab_Address_Testing_Pattern1_2023_10_25_1.txt"], 
+        CORE_NLP_MODELNAME, 
+        [CORE_NLP_TRAINING_FILEPATH], 
+        [CORE_NLP_TESTING_FILEPATH], 
         True, 
         classpath
     )

@@ -1,0 +1,175 @@
+115     HOUSE_NO
+main    STREET_NAME
+road    STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+313     SUITE_NO
+
+759     HOUSE_NO
+kaikorai    STREET_NAME
+valley  STREET_NAME
+rd  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+6341    SUITE_NO
+
+1039    HOUSE_NO
+totara  STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+40  SUITE_NO
+
+6170    HOUSE_NO
+wendover    STREET_NAME
+rd  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+12474   SUITE_NO
+
+67  HOUSE_NO
+chesterfield    STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+11768   SUITE_NO
+
+2088b   HOUSE_NO
+riccarton   STREET_NAME
+road    STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+2226    SUITE_NO
+
+395     HOUSE_NO
+riccarton   STREET_NAME
+road    STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+5047    SUITE_NO
+
+61  HOUSE_NO
+clarendon   STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+323     SUITE_NO
+
+112     HOUSE_NO
+princes STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+230     SUITE_NO
+
+16  HOUSE_NO
+chapel  STREET_NAME
+st  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+107     SUITE_NO
+
+59  HOUSE_NO
+wharf   STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+50  SUITE_NO
+
+51a     HOUSE_NO
+taranaki    STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+7623    SUITE_NO
+
+250     HOUSE_NO
+gladstone   STREET_NAME
+road    STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+664     SUITE_NO
+
+13  HOUSE_NO
+adams   STREET_NAME
+drive   STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+55  SUITE_NO
+
+229a    HOUSE_NO
+berwick STREET_NAME
+st  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+10068   SUITE_NO
+
+63  HOUSE_NO
+mitchell    STREET_NAME
+ave     STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+10061   SUITE_NO
+
+3052    HOUSE_NO
+lorneville-dacre    STREET_NAME
+highway STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+141     SUITE_NO
+
+21m     HOUSE_NO
+gerrard STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+10066   SUITE_NO
+
+810     HOUSE_NO
+leeds   STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+10069   SUITE_NO
+
+79  HOUSE_NO
+park    STREET_NAME
+avenue  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+10724   SUITE_NO
+
+80  HOUSE_NO
+fairlie STREET_NAME
+terrace STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+30463   SUITE_NO
+
+567b    HOUSE_NO
+leith   STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+2468    SUITE_NO
+
+919     HOUSE_NO
+george  STREET_NAME
+street  STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+10058   SUITE_NO
+
+36c     HOUSE_NO
+manukau STREET_NAME
+road    STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+1491    SUITE_NO
+
+80  HOUSE_NO
+maryhill    STREET_NAME
+road    STREET_NAME
+po  SUITE_NO
+box     SUITE_NO
+755     SUITE_NO
