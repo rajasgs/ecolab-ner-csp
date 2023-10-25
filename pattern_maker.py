@@ -244,7 +244,7 @@ def pattern_5_maker_single(address):
 def pattern_6_maker_single(address):
 
     '''
-        Pattern 5:
+        Pattern 6:
 
         6	
         (StreetName) # (Suite_No)	
@@ -255,9 +255,6 @@ def pattern_6_maker_single(address):
     '''
 
     # print(address)
-
-    
-
     # print(len(address_parts))
 
     address_full_parts = address.split("#")
@@ -269,10 +266,14 @@ def pattern_6_maker_single(address):
     for c_index, c_item in enumerate(address_parts):
         # print(c_index, c_item)
 
+        c_item = c_item.strip()
+        if(len(c_item) <= 0):
+            continue
+
         if(c_index == 0):
             
             if(isinstance(c_item, int)):
-                content += get_single_content(c_item, SUITE_NO)
+                content += get_single_content(c_item, HOUSE_NO)
             else:
                 content += get_single_content(c_item, STREET_NAME)
 
@@ -281,7 +282,7 @@ def pattern_6_maker_single(address):
         
     
     content += get_single_content("#", EMPTY)
-    content += get_single_content(address_full_parts[1], EMPTY)
+    content += get_single_content(address_full_parts[1].strip(), SUITE_NO)
 
     return content
 
@@ -590,17 +591,31 @@ def pattern_18_maker_single(address):
         
     '''
 
-    address_parts = address.split(" ")
+    address_full_parts = address.split("#")
+
+    address_parts = address_full_parts[0].split(" ")
 
     content = ""
 
     for c_index, c_item in enumerate(address_parts):
         # print(c_index, c_item)
 
+        c_item = c_item.strip()
+        if(len(c_item) <= 0):
+            continue
+
         if(c_index == 0):
-            content += get_single_content(c_item, HOUSE_NO)
+            
+            if(isinstance(c_item, int)):
+                content += get_single_content(c_item, HOUSE_NO)
+            else:
+                content += get_single_content(c_item, STREET_NAME)
+
         else:
             content += get_single_content(c_item, STREET_NAME)
+        
+    content += get_single_content("#", EMPTY)
+    content += get_single_content(address_full_parts[1].strip(), SUITE_NO)
 
     return content
 
@@ -1005,6 +1020,8 @@ def pattern_maker_multiple(pattern_index):
 
     if(con.PATTERN_DEBUG):
         print('Using Debug mode\n')
+        print(f'{train_list[0]}')
+        print(f'{test_list[0]}')
         train_list = [train_list[0]]
         test_list = [test_list[0]]
 
