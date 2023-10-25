@@ -585,7 +585,7 @@ def pattern_18_maker_single(address):
         18		
 
         Sample:
-        103 PTH 12 N
+        5535 irwin simpson rd # 5535
 
         
     '''
