@@ -1027,111 +1027,10 @@ def pattern_maker_multiple(pattern_index):
     return content
 
 def startpy():
-    
-    # pattern_1_maker_single("12A WEST STREET")
 
     pattern = int(sys.argv[1])
 
     print(pattern_maker_multiple(pattern))
-
-    # Pattern 1
-    # print(pattern_maker_multiple(1))
-
-    # Pattern 2
-    # print(pattern_maker_multiple(2))
-
-    # Pattern 3
-    # print(pattern_maker_multiple(3))
-
-    # Pattern 4
-    # print(pattern_maker_multiple(4))
-
-    # Pattern 5
-    # pattern_5_maker_single("1/3 WESTGATE PARK FODDERWICK")
-    # print(pattern_maker_multiple(5))
-
-    # Pattern 6
-    # print(pattern_maker_multiple(6))
-
-    # Pattern 7: Not implemented
-    # print(pattern_maker_multiple(7))
-
-    # Pattern 8: Not implemented
-    # print(pattern_maker_multiple(8))
-
-    # Pattern 9: Not implemented
-    # print(pattern_maker_multiple(9))
-
-    # Pattern 10
-    # print(pattern_maker_multiple(10))
-
-    # Pattern 11
-    # print(pattern_maker_multiple(11))
-
-    # Pattern 12
-    # print(pattern_maker_multiple(12))
-
-    # Pattern 13
-    # print(pattern_maker_multiple(13))
-
-    # Pattern 14
-    # print(pattern_maker_multiple(14))
-
-    # Pattern 15
-    # print(pattern_maker_multiple(15))
-
-    # Pattern 16
-    # print(pattern_maker_multiple(16))
-
-    # Pattern 17
-    # print(pattern_maker_multiple(17))
-
-    # Pattern 18
-    # print(pattern_maker_multiple(18))
-
-    # Pattern 19
-    # print(pattern_maker_multiple(19))
-
-    # 20 : Not implemented
-
-    # print(pattern_21_maker_single("KAMPUNG MUHHIBAH 14981 JALAN PUCHONG"))
-    # Pattern 21
-    # print(pattern_maker_multiple(21))
-
-    # Pattern 22
-    # print(pattern_maker_multiple(22))
-
-    # Pattern 23
-    # print(pattern_maker_multiple(23))
-
-    # Pattern 24
-    # print(pattern_maker_multiple(24))
-
-    # : Not implemented
-
-    # Pattern 26
-    # print(pattern_maker_multiple(26))
-
-    # Pattern 27
-    # print(pattern_27_maker_single("76 W HORIZON RIDGE PKWY STE 120"))
-    # print(pattern_maker_multiple(27))
-
-    # Pattern 28
-    # print(pattern_maker_multiple(28))
-
-    # Pattern 29
-    # print(pattern_maker_multiple(29))
-
-    # Pattern 30
-    # print(pattern_maker_multiple(30))
-
-    # Pattern 31
-    # print(pattern_maker_multiple(30))
-
-    # Pattern 32
-    # print(pattern_maker_multiple(32))
-
-    pass
 
 
 def test_split():
@@ -1174,71 +1073,9 @@ if __name__ == '__main__':
 
 
 '''
-Status:
+How to run?
 
-Total Done:
+py pattern_maker.py <pattern_index>
+py pattern_maker.py 13
 
-Can't do:
-2?
-
-
-01 - DONE
-
-02 - DONE
-
-03 - DONE
-
-04 - DONE
-
-05 - DONE
-
-06 - DONE 
-
-07 - CANT DO
-
-08 - CANT DO
-
-09 - CANT DO
-
-10 - DONE
-
-11 - DONE
-
-12 - DONE
-
-13 - DONE
-
-14 - DONE
-
-15 - DONE
-
-16 - DONE
-
-17 - DONE
-
-18 - DONE
-
-19 - DONE
-
-20 - PENDING
-
-21 - DONE
-
-22 - DONE
-
-23 - DONE
-
-24 - DONE
-
-25 - CAN'T DO
-
-26 - DONE
-
-27 - DONE
-
-28 - DONE
-
-29 - DONE
-
-30 - ?
 '''
