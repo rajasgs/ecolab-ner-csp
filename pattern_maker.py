@@ -650,11 +650,15 @@ def pattern_19_maker_single(address):
 
     content = ""
 
+    words_count = len(address_parts)
+
     for c_index, c_item in enumerate(address_parts):
         # print(c_index, c_item)
 
         if(c_index == 0):
             content += get_single_content(c_item, HOUSE_NO)
+        elif((c_index == ((words_count)-2)) or (c_index == ((words_count)-1))):
+            content += get_single_content(c_item, SUITE_NO)
         else:
             content += get_single_content(c_item, STREET_NAME)
 
