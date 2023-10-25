@@ -323,14 +323,25 @@ def pattern_9_maker_single(address):
     '''
         Pattern :
 
-        
-
         Sample:
-        
-        Not clear
+        28 15th avenue s
     '''
 
-    pass
+    address_parts = address.split(" ")
+
+    # print(len(address_parts))
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, HOUSE_NO)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
 
 def pattern_10_maker_single(address):
 
