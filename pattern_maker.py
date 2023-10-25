@@ -635,14 +635,10 @@ def pattern_19_maker_single(address):
 
     '''
         Pattern 19:
-
         19	
-        (House_No) (HWY with No)	
-        10 HWY
+        51 pinewood haven apt 50
 
         Sample:
-        
-
         
     '''
 
@@ -657,7 +653,7 @@ def pattern_19_maker_single(address):
 
         if(c_index == 0):
             content += get_single_content(c_item, HOUSE_NO)
-        elif((c_index == ((words_count)-2)) or (c_index == ((words_count)-1))):
+        elif((c_index == ((words_count)-2)) or (c_index == ((words_count)-1))): # last item or last second item
             content += get_single_content(c_item, SUITE_NO)
         else:
             content += get_single_content(c_item, STREET_NAME)
