@@ -53,3 +53,10 @@ VAP/RS/ecolab-ner-csp/address_training_bert_2.csv
 
 
 ```
+
+
+Pending:
+```
+1. training inputs has a lot of repetitive entries. We need to find and remove them
+
+```

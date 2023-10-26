@@ -290,33 +290,67 @@ def pattern_6_maker_single(address):
 def pattern_7_maker_single(address):
 
     '''
-        Pattern 7:
-        
+        Pattern 7:        
         7	
-        (StreetName) (Suite_No) (StreetName)	        
+        
+        801 route 38
 
-        Sample:
-        BOTANY TOWN CENTRE 588 CHAPEL ROAD
-
-        Not clear
     '''
 
-    pass
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, HOUSE_NO)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
 
 def pattern_8_maker_single(address):
 
     '''
-        Pattern :
+        Pattern 18:
 
-        
+        18		
 
         Sample:
-        
+        5535 irwin simpson rd # 5535
 
-        Not clear
+        
     '''
 
-    pass
+    address_full_parts = address.split("#")
+
+    address_parts = address_full_parts[0].split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        c_item = c_item.strip()
+        if(len(c_item) <= 0):
+            continue
+
+        if(c_index == 0):
+            
+            if(isinstance(c_item, int)):
+                content += get_single_content(c_item, HOUSE_NO)
+            else:
+                content += get_single_content(c_item, STREET_NAME)
+
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+        
+    content += get_single_content("#", EMPTY)
+    content += get_single_content(address_full_parts[1].strip(), SUITE_NO)
+
+    return content
 
 def pattern_9_maker_single(address):
 
@@ -448,16 +482,15 @@ def pattern_13_maker_single(address):
 
     content = ""
 
+    words_count = len(address_parts)
+
     for c_index, c_item in enumerate(address_parts):
         # print(c_index, c_item)
 
         if(c_index == 0):
             content += get_single_content(c_item, HOUSE_NO)
-
-        elif(len(address_parts)-1 == c_index):
-
+        elif((c_index == ((words_count)-2)) or (c_index == ((words_count)-1))): # last item or last second item
             content += get_single_content(c_item, SUITE_NO)
-
         else:
             content += get_single_content(c_item, STREET_NAME)
 
@@ -589,46 +622,7 @@ def pattern_17_maker_single(address):
 
     return content
 
-def pattern_18_maker_single(address):
 
-    '''
-        Pattern 18:
-
-        18		
-
-        Sample:
-        5535 irwin simpson rd # 5535
-
-        
-    '''
-
-    address_full_parts = address.split("#")
-
-    address_parts = address_full_parts[0].split(" ")
-
-    content = ""
-
-    for c_index, c_item in enumerate(address_parts):
-        # print(c_index, c_item)
-
-        c_item = c_item.strip()
-        if(len(c_item) <= 0):
-            continue
-
-        if(c_index == 0):
-            
-            if(isinstance(c_item, int)):
-                content += get_single_content(c_item, HOUSE_NO)
-            else:
-                content += get_single_content(c_item, STREET_NAME)
-
-        else:
-            content += get_single_content(c_item, STREET_NAME)
-        
-    content += get_single_content("#", EMPTY)
-    content += get_single_content(address_full_parts[1].strip(), SUITE_NO)
-
-    return content
 
 
 def pattern_19_maker_single(address):
