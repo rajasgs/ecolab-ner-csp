@@ -1,0 +1,116 @@
+redwood STREET_NAME
+redwood STREET_NAME
+rd  STREET_NAME
+#   0
+87  SUITE_NO
+
+spruce  STREET_NAME
+spruce  STREET_NAME
+road    STREET_NAME
+#   0
+683     SUITE_NO
+
+pine    STREET_NAME
+st  STREET_NAME
+#   0
+642     SUITE_NO
+
+spruce  STREET_NAME
+road    STREET_NAME
+#   0
+289     SUITE_NO
+
+shaftesbury STREET_NAME
+rd  STREET_NAME
+#   0
+920     SUITE_NO
+
+oak     STREET_NAME
+oak     STREET_NAME
+court   STREET_NAME
+#   0
+428     SUITE_NO
+
+pine    STREET_NAME
+pine    STREET_NAME
+avenue  STREET_NAME
+#   0
+559     SUITE_NO
+
+patrick STREET_NAME
+patrick STREET_NAME
+street  STREET_NAME
+#   0
+346     SUITE_NO
+
+shaftesbury STREET_NAME
+st  STREET_NAME
+#   0
+859     SUITE_NO
+
+shaftesbury STREET_NAME
+shaftesbury STREET_NAME
+road    STREET_NAME
+#   0
+521     SUITE_NO
+
+spruce  STREET_NAME
+spruce  STREET_NAME
+lane    STREET_NAME
+#   0
+696     SUITE_NO
+
+temple  STREET_NAME
+avenue  STREET_NAME
+#   0
+82  SUITE_NO
+
+maple   STREET_NAME
+st  STREET_NAME
+#   0
+484     SUITE_NO
+
+neville STREET_NAME
+neville STREET_NAME
+crt     STREET_NAME
+#   0
+146     SUITE_NO
+
+hills   STREET_NAME
+road    STREET_NAME
+#   0
+459     SUITE_NO
+
+bentrim STREET_NAME
+bentrim STREET_NAME
+causeway    STREET_NAME
+#   0
+699     SUITE_NO
+
+cedar   STREET_NAME
+st  STREET_NAME
+#   0
+862     SUITE_NO
+
+elm     STREET_NAME
+elm     STREET_NAME
+crt     STREET_NAME
+#   0
+802     SUITE_NO
+
+park    STREET_NAME
+drive   STREET_NAME
+#   0
+132     SUITE_NO
+
+cedar   STREET_NAME
+cedar   STREET_NAME
+crt     STREET_NAME
+#   0
+884     SUITE_NO
+
+terrace STREET_NAME
+terrace STREET_NAME
+road    STREET_NAME
+#   0
+276     SUITE_NO

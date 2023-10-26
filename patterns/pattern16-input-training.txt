@@ -1,0 +1,458 @@
+otok    STREET_NAME
+katarina    STREET_NAME
+1   HOUSE_NO
+
+karola  STREET_NAME
+salvu   STREET_NAME
+2   HOUSE_NO
+
+bolzanova   STREET_NAME
+512     HOUSE_NO
+
+jezerci STREET_NAME
+21  HOUSE_NO
+
+avenida STREET_NAME
+división    STREET_NAME
+del     STREET_NAME
+norte   STREET_NAME
+no  STREET_NAME
+2553    HOUSE_NO
+
+temselaan   STREET_NAME
+100     HOUSE_NO
+
+sharma  STREET_NAME
+complex STREET_NAME
+shop    STREET_NAME
+no  STREET_NAME
+4   HOUSE_NO
+
+malotova    STREET_NAME
+5614    HOUSE_NO
+
+ozaljska    STREET_NAME
+ulica   STREET_NAME
+95  HOUSE_NO
+
+jalan   STREET_NAME
+sultan  STREET_NAME
+idris   STREET_NAME
+shah    STREET_NAME
+1   HOUSE_NO
+
+frankopanska    STREET_NAME
+10  HOUSE_NO
+
+branimirova STREET_NAME
+obala   STREET_NAME
+115     HOUSE_NO
+
+usnjarska   STREET_NAME
+cesta   STREET_NAME
+12  HOUSE_NO
+
+mala    STREET_NAME
+mora    STREET_NAME
+5   HOUSE_NO
+
+na  STREET_NAME
+moru    STREET_NAME
+1   HOUSE_NO
+
+tervuursesteenweg   STREET_NAME
+303     HOUSE_NO
+
+emila   STREET_NAME
+geistlicha  STREET_NAME
+38  HOUSE_NO
+
+cesta   STREET_NAME
+svobode STREET_NAME
+8   HOUSE_NO
+
+rua     STREET_NAME
+domingas    STREET_NAME
+galleteri   STREET_NAME
+blotta  STREET_NAME
+137     HOUSE_NO
+
+rejckov STREET_NAME
+20  HOUSE_NO
+
+vrtni   STREET_NAME
+put     STREET_NAME
+1   HOUSE_NO
+
+neuer   STREET_NAME
+weg     STREET_NAME
+9   HOUSE_NO
+
+mercedesstr.    STREET_NAME
+132     HOUSE_NO
+
+london  STREET_NAME
+dairy   STREET_NAME
+al  STREET_NAME
+khail   STREET_NAME
+rd  STREET_NAME
+52  HOUSE_NO
+
+mariborska  STREET_NAME
+cesta   STREET_NAME
+37  HOUSE_NO
+
+rautatienkatu   STREET_NAME
+25  HOUSE_NO
+
+industrijska    STREET_NAME
+cesta   STREET_NAME
+5   HOUSE_NO
+
+aleja   STREET_NAME
+vukovar STREET_NAME
+4   HOUSE_NO
+
+liburnijska STREET_NAME
+3   HOUSE_NO
+
+vatrogasna  STREET_NAME
+cesta   STREET_NAME
+1   HOUSE_NO
+
+highway STREET_NAME
+1   HOUSE_NO
+
+metodova    STREET_NAME
+6   HOUSE_NO
+
+avenida STREET_NAME
+ricardo STREET_NAME
+bassoli STREET_NAME
+cezare  STREET_NAME
+1567    HOUSE_NO
+
+petalon STREET_NAME
+1   HOUSE_NO
+
+kolodvorska STREET_NAME
+cesta   STREET_NAME
+1   HOUSE_NO
+
+cesta   STREET_NAME
+na  STREET_NAME
+bokalce STREET_NAME
+40  HOUSE_NO
+
+molindrio   STREET_NAME
+16  HOUSE_NO
+
+smareglina  STREET_NAME
+ulica   STREET_NAME
+3   HOUSE_NO
+
+hajduk  STREET_NAME
+veljkova    STREET_NAME
+1   HOUSE_NO
+
+tattenbachova   STREET_NAME
+ulica   STREET_NAME
+5   HOUSE_NO
+
+kneza   STREET_NAME
+mutimira    STREET_NAME
+4   HOUSE_NO
+
+industrijska    STREET_NAME
+ulica   STREET_NAME
+1   HOUSE_NO
+
+jurija  STREET_NAME
+gagarina    STREET_NAME
+16  HOUSE_NO
+
+tollaan STREET_NAME
+68  HOUSE_NO
+
+beenhouwerstraat    STREET_NAME
+28  HOUSE_NO
+
+9150    STREET_NAME
+state   STREET_NAME
+route   STREET_NAME
+108     HOUSE_NO
+
+laagstraat  STREET_NAME
+63  HOUSE_NO
+
+avenida STREET_NAME
+miguel  STREET_NAME
+de  STREET_NAME
+cervantes   STREET_NAME
+saavedra    STREET_NAME
+397     HOUSE_NO
+
+maksimirska STREET_NAME
+cesta   STREET_NAME
+127     HOUSE_NO
+
+calle   STREET_NAME
+5   STREET_NAME
+de  STREET_NAME
+mayo    STREET_NAME
+217     HOUSE_NO
+
+kardinala   STREET_NAME
+stepinca    STREET_NAME
+31  HOUSE_NO
+
+arm.    STREET_NAME
+gen.    STREET_NAME
+svobodu STREET_NAME
+25  HOUSE_NO
+
+nijverheidsstraat   STREET_NAME
+15  HOUSE_NO
+
+kampor  STREET_NAME
+82  HOUSE_NO
+
+guillermo   STREET_NAME
+gonzalez    STREET_NAME
+camarena    STREET_NAME
+no.     STREET_NAME
+300     HOUSE_NO
+
+rovinjska   STREET_NAME
+17  HOUSE_NO
+
+gasthuisstraat  STREET_NAME
+2   HOUSE_NO
+
+glavni  STREET_NAME
+trg     STREET_NAME
+43  HOUSE_NO
+
+av  STREET_NAME
+solmar  STREET_NAME
+no.     STREET_NAME
+1   HOUSE_NO
+
+pineta  STREET_NAME
+1   HOUSE_NO
+
+materada    STREET_NAME
+38  HOUSE_NO
+
+cesta   STREET_NAME
+na  STREET_NAME
+jezerca STREET_NAME
+17  HOUSE_NO
+
+vladimira   STREET_NAME
+nazora  STREET_NAME
+57  HOUSE_NO
+
+ruzveltova  STREET_NAME
+35  HOUSE_NO
+
+nitrianska  STREET_NAME
+4   HOUSE_NO
+
+zona    STREET_NAME
+franca  STREET_NAME
+america STREET_NAME
+32  HOUSE_NO
+
+o.huysecomlaan  STREET_NAME
+2   HOUSE_NO
+
+ulica   STREET_NAME
+don     STREET_NAME
+frane   STREET_NAME
+bege    STREET_NAME
+2   HOUSE_NO
+
+10123   STREET_NAME
+louetta STREET_NAME
+rd  STREET_NAME
+ste     STREET_NAME
+700     HOUSE_NO
+
+krakovo STREET_NAME
+73  HOUSE_NO
+
+trg     STREET_NAME
+pobjede STREET_NAME
+2   HOUSE_NO
+
+lange   STREET_NAME
+torhoutstraat   STREET_NAME
+29  HOUSE_NO
+
+meridia.    STREET_NAME
+unit    STREET_NAME
+1   HOUSE_NO
+
+ulica   STREET_NAME
+majstora    STREET_NAME
+radovana    STREET_NAME
+7   HOUSE_NO
+
+meljska STREET_NAME
+cesta   STREET_NAME
+19  HOUSE_NO
+
+dunjevac    STREET_NAME
+17  HOUSE_NO
+
+supmza  STREET_NAME
+310     HOUSE_NO
+
+sudice  STREET_NAME
+50  HOUSE_NO
+
+panonska    STREET_NAME
+ulica   STREET_NAME
+5   HOUSE_NO
+
+put     STREET_NAME
+mostina STREET_NAME
+10  HOUSE_NO
+
+calle   STREET_NAME
+industria   STREET_NAME
+de  STREET_NAME
+la  STREET_NAME
+transformación  STREET_NAME
+no.     STREET_NAME
+3140    HOUSE_NO
+
+spadina STREET_NAME
+road    STREET_NAME
+293     HOUSE_NO
+
+ul.     STREET_NAME
+roberta STREET_NAME
+schumana    STREET_NAME
+11  HOUSE_NO
+
+pribinova   STREET_NAME
+1   HOUSE_NO
+
+na  STREET_NAME
+jablonce    STREET_NAME
+101     HOUSE_NO
+
+stara   STREET_NAME
+loka    STREET_NAME
+31  HOUSE_NO
+
+rua     STREET_NAME
+equador STREET_NAME
+2300    HOUSE_NO
+
+transportes STREET_NAME
+parque  STREET_NAME
+industrial  STREET_NAME
+221     HOUSE_NO
+
+steenweg    STREET_NAME
+op  STREET_NAME
+gierle  STREET_NAME
+417     HOUSE_NO
+
+milovy  STREET_NAME
+11  HOUSE_NO
+
+cesta   STREET_NAME
+svobode STREET_NAME
+12  HOUSE_NO
+
+vukovarska  STREET_NAME
+44  HOUSE_NO
+
+ulica   STREET_NAME
+kneza   STREET_NAME
+borne   STREET_NAME
+2   HOUSE_NO
+
+gortanova   STREET_NAME
+ulica   STREET_NAME
+35  HOUSE_NO
+
+calle   STREET_NAME
+general STREET_NAME
+gómez   STREET_NAME
+pedraza STREET_NAME
+no.     STREET_NAME
+68  HOUSE_NO
+
+ulica   STREET_NAME
+milke   STREET_NAME
+trnine  STREET_NAME
+14  HOUSE_NO
+
+partizanska STREET_NAME
+cesta   STREET_NAME
+24  HOUSE_NO
+
+donovaly    STREET_NAME
+196     HOUSE_NO
+
+celjska STREET_NAME
+cesta   STREET_NAME
+11  HOUSE_NO
+
+crveni  STREET_NAME
+otok    STREET_NAME
+1   HOUSE_NO
+
+3151    STREET_NAME
+zinfandel   STREET_NAME
+dr  STREET_NAME
+ste     STREET_NAME
+5   HOUSE_NO
+
+slobode STREET_NAME
+80  HOUSE_NO
+
+the     STREET_NAME
+quintins    STREET_NAME
+unit    STREET_NAME
+7   HOUSE_NO
+
+kettejeva   STREET_NAME
+ulica   STREET_NAME
+13  HOUSE_NO
+
+eibesbrunnergasse   STREET_NAME
+20  HOUSE_NO
+
+delpinova   STREET_NAME
+ulica   STREET_NAME
+5   HOUSE_NO
+
+2051    STREET_NAME
+bronze  STREET_NAME
+star    STREET_NAME
+dr  STREET_NAME
+ste     STREET_NAME
+100     HOUSE_NO
+
+kovinarska  STREET_NAME
+ulica   STREET_NAME
+13  HOUSE_NO
+
+istarska    STREET_NAME
+50  HOUSE_NO
+
+nasipna STREET_NAME
+ulica   STREET_NAME
+64  HOUSE_NO
+
+rodovia STREET_NAME
+washington  STREET_NAME
+luiz    STREET_NAME
+km  STREET_NAME
+103     HOUSE_NO

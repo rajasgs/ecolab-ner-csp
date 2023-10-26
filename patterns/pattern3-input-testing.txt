@@ -1,0 +1,191 @@
+189     SUITE_NO
+200     HOUSE_NO
+marshwood   STREET_NAME
+ln  STREET_NAME
+
+270     SUITE_NO
+285     HOUSE_NO
+pineview    STREET_NAME
+pl  STREET_NAME
+
+1501    SUITE_NO
+1599    HOUSE_NO
+ocean   STREET_NAME
+avenue  STREET_NAME
+
+31  SUITE_NO
+35  HOUSE_NO
+katajanokankatu STREET_NAME
+
+123     SUITE_NO
+139     HOUSE_NO
+fairway STREET_NAME
+way     STREET_NAME
+
+130     SUITE_NO
+134     HOUSE_NO
+coastal STREET_NAME
+avenue  STREET_NAME
+
+300     SUITE_NO
+398     HOUSE_NO
+cedarwood   STREET_NAME
+street  STREET_NAME
+
+2215    SUITE_NO
+2225    HOUSE_NO
+sunset  STREET_NAME
+ct  STREET_NAME
+
+31  SUITE_NO
+47  HOUSE_NO
+marshwood   STREET_NAME
+pl  STREET_NAME
+
+110     SUITE_NO
+126     HOUSE_NO
+woodland    STREET_NAME
+cres    STREET_NAME
+
+1   SUITE_NO
+9   HOUSE_NO
+ozanam  STREET_NAME
+place   STREET_NAME
+
+81  SUITE_NO
+83  HOUSE_NO
+oxford  STREET_NAME
+street  STREET_NAME
+
+18  SUITE_NO
+20  HOUSE_NO
+black   STREET_NAME
+castle  STREET_NAME
+square  STREET_NAME
+
+45  SUITE_NO
+60  HOUSE_NO
+riverside   STREET_NAME
+pl  STREET_NAME
+
+901     SUITE_NO
+999     HOUSE_NO
+oceanview   STREET_NAME
+court   STREET_NAME
+
+135     SUITE_NO
+139     HOUSE_NO
+waterfront  STREET_NAME
+lane    STREET_NAME
+
+140     SUITE_NO
+144     HOUSE_NO
+sompasaarenlaituri  STREET_NAME
+
+670     SUITE_NO
+689     HOUSE_NO
+lakeshore   STREET_NAME
+pl  STREET_NAME
+
+265     SUITE_NO
+280     HOUSE_NO
+lakeside    STREET_NAME
+view    STREET_NAME
+
+450     SUITE_NO
+466     HOUSE_NO
+lakeside    STREET_NAME
+path    STREET_NAME
+
+930     SUITE_NO
+947     HOUSE_NO
+hilltop STREET_NAME
+view    STREET_NAME
+
+1626    SUITE_NO
+1630    HOUSE_NO
+ness    STREET_NAME
+ave     STREET_NAME
+
+125     SUITE_NO
+138     HOUSE_NO
+parkside    STREET_NAME
+ct  STREET_NAME
+
+61  SUITE_NO
+75  HOUSE_NO
+meadowview  STREET_NAME
+ln  STREET_NAME
+
+312     SUITE_NO
+326     HOUSE_NO
+lakeside    STREET_NAME
+ct  STREET_NAME
+
+145     SUITE_NO
+149     HOUSE_NO
+lakeside    STREET_NAME
+street  STREET_NAME
+
+25  SUITE_NO
+29  HOUSE_NO
+waterfront  STREET_NAME
+drive   STREET_NAME
+
+11  SUITE_NO
+15  HOUSE_NO
+elmcrest    STREET_NAME
+avenue  STREET_NAME
+
+1000    SUITE_NO
+1098    HOUSE_NO
+beachside   STREET_NAME
+lane    STREET_NAME
+
+30  SUITE_NO
+34  HOUSE_NO
+park    STREET_NAME
+lane    STREET_NAME
+
+435     SUITE_NO
+445     HOUSE_NO
+cedar   STREET_NAME
+ave     STREET_NAME
+
+26  SUITE_NO
+30  HOUSE_NO
+eteläranta  STREET_NAME
+
+112     SUITE_NO
+128     HOUSE_NO
+lakeside    STREET_NAME
+bend    STREET_NAME
+
+56  SUITE_NO
+71  HOUSE_NO
+woodland    STREET_NAME
+ct  STREET_NAME
+
+80  SUITE_NO
+88  HOUSE_NO
+lakeshore   STREET_NAME
+drive   STREET_NAME
+
+165     SUITE_NO
+182     HOUSE_NO
+pinecrest   STREET_NAME
+cres    STREET_NAME
+
+140     SUITE_NO
+152     HOUSE_NO
+laurel  STREET_NAME
+ln  STREET_NAME
+
+395     SUITE_NO
+410     HOUSE_NO
+fairway STREET_NAME
+rd  STREET_NAME
+
+110     SUITE_NO
+114     HOUSE_NO
+vattuniemenkatu STREET_NAME

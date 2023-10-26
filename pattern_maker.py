@@ -434,35 +434,29 @@ def pattern_11_maker_single(address):
 def pattern_12_maker_single(address):
 
     '''
-        Pattern :
-
-        12	
-        (Suite_No) (House_No) (StreetName)	
-        3820 43 AVE
+        Pattern 12:
+        12
+        51 pinewood haven apt 50
 
         Sample:
-        3820 43 AVE
+        
     '''
 
     address_parts = address.split(" ")
 
     content = ""
 
+    words_count = len(address_parts)
+
     for c_index, c_item in enumerate(address_parts):
         # print(c_index, c_item)
 
         if(c_index == 0):
-            content += get_single_content(c_item, SUITE_NO)
-
-        elif(c_index == 1):
-
             content += get_single_content(c_item, HOUSE_NO)
-
+        elif((c_index == ((words_count)-2)) or (c_index == ((words_count)-1))): # last item or last second item
+            content += get_single_content(c_item, SUITE_NO)
         else:
             content += get_single_content(c_item, STREET_NAME)
-
-
-    # print(content)
 
     return content
 
@@ -625,34 +619,7 @@ def pattern_17_maker_single(address):
 
 
 
-def pattern_19_maker_single(address):
 
-    '''
-        Pattern 19:
-        19	
-        51 pinewood haven apt 50
-
-        Sample:
-        
-    '''
-
-    address_parts = address.split(" ")
-
-    content = ""
-
-    words_count = len(address_parts)
-
-    for c_index, c_item in enumerate(address_parts):
-        # print(c_index, c_item)
-
-        if(c_index == 0):
-            content += get_single_content(c_item, HOUSE_NO)
-        elif((c_index == ((words_count)-2)) or (c_index == ((words_count)-1))): # last item or last second item
-            content += get_single_content(c_item, SUITE_NO)
-        else:
-            content += get_single_content(c_item, STREET_NAME)
-
-    return content
 
 
 def pattern_20_maker_single(address):
