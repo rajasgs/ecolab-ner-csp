@@ -39,6 +39,8 @@ py ner_with_bert.py
 ```
 
 
+### Address-CNER-Riversand
+https://docs.google.com/spreadsheets/d/1QH_T6C3MAJNj5f_1gL1dZtLRUjFbwJ4wcHpPwlCfylI/
 
 ### Address - Patterns - Raja - Google Sheet:
 https://docs.google.com/spreadsheets/d/1RuTw-ycDOy2EUHf0qDp3kVvoZ0_s-bjd4eeRAyZndRk/

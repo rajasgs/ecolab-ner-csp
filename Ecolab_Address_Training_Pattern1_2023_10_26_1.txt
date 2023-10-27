@@ -6040,10 +6040,7 @@ c   SUITE_NO
 fernander   STREET_NAME
 102     SUITE_NO
 
-199     HOUSE_NO
-laniuma STREET_NAME
-place   STREET_NAME
-102     SUITE_NO
+p
 
 191     HOUSE_NO
 ahamaka STREET_NAME
