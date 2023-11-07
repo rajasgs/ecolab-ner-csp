@@ -9,7 +9,7 @@ source:
     
 '''
 
-FILEPATH = 'metrics_input.txt'
+FILEPATH = 'metrics_result_1.txt'
 
 dict_parts = {
     0 : 'entity',
@@ -23,14 +23,24 @@ dict_parts = {
 
 def set_dict(r_dict, parts):
 
+    # print(f'parts : {parts}')
+
     for idx, val in enumerate(parts):
-        r_dict[dict_parts[idx]] = val
+
+        if(idx in [1, 2, 3]):
+            r_dict[dict_parts[idx]] = float(val)
+        else:
+            r_dict[dict_parts[idx]] = val
 
     return r_dict
 
-def startpy():
+def get_metrics_from_text(filepath):
 
-    with open(FILEPATH) as fp:
+    overall_metric_dict = {
+
+    }
+
+    with open(filepath) as fp:
         for idx, line in enumerate(fp):
 
             if(idx == 0):
@@ -59,9 +69,19 @@ def startpy():
 
             # print(line)
 
-            print(r_dict)
+            overall_metric_dict[r_dict['entity']]  = r_dict
 
-    pass
+            # print(r_dict)
+            
+
+    total_metric = overall_metric_dict['Totals']
+
+    return overall_metric_dict, total_metric
+
+def startpy():
+
+    final_metric, total_metric = get_metrics_from_text(FILEPATH)
+    print(total_metric)
 
 if __name__ == '__main__':
     startpy()
