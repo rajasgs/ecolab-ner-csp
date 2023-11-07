@@ -102,12 +102,12 @@ def plot2():
 
     '''
         'entity' : 0,
-        'p' : 1,
-        'r' : 2,
-        'f1' : 3,
-        'tp' : 4,
-        'fp' : 5,
-        'fn' : 2
+        'p'     : 1,
+        'r'     : 2,
+        'f1'    : 3,
+        'tp'    : 4,
+        'fp'    : 5,
+        'fn'    : 2
     '''
 
     # https://matplotlib.org/stable/gallery/lines_bars_and_markers/barchart.html
