@@ -73,9 +73,24 @@ def write_ner_prop_file(ner_prop_file:str, train_files: list,test_files: list, o
         props = ner_prop_str(train_files, test_files, output_file)
         f.write(props)
 
+def cleanfile(filename):
 
+    with open(filename,'w') as file:
+        pass
+
+def write2file(file, content):
+
+    print(f'inside write2file')
+    print(content)
+
+    with open(file, 'a') as filetowrite:
+        filetowrite.write(content)
 
 def train_model(model_name: str, train_files: list, test_files: list, print_report: bool, classpath: str ):
+
+    output_filepath     = 'ner_output.txt'
+
+    cleanfile(output_filepath)
     
     model_file        = f'{model_name}.model.ser.gz'
     ner_prop_filename = f'{model_name}.model.props'
@@ -84,19 +99,33 @@ def train_model(model_name: str, train_files: list, test_files: list, print_repo
 
     with open("ner_classification.txt", 'w') as f:
         result = subprocess.run(
-            ['java',
-                     '-Xmx1g',
-                     '-cp', classpath,
-                    'edu.stanford.nlp.ie.crf.CRFClassifier',
-                    '-prop', ner_prop_filename], stdout=f
-            )
+            [
+                'java',
+                '-Xmx1g',
+                '-cp', 
+                classpath,
+                'edu.stanford.nlp.ie.crf.CRFClassifier',
+                '-prop', 
+                ner_prop_filename,
+                # 'capture_output=True',
+                # '>',
+                # 'neroutput.txt',
+                # '2>&1'
+            ], 
+            stdout = f
+        )
     
     ''',
                 capture_output=True,
                 check=True'''
-    #if print_report:
-    #    print(*result.stderr.decode('utf-8').split('\n')[-11:], sep='\n')
-    print("done")
+    
+    if print_report:
+        print(*result.stderr.decode('utf-8').split('\n')[-11:], sep='\n')
+
+        print(f'trap234')
+        write2file(output_filepath, result.stderr.decode('utf-8'))
+
+    print("done1")
     return model_file
 
 
@@ -154,11 +183,11 @@ def startpy():
     # )
 
     train_model(
-        CORE_NLP_MODELNAME, 
-        [CORE_NLP_TRAINING_FILEPATH], 
-        [CORE_NLP_TESTING_FILEPATH], 
-        True, 
-        classpath
+        model_name      = CORE_NLP_MODELNAME, 
+        train_files     = [CORE_NLP_TRAINING_FILEPATH], 
+        test_files      = [CORE_NLP_TESTING_FILEPATH], 
+        print_report    = False, 
+        classpath       = classpath
     )
 
     #result = ner_extract("/home/ashish/Documents/NER/ecolab_address_NER.model.ser.gz", ["2 The Square", "188 Belmont Road", "Deltaweg 76"], True)
