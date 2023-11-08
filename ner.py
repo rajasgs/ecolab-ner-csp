@@ -125,7 +125,7 @@ def train_model(model_name: str, train_files: list, test_files: list, print_repo
         print(f'trap234')
         write2file(output_filepath, result.stderr.decode('utf-8'))
 
-    print("done1")
+    # print("done1")
     return model_file
 
 

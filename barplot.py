@@ -120,8 +120,6 @@ def plot2():
     # return
 
     graph_title = 'NLP Mertics Comparison'
-    
-    # data from https://allisonhorst.github.io/palmerpenguins/
 
     species = ("precision", "recall", "f1")
     model_versions = {
