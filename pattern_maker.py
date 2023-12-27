@@ -543,7 +543,6 @@ def pattern_15_maker_single(address):
 
     return content
 
-
 def pattern_16_maker_single(address):
 
     '''
@@ -969,6 +968,14 @@ def pattern_32_maker_single(address):
 
     return content
 
+def pattern_43_maker_single(address):
+
+    return pattern_15_maker_single(address)
+
+def pattern_41_maker_single(address):
+
+    return pattern_16_maker_single(address)
+
 def pattern_maker_single(c_line, pattern_index):
 
     dynamic_module  = import_module(f"pattern_maker")
@@ -1072,5 +1079,11 @@ How to run?
 
 py pattern_maker.py <pattern_index>
 py pattern_maker.py 13
+
+
+This will print both training and testing content.
+You need to copy paste both on appropriate text files
+
+
 
 '''

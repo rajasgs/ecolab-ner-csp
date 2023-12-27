@@ -1,0 +1,408 @@
+15  HOUSE_NO
+ruchfeldstrasse STREET_NAME
+
+3799    HOUSE_NO
+las     STREET_NAME
+vegas   STREET_NAME
+blvd    STREET_NAME
+s   STREET_NAME
+
+1046    HOUSE_NO
+patterson   STREET_NAME
+rd  STREET_NAME
+
+719     HOUSE_NO
+tirau   STREET_NAME
+road    STREET_NAME
+
+55  HOUSE_NO
+hufelandstr.    STREET_NAME
+
+3000    HOUSE_NO
+las     STREET_NAME
+vegas   STREET_NAME
+blvd    STREET_NAME
+s   STREET_NAME
+
+5   HOUSE_NO
+bože    STREET_NAME
+perišić STREET_NAME
+
+4507    HOUSE_NO
+n   STREET_NAME
+college STREET_NAME
+ave     STREET_NAME
+
+169     HOUSE_NO
+jalan   STREET_NAME
+radin   STREET_NAME
+bagus   STREET_NAME
+
+55  HOUSE_NO
+hufelandstr.    STREET_NAME
+
+55  HOUSE_NO
+hufelandstr.    STREET_NAME
+
+200     HOUSE_NO
+laurier STREET_NAME
+ave     STREET_NAME
+w   STREET_NAME
+
+8   HOUSE_NO
+djalma  STREET_NAME
+lunds   STREET_NAME
+gård    STREET_NAME
+
+25  HOUSE_NO
+n   STREET_NAME
+škropeti    STREET_NAME
+
+20  HOUSE_NO
+nemocniční  STREET_NAME
+
+932     HOUSE_NO
+s   STREET_NAME
+bluff   STREET_NAME
+st  STREET_NAME
+
+1   HOUSE_NO
+kirschtalgraben STREET_NAME
+
+18  HOUSE_NO
+pribinova   STREET_NAME
+
+8   HOUSE_NO
+via     STREET_NAME
+nevizzano   STREET_NAME
+
+26  HOUSE_NO
+industrial  STREET_NAME
+dr  STREET_NAME
+
+656     HOUSE_NO
+river   STREET_NAME
+gardens STREET_NAME
+
+3   HOUSE_NO
+jalan   STREET_NAME
+radin   STREET_NAME
+bagus   STREET_NAME
+
+55  HOUSE_NO
+hufelandstr.    STREET_NAME
+
+7   HOUSE_NO
+einsteinova STREET_NAME
+
+37  HOUSE_NO
+jalan   STREET_NAME
+radin   STREET_NAME
+bagus   STREET_NAME
+
+1527    HOUSE_NO
+u   STREET_NAME
+slavie  STREET_NAME
+
+8   HOUSE_NO
+hauptstrasse    STREET_NAME
+
+497     HOUSE_NO
+bezručova   STREET_NAME
+
+80  HOUSE_NO
+w   STREET_NAME
+patent  STREET_NAME
+rd  STREET_NAME
+
+57  HOUSE_NO
+pratt   STREET_NAME
+street  STREET_NAME
+
+18  HOUSE_NO
+einsteinova STREET_NAME
+
+45  HOUSE_NO
+wildermannstr.  STREET_NAME
+
+114     HOUSE_NO
+haikkoontie STREET_NAME
+
+23442   HOUSE_NO
+el  STREET_NAME
+toro    STREET_NAME
+rd  STREET_NAME
+
+2185    HOUSE_NO
+s   STREET_NAME
+pleasant    STREET_NAME
+valley  STREET_NAME
+rd  STREET_NAME
+
+45  HOUSE_NO
+harvard STREET_NAME
+avenue  STREET_NAME
+
+188     HOUSE_NO
+parklands   STREET_NAME
+avenue  STREET_NAME
+
+7   HOUSE_NO
+einsteinova STREET_NAME
+
+443     HOUSE_NO
+s   STREET_NAME
+broad   STREET_NAME
+st  STREET_NAME
+
+386     HOUSE_NO
+elm     STREET_NAME
+st  STREET_NAME
+
+8   HOUSE_NO
+hietasaarenkuja STREET_NAME
+
+8500    HOUSE_NO
+pena    STREET_NAME
+blvd    STREET_NAME
+
+25  HOUSE_NO
+kinross STREET_NAME
+street  STREET_NAME
+
+25  HOUSE_NO
+einsteinova STREET_NAME
+
+4a  HOUSE_NO
+kovinska    STREET_NAME
+
+11  HOUSE_NO
+jana    STREET_NAME
+babáka  STREET_NAME
+
+605     HOUSE_NO
+via     STREET_NAME
+casino  STREET_NAME
+albini  STREET_NAME
+
+2   HOUSE_NO
+sierra  STREET_NAME
+de  STREET_NAME
+la  STREET_NAME
+solana  STREET_NAME
+
+3790    HOUSE_NO
+las     STREET_NAME
+vegas   STREET_NAME
+blvd    STREET_NAME
+s   STREET_NAME
+
+160     HOUSE_NO
+zlosyň  STREET_NAME
+
+100     HOUSE_NO
+brunswick   STREET_NAME
+medical STREET_NAME
+center  STREET_NAME
+pkwy    STREET_NAME
+ne  STREET_NAME
+
+34  HOUSE_NO
+sustjepanska    STREET_NAME
+obala   STREET_NAME
+
+4   HOUSE_NO
+carretera   STREET_NAME
+de  STREET_NAME
+murcia  STREET_NAME
+
+3   HOUSE_NO
+bruselská   STREET_NAME
+
+88  HOUSE_NO
+sp.     STREET_NAME
+voličina    STREET_NAME
+
+9700    HOUSE_NO
+s   STREET_NAME
+cass    STREET_NAME
+ave     STREET_NAME
+
+559     HOUSE_NO
+via     STREET_NAME
+claudia STREET_NAME
+
+150     HOUSE_NO
+saint   STREET_NAME
+thomas  STREET_NAME
+more    STREET_NAME
+dr  STREET_NAME
+
+11  HOUSE_NO
+hlohovecká  STREET_NAME
+cesta   STREET_NAME
+
+21  HOUSE_NO
+hviezdoslavovo  STREET_NAME
+námestie    STREET_NAME
+
+25  HOUSE_NO
+eisteinova  STREET_NAME
+
+1   HOUSE_NO
+flughafenstr.   STREET_NAME
+
+13  HOUSE_NO
+arto    STREET_NAME
+
+619     HOUSE_NO
+s   STREET_NAME
+woodward    STREET_NAME
+ave     STREET_NAME
+
+1   HOUSE_NO
+robert-bosch-str.   STREET_NAME
+
+2   HOUSE_NO
+islandska   STREET_NAME
+
+12  HOUSE_NO
+kojsko  STREET_NAME
+
+244     HOUSE_NO
+port    STREET_NAME
+richmond    STREET_NAME
+ave     STREET_NAME
+
+1   HOUSE_NO
+aichhof STREET_NAME
+
+149a    HOUSE_NO
+kells   STREET_NAME
+lane    STREET_NAME
+
+46  HOUSE_NO
+albertistrasse  STREET_NAME
+
+25  HOUSE_NO
+einsteinova STREET_NAME
+
+2   HOUSE_NO
+laubeho STREET_NAME
+nám.    STREET_NAME
+
+25  HOUSE_NO
+beethoven   STREET_NAME
+str.    STREET_NAME
+
+765     HOUSE_NO
+foxcroft    STREET_NAME
+ave     STREET_NAME
+
+35  HOUSE_NO
+lenox   STREET_NAME
+ave     STREET_NAME
+
+3   HOUSE_NO
+rybná   STREET_NAME
+
+5021    HOUSE_NO
+trotwood    STREET_NAME
+ave     STREET_NAME
+
+1045    HOUSE_NO
+staničná    STREET_NAME
+
+4600    HOUSE_NO
+international   STREET_NAME
+gtwy    STREET_NAME
+
+75  HOUSE_NO
+sienna  STREET_NAME
+
+601     HOUSE_NO
+s   STREET_NAME
+main    STREET_NAME
+st  STREET_NAME
+
+3475    HOUSE_NO
+las     STREET_NAME
+vegas   STREET_NAME
+blvd    STREET_NAME
+s   STREET_NAME
+
+8   HOUSE_NO
+robert-koch-str.    STREET_NAME
+
+77  HOUSE_NO
+e   STREET_NAME
+main    STREET_NAME
+st  STREET_NAME
+
+41  HOUSE_NO
+via     STREET_NAME
+emilia  STREET_NAME
+
+8   HOUSE_NO
+hietasaarenkuja STREET_NAME
+
+7   HOUSE_NO
+braškovská  STREET_NAME
+
+31  HOUSE_NO
+ul.     STREET_NAME
+krakowska   STREET_NAME
+
+419     HOUSE_NO
+n   STREET_NAME
+timberland  STREET_NAME
+dr  STREET_NAME
+
+495     HOUSE_NO
+gordonton   STREET_NAME
+road    STREET_NAME
+
+7   HOUSE_NO
+rockbarton  STREET_NAME
+park    STREET_NAME
+
+4   HOUSE_NO
+koseskega   STREET_NAME
+cesta   STREET_NAME
+
+14  HOUSE_NO
+donje   STREET_NAME
+svetice STREET_NAME
+
+49  HOUSE_NO
+haldenstrasse   STREET_NAME
+
+28  HOUSE_NO
+wolf-hirth-str. STREET_NAME
+
+2   HOUSE_NO
+islandska   STREET_NAME
+
+34e     HOUSE_NO
+hardek  STREET_NAME
+
+9   HOUSE_NO
+blegdamsvej STREET_NAME
+
+15  HOUSE_NO
+dalgas  STREET_NAME
+have    STREET_NAME
+
+34  HOUSE_NO
+adam    STREET_NAME
+road    STREET_NAME
+
+4   HOUSE_NO
+hviezdoslavovo  STREET_NAME
+námestie    STREET_NAME
+
+25  HOUSE_NO
+furth   STREET_NAME
+
+68  HOUSE_NO
+draše   STREET_NAME

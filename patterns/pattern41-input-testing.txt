@@ -1,0 +1,61 @@
+rua     STREET_NAME
+josé    STREET_NAME
+freire  STREET_NAME
+de  STREET_NAME
+moura,  STREET_NAME
+244     HOUSE_NO
+
+英皇道979  HOUSE_NO
+
+avenida STREET_NAME
+cristiano   STREET_NAME
+machado,    STREET_NAME
+4000    HOUSE_NO
+
+chemlonská  STREET_NAME
+1   HOUSE_NO
+
+kutnohorská STREET_NAME
+474     HOUSE_NO
+
+smaragdová  STREET_NAME
+1   HOUSE_NO
+
+savudrijska STREET_NAME
+cesta   STREET_NAME
+9   HOUSE_NO
+
+rua     STREET_NAME
+francisco   STREET_NAME
+dal'negro,  STREET_NAME
+3400    HOUSE_NO
+
+spojovacia  STREET_NAME
+1   HOUSE_NO
+
+朝阳北路175号    HOUSE_NO
+
+arja    STREET_NAME
+vas     STREET_NAME
+92  HOUSE_NO
+
+源順圍28   HOUSE_NO
+
+kajuhova    STREET_NAME
+cesta   STREET_NAME
+1   HOUSE_NO
+
+avenida STREET_NAME
+afonso  STREET_NAME
+pena,   STREET_NAME
+4909    HOUSE_NO
+
+185     STREET_NAME
+sargent STREET_NAME
+st  STREET_NAME
+unit    STREET_NAME
+103     HOUSE_NO
+
+po  STREET_NAME
+box     STREET_NAME
+69  HOUSE_NO
