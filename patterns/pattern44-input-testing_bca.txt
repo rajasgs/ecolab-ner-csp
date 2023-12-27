@@ -1,0 +1,99 @@
+3029    0
+/   0
+38  HOUSE_NO
+syllabova   STREET_NAME
+
+1018    0
+/   0
+1   HOUSE_NO
+za  STREET_NAME
+panskou STREET_NAME
+zahradou    STREET_NAME
+
+153     0
+/   0
+6   HOUSE_NO
+na  STREET_NAME
+dědince STREET_NAME
+
+693     0
+/   0
+5   HOUSE_NO
+galantská   STREET_NAME
+cesta   STREET_NAME
+
+28  0
+/   0
+1638    HOUSE_NO
+karolíny    STREET_NAME
+světlé  STREET_NAME
+
+187     0
+/   0
+177     HOUSE_NO
+m.r     STREET_NAME
+stefánika   STREET_NAME
+
+833     0
+/   0
+5   HOUSE_NO
+u   STREET_NAME
+nikolajky   STREET_NAME
+
+529     0
+/   0
+5   HOUSE_NO
+karmelitská STREET_NAME
+
+1666    0
+/   0
+17  HOUSE_NO
+zámecká STREET_NAME
+
+55  0
+/   0
+24  HOUSE_NO
+przemyska   STREET_NAME
+
+3779    0
+/   0
+18  HOUSE_NO
+nezvalova   STREET_NAME
+
+795     0
+/   0
+7   HOUSE_NO
+dusíkova    STREET_NAME
+
+1743    0
+/   0
+114     HOUSE_NO
+koněvova    STREET_NAME
+
+185     0
+/   0
+47  HOUSE_NO
+sluneční    STREET_NAME
+
+1078    0
+/   0
+1   HOUSE_NO
+náměstí STREET_NAME
+republiky   STREET_NAME
+
+4582    0
+/   0
+17  HOUSE_NO
+u   STREET_NAME
+spalovny    STREET_NAME
+
+51  0
+/   0
+22  HOUSE_NO
+dr.     STREET_NAME
+pohoreckého STREET_NAME
+
+1742    0
+/   0
+114     HOUSE_NO
+koněvova    STREET_NAME

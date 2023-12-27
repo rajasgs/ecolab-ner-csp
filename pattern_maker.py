@@ -842,8 +842,8 @@ def pattern_27_maker_single(address):
             content += get_single_content(c_item, HOUSE_NO)
         else:
 
-            if(c_item == "STE" or c_item == "SUITE"):
-                content += get_single_content(c_item, SUITE_NO)
+            if(c_item == "STE" or c_item == "SUITE" or c_item == 'ste' or c_item == 'suite'):
+                content += get_single_content(c_item, 0)
 
                 after_suite_flag = True
             else:
@@ -968,13 +968,79 @@ def pattern_32_maker_single(address):
 
     return content
 
+def pattern_41_maker_single(address):
+
+    return pattern_16_maker_single(address)
+
+def pattern_42_maker_single(address):
+
+    return pattern_15_maker_single(address)
+
 def pattern_43_maker_single(address):
 
     return pattern_15_maker_single(address)
 
-def pattern_41_maker_single(address):
+# BCA
+def pattern_44_maker_single(address):
 
-    return pattern_16_maker_single(address)
+    '''
+        Pattern 44 (BCA):
+
+        44	
+        (Suite_No)/(House_No) (StreetName)	
+        55/57 BAHNHOFSTRASSE
+
+        Sample:
+        1/3 WESTGATE PARK FODDERWICK
+    '''
+
+    # print(address)
+
+    address_parts = address.split(" ")
+
+    # print(len(address_parts))
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+
+            sub_parts = c_item.split("/")
+
+            content += get_single_content(sub_parts[0], EMPTY)
+            content += get_single_content("/", EMPTY)
+            content += get_single_content(sub_parts[1], HOUSE_NO)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
+
+# BCA
+def pattern_45_maker_single(address):
+
+    '''
+        Pattern 45 (BCA):
+
+        45	
+        (Street_Name) ( Street_Name)	
+        quai louis aulagne
+
+        Sample:
+        
+    '''
+    ad_list = address.split(" ")
+    content = "" 
+
+    for _, c_item in enumerate(ad_list):
+        content += get_single_content(c_item, STREET_NAME)
+
+    return content
+
+def pattern_46_maker_single(address):
+
+    return pattern_27_maker_single(address)
 
 def pattern_maker_single(c_line, pattern_index):
 
