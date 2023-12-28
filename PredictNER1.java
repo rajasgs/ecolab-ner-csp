@@ -103,10 +103,10 @@ public class PredictNER1 {
 
     public static void doTagging(CRFClassifier model, String input){
         input = input.trim();
-        // System.out.println(input+" ==> "+model.classifyToString(input));
+        System.out.println(input+" ==> "+model.classifyToString(input));
         // model.classifyToString(input);
 
-        System.out.println(model.classify(input));
+        // System.out.println(model.classify(input));
     }
 
     public static List<String> getContentsOfFile(String fileName){
@@ -179,12 +179,13 @@ public class PredictNER1 {
     public static void analyzeWithArgs(String address){
 
         CRFClassifier model = getModel(MODEL_PATH);
-        
-        Map<String, String> resultMap = getEntities(model, address);
-        System.out.println(resultMap);
 
         // if you want plain, use this
-        // doTagging(model, address);
+        doTagging(model, address);
+        
+        // Map<String, String> resultMap = getEntities(model, address);
+        // System.out.println(resultMap);
+
     }
 
     public static void main(String[] args){
