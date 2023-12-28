@@ -976,7 +976,38 @@ def pattern_41_maker_single(address):
 
 def pattern_42_maker_single(address):
 
-    return pattern_15_maker_single(address)
+    '''
+        Pattern 42:
+
+        42	
+        (HOUSE_NO)-(HOUSE_NO) (STREET_NAME)	
+        224-230 high street	
+
+        Sample:
+        224-230 high street
+ 
+    '''
+
+    address_parts = address.split(" ")
+
+    # print(len(address_parts))
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+
+            sub_parts = c_item.split("-")
+
+            content += get_single_content(sub_parts[0], HOUSE_NO)
+            content += get_single_content("-", HOUSE_NO)
+            content += get_single_content(sub_parts[1], HOUSE_NO)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
 
 def pattern_43_maker_single(address):
 
@@ -1156,10 +1187,7 @@ How to run?
 py pattern_maker.py <pattern_index>
 py pattern_maker.py 13
 
-
 This will print both training and testing content.
 You need to copy paste both on appropriate text files
-
-
 
 '''

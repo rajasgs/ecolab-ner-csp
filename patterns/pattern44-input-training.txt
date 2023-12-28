@@ -1,293 +1,348 @@
-1056    0
-/   0
-40  HOUSE_NO
-mánesova    STREET_NAME
-
-2121    0
-/   0
-22  HOUSE_NO
-spálená STREET_NAME
-ul.     STREET_NAME
-
-803     0
-/   0
-28  HOUSE_NO
-banícka STREET_NAME
-
-1645    0
+1655    SUITE_NO
 /   0
 1   HOUSE_NO
-vrbová  STREET_NAME
+kongresová  STREET_NAME
 
-1603    0
+51  SUITE_NO
 /   0
-47a     HOUSE_NO
-jankovcova  STREET_NAME
+22  HOUSE_NO
+dr.     STREET_NAME
+pohoreckého STREET_NAME
 
-3604    0
-/   0
-32  HOUSE_NO
-nábrežie    STREET_NAME
-justusajánatorkosa  STREET_NAME
-
-2   0
-/   0
-12  HOUSE_NO
-industriezeile  STREET_NAME
-
-3029    0
-/   0
-38  HOUSE_NO
-syllabova   STREET_NAME
-
-682     0
-/   0
-20  HOUSE_NO
-vodičkova   STREET_NAME
-
-330     0
-/   0
-33  HOUSE_NO
-evropská    STREET_NAME
-
-3   0
+3   SUITE_NO
 /   0
 1   HOUSE_NO
 stupničke   STREET_NAME
 šipkovine   STREET_NAME
 
-37  0
+70  SUITE_NO
 /   0
-a   HOUSE_NO
-via     STREET_NAME
-lumiere STREET_NAME
-fratelli    STREET_NAME
+289     HOUSE_NO
+m.r.štefánika   STREET_NAME
 
-53  0
+14  SUITE_NO
 /   0
-18  HOUSE_NO
-dr.pohoreckého  STREET_NAME
+13  HOUSE_NO
+alešova STREET_NAME
 
-505     0
+1073    SUITE_NO
 /   0
-8   HOUSE_NO
-novovysočanská  STREET_NAME
+25  HOUSE_NO
+k   STREET_NAME
+letišti STREET_NAME
 
-61  0
-/   0
-66  HOUSE_NO
-hlavní  STREET_NAME
-třída   STREET_NAME
-
-2041    0
-/   0
-38  HOUSE_NO
-jablunkovská    STREET_NAME
-
-658     0
-/   0
-9   HOUSE_NO
-žitná   STREET_NAME
-
-493     0
+493     SUITE_NO
 /   0
 63  HOUSE_NO
 bělohorská  STREET_NAME
 
-8   0
+803     SUITE_NO
+/   0
+28  HOUSE_NO
+banícka STREET_NAME
+
+2041    SUITE_NO
+/   0
+38  HOUSE_NO
+jablunkovská    STREET_NAME
+
+3603    SUITE_NO
+/   0
+28  HOUSE_NO
+nábrežie    STREET_NAME
+justusajánatorkosa  STREET_NAME
+
+1056    SUITE_NO
+/   0
+40  HOUSE_NO
+mánesova    STREET_NAME
+
+505     SUITE_NO
+/   0
+8   HOUSE_NO
+novovysočanská  STREET_NAME
+
+4   SUITE_NO
+/   0
+684     HOUSE_NO
+vítězné STREET_NAME
+nám.    STREET_NAME
+
+10  SUITE_NO
+/   0
+1   HOUSE_NO
+seelenwald  STREET_NAME
+
+569     SUITE_NO
+/   0
+31  HOUSE_NO
+štolcova    STREET_NAME
+
+8   SUITE_NO
 /   0
 b   HOUSE_NO
 via     STREET_NAME
 del     STREET_NAME
 chiassatello    STREET_NAME
 
-3603    0
+3333    SUITE_NO
 /   0
-28  HOUSE_NO
+159a    HOUSE_NO
+vinohradská STREET_NAME
+
+529     SUITE_NO
+/   0
+5   HOUSE_NO
+karmelitská STREET_NAME
+
+3604    SUITE_NO
+/   0
+32  HOUSE_NO
 nábrežie    STREET_NAME
 justusajánatorkosa  STREET_NAME
 
-479     0
+1018    SUITE_NO
 /   0
-25  HOUSE_NO
-staroměstské    STREET_NAME
-nám.    STREET_NAME
+1   HOUSE_NO
+za  STREET_NAME
+panskou STREET_NAME
+zahradou    STREET_NAME
 
-48a     0
+48a     SUITE_NO
 /   0
 4219    HOUSE_NO
 nitrianska  STREET_NAME
 
-242     0
+2589    SUITE_NO
 /   0
-25  HOUSE_NO
-podolská    STREET_NAME
+33b     HOUSE_NO
+evropská    STREET_NAME
 
-6711    0
+187     SUITE_NO
 /   0
-25  HOUSE_NO
-n.  STREET_NAME
-teslu   STREET_NAME
+177     HOUSE_NO
+m.r     STREET_NAME
+stefánika   STREET_NAME
 
-4304    0
-/   0
-1   HOUSE_NO
-věstonická  STREET_NAME
-
-48a     0
-/   0
-4219    HOUSE_NO
-nitrianska  STREET_NAME
-
-218     0
-/   0
-4   HOUSE_NO
-příkrá  STREET_NAME
-
-1461    0
-/   0
-2a  HOUSE_NO
-vyskočilova STREET_NAME
-
-1655    0
-/   0
-1   HOUSE_NO
-kongresová  STREET_NAME
-
-3944    0
-/   0
-5a  HOUSE_NO
-zemědělská  STREET_NAME
-
-114     0
-/   0
-10  HOUSE_NO
-koněvova    STREET_NAME
-
-372     0
+372     SUITE_NO
 /   0
 3   HOUSE_NO
 k   STREET_NAME
 suchopádu   STREET_NAME
 
-343     0
-/   0
-7   HOUSE_NO
-hurbanova   STREET_NAME
-
-2459    0
-/   0
-108     HOUSE_NO
-hlavní  STREET_NAME
-
-455     0
-/   0
-54  HOUSE_NO
-brněnská    STREET_NAME
-
-185     0
-/   0
-47  HOUSE_NO
-sluneční    STREET_NAME
-
-283     0
-/   0
-8   HOUSE_NO
-v   STREET_NAME
-mokřinách   STREET_NAME
-
-3333    0
-/   0
-159a    HOUSE_NO
-vinohradská STREET_NAME
-
-505     0
-/   0
-8   HOUSE_NO
-novovysočanská  STREET_NAME
-
-107     0
-/   0
-32  HOUSE_NO
-via     STREET_NAME
-monza   STREET_NAME
-
-2589    0
-/   0
-33b     HOUSE_NO
-evropská    STREET_NAME
-
-283     0
-/   0
-8   HOUSE_NO
-v   STREET_NAME
-mokřinách   STREET_NAME
-
-14  0
-/   0
-13  HOUSE_NO
-alešova STREET_NAME
-
-10  0
-/   0
-1   HOUSE_NO
-seelenwald  STREET_NAME
-
-100     0
-/   0
-6   HOUSE_NO
-vaníčkova   STREET_NAME
-
-2589    0
-/   0
-33b     HOUSE_NO
-evropská    STREET_NAME
-
-569     0
+569     SUITE_NO
 /   0
 31  HOUSE_NO
 štolcova    STREET_NAME
 
-336     0
+682     SUITE_NO
 /   0
-36  HOUSE_NO
-vlašská STREET_NAME
+20  HOUSE_NO
+vodičkova   STREET_NAME
 
-12  0
+2   SUITE_NO
 /   0
-14  HOUSE_NO
-via     STREET_NAME
-mazzini STREET_NAME
+12  HOUSE_NO
+industriezeile  STREET_NAME
 
-8   0
+8   SUITE_NO
 /   0
 25  HOUSE_NO
 ul.     STREET_NAME
 dworska STREET_NAME
 
-1913    0
+1927    SUITE_NO
+/   0
+5   HOUSE_NO
+"břevnov,   STREET_NAME
+zvoníčkova" STREET_NAME
+
+114     SUITE_NO
+/   0
+10  HOUSE_NO
+koněvova    STREET_NAME
+
+4304    SUITE_NO
+/   0
+1   HOUSE_NO
+věstonická  STREET_NAME
+
+68  SUITE_NO
+/   0
+73  HOUSE_NO
+komenského  STREET_NAME
+
+3779    SUITE_NO
+/   0
+18  HOUSE_NO
+nezvalova   STREET_NAME
+
+14  SUITE_NO
 /   0
 13  HOUSE_NO
-pod     STREET_NAME
-slovany STREET_NAME
+alešova STREET_NAME
 
-70  0
+100     SUITE_NO
 /   0
-289     HOUSE_NO
-m.r.štefánika   STREET_NAME
+6   HOUSE_NO
+vaníčkova   STREET_NAME
 
-569     0
+336     SUITE_NO
 /   0
-31  HOUSE_NO
-štolcova    STREET_NAME
+36  HOUSE_NO
+vlašská STREET_NAME
 
-4   0
+4582    SUITE_NO
 /   0
-684     HOUSE_NO
-vítězné STREET_NAME
+17  HOUSE_NO
+u   STREET_NAME
+spalovny    STREET_NAME
+
+2121    SUITE_NO
+/   0
+22  HOUSE_NO
+spálená STREET_NAME
+ul.     STREET_NAME
+
+3029    SUITE_NO
+/   0
+38  HOUSE_NO
+syllabova   STREET_NAME
+
+3029    SUITE_NO
+/   0
+38  HOUSE_NO
+syllabova   STREET_NAME
+
+12  SUITE_NO
+/   0
+14  HOUSE_NO
+via     STREET_NAME
+mazzini STREET_NAME
+
+53  SUITE_NO
+/   0
+18  HOUSE_NO
+dr.pohoreckého  STREET_NAME
+
+283     SUITE_NO
+/   0
+8   HOUSE_NO
+v   STREET_NAME
+mokřinách   STREET_NAME
+
+2027    SUITE_NO
+/   0
+77  HOUSE_NO
+antala  STREET_NAME
+staška  STREET_NAME
+
+693     SUITE_NO
+/   0
+5   HOUSE_NO
+galantská   STREET_NAME
+cesta   STREET_NAME
+
+372     SUITE_NO
+/   0
+3   HOUSE_NO
+k   STREET_NAME
+suchopádu   STREET_NAME
+
+343     SUITE_NO
+/   0
+7   HOUSE_NO
+hurbanova   STREET_NAME
+
+218     SUITE_NO
+/   0
+4   HOUSE_NO
+příkrá  STREET_NAME
+
+1078    SUITE_NO
+/   0
+1   HOUSE_NO
+náměstí STREET_NAME
+republiky   STREET_NAME
+
+185     SUITE_NO
+/   0
+47  HOUSE_NO
+sluneční    STREET_NAME
+
+107     SUITE_NO
+/   0
+32  HOUSE_NO
+via     STREET_NAME
+monza   STREET_NAME
+
+479     SUITE_NO
+/   0
+25  HOUSE_NO
+staroměstské    STREET_NAME
 nám.    STREET_NAME
 
-18  0
+455     SUITE_NO
+/   0
+54  HOUSE_NO
+brněnská    STREET_NAME
+
+2589    SUITE_NO
+/   0
+33b     HOUSE_NO
+evropská    STREET_NAME
+
+658     SUITE_NO
+/   0
+9   HOUSE_NO
+žitná   STREET_NAME
+
+28  SUITE_NO
+/   0
+1638    HOUSE_NO
+karolíny    STREET_NAME
+světlé  STREET_NAME
+
+1461    SUITE_NO
+/   0
+2a  HOUSE_NO
+vyskočilova STREET_NAME
+
+1603    SUITE_NO
+/   0
+47a     HOUSE_NO
+jankovcova  STREET_NAME
+
+3944    SUITE_NO
+/   0
+5a  HOUSE_NO
+zemědělská  STREET_NAME
+
+283     SUITE_NO
+/   0
+8   HOUSE_NO
+v   STREET_NAME
+mokřinách   STREET_NAME
+
+61  SUITE_NO
+/   0
+66  HOUSE_NO
+hlavní  STREET_NAME
+třída   STREET_NAME
+
+37  SUITE_NO
+/   0
+a   HOUSE_NO
+via     STREET_NAME
+lumiere STREET_NAME
+fratelli    STREET_NAME
+
+795     SUITE_NO
+/   0
+7   HOUSE_NO
+dusíkova    STREET_NAME
+
+18  SUITE_NO
 /   0
 20  HOUSE_NO
 rue     STREET_NAME
@@ -295,85 +350,33 @@ louis   STREET_NAME
 jacques STREET_NAME
 guichard    STREET_NAME
 
-1927    0
-/   0
-5   HOUSE_NO
-"břevnov,   STREET_NAME
-zvoníčkova" STREET_NAME
-
-68  0
-/   0
-73  HOUSE_NO
-komenského  STREET_NAME
-
-1576    0
-/   0
-23c     HOUSE_NO
-bohdalecká  STREET_NAME
-
-14  0
-/   0
-13  HOUSE_NO
-alešova STREET_NAME
-
-626     0
+626     SUITE_NO
 /   0
 1   HOUSE_NO
 jarmočná    STREET_NAME
 
-372     0
+55  SUITE_NO
 /   0
-3   HOUSE_NO
-k   STREET_NAME
-suchopádu   STREET_NAME
+24  HOUSE_NO
+przemyska   STREET_NAME
 
-658     0
-/   0
-9   HOUSE_NO
-žitná   STREET_NAME
-
-68  0
-/   0
-73  HOUSE_NO
-komenského  STREET_NAME
-
-2027    0
-/   0
-77  HOUSE_NO
-antala  STREET_NAME
-staška  STREET_NAME
-
-1073    0
+6711    SUITE_NO
 /   0
 25  HOUSE_NO
-k   STREET_NAME
-letišti STREET_NAME
+n.  STREET_NAME
+teslu   STREET_NAME
 
-2627    0
+1743    SUITE_NO
 /   0
-46  HOUSE_NO
-"vysočina,  STREET_NAME
-vrchlického STREET_NAME
-"   STREET_NAME
+114     HOUSE_NO
+koněvova    STREET_NAME
 
-4304    0
+48a     SUITE_NO
 /   0
-1   HOUSE_NO
-věstonická  STREET_NAME
+4219    HOUSE_NO
+nitrianska  STREET_NAME
 
-228     0
+242     SUITE_NO
 /   0
-2   HOUSE_NO
-nádražní    STREET_NAME
-
-26  0
-/   0
-2   HOUSE_NO
-mate    STREET_NAME
-vlašća  STREET_NAME
-
-133     0
-/   0
-2   HOUSE_NO
-purkyňovo   STREET_NAME
-nám.    STREET_NAME
+25  HOUSE_NO
+podolská    STREET_NAME

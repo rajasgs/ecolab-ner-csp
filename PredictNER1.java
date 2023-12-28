@@ -19,13 +19,20 @@ import edu.stanford.nlp.util.StringUtils;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
 
 public class PredictNER1 {
 
-    private static final String MODEL_PATH = "ecolab_address_bca_20231227_1.model.ser.gz";
+    private static final String MODEL_PATH = "ecolab_address_20231228_1.model.ser.gz";
+
+    static String STREET_NAME       = "STREET_NAME";
+    static String HOUSE_NO          = "HOUSE_NO";
+    static String SUITE_NO          = "SUITE_NO";
 
     static void print(Object obj){
         System.out.println(obj);
@@ -36,10 +43,70 @@ public class PredictNER1 {
         return CRFClassifier.getClassifierNoExceptions(modelPath);
     }
 
+    public static Map<String, String> getEntities(CRFClassifier model, String input){
+        input = input.trim();
+        // System.out.println(input+" ==> "+model.classifyToString(input));
+        String result = model.classifyToString(input);
+
+        List<String> resultParts = Arrays.asList(result.split(" "));
+        // print(resultParts);
+
+        Map<String, String> resultMap = new HashMap<String, String>();
+
+
+        resultMap.put(STREET_NAME, "");
+        resultMap.put(HOUSE_NO, "");
+        for (String object: resultParts) {
+
+            // print("part : " + object);
+
+            List<String> KeyValueParts = Arrays.asList(object.split("/"));
+
+            String value = KeyValueParts.get(0);
+            String key   = KeyValueParts.get(1);
+
+            // print(key);
+
+            if(key.equalsIgnoreCase(STREET_NAME)){
+                String prevValue = resultMap.get(STREET_NAME);
+
+                String newValue = prevValue + " " + value; 
+                resultMap.put(STREET_NAME, newValue);
+
+                // print(resultMap);
+            } else if (key.equalsIgnoreCase(HOUSE_NO)){
+
+                String prevValue = resultMap.get(HOUSE_NO);
+
+                String newValue = prevValue + " " + value; 
+                resultMap.put(HOUSE_NO, newValue);
+
+            } else if (key.equalsIgnoreCase(SUITE_NO)){
+
+                String prevValue = resultMap.get(SUITE_NO);
+
+                String newValue = prevValue + " " + value; 
+                resultMap.put(SUITE_NO, newValue);
+
+            }
+            
+        }
+
+        resultMap.put(STREET_NAME, (resultMap.getOrDefault(STREET_NAME, "")).trim());
+        resultMap.put(HOUSE_NO, (resultMap.getOrDefault(HOUSE_NO, "")).trim());
+        resultMap.put(SUITE_NO, (resultMap.getOrDefault(SUITE_NO, "")).trim());
+
+        // print("");
+
+        return resultMap;
+    }
+
     public static void doTagging(CRFClassifier model, String input){
         input = input.trim();
-        System.out.println(input+" ==> "+model.classifyToString(input));
-        model.classifyToString(input);
+        // System.out.println(input+" ==> "+model.classifyToString(input));
+        // model.classifyToString(input);
+
+        System.out.println(model.classify(input));
     }
 
     public static List<String> getContentsOfFile(String fileName){
@@ -112,7 +179,12 @@ public class PredictNER1 {
     public static void analyzeWithArgs(String address){
 
         CRFClassifier model = getModel(MODEL_PATH);
-        doTagging(model, address);
+        
+        Map<String, String> resultMap = getEntities(model, address);
+        System.out.println(resultMap);
+
+        // if you want plain, use this
+        // doTagging(model, address);
     }
 
     public static void main(String[] args){
