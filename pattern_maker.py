@@ -79,6 +79,8 @@ def find_digit_index_in_list(address_list):
 
 def get_single_content(item, tag):
 
+    # item = item.strip()
+
     content = ""
 
     content += f"{item}"
@@ -988,10 +990,13 @@ def pattern_44_maker_single(address):
 
         44	
         (Suite_No)/(House_No) (StreetName)	
-        55/57 BAHNHOFSTRASSE
+        After call with Yash, this format changed to: (Dec 28, 2023)
+            (Suite_No) / (House_No) (StreetName)
+
+        55 / 57 BAHNHOFSTRASSE
 
         Sample:
-        1/3 WESTGATE PARK FODDERWICK
+        1 / 3 WESTGATE PARK FODDERWICK
     '''
 
     # print(address)
@@ -1005,13 +1010,18 @@ def pattern_44_maker_single(address):
     for c_index, c_item in enumerate(address_parts):
         # print(c_index, c_item)
 
-        if(c_index == 0):
+        if(c_index == 0 or c_index == 1 or c_index == 2):
 
-            sub_parts = c_item.split("/")
+            # sub_parts = c_item.split("/")
 
-            content += get_single_content(sub_parts[0], EMPTY)
-            content += get_single_content("/", EMPTY)
-            content += get_single_content(sub_parts[1], HOUSE_NO)
+            # print(f'sub_parts : {sub_parts}')
+
+            if(c_index == 0):
+                content += get_single_content(c_item, SUITE_NO)
+            elif(c_index == 1):
+                content += get_single_content("/", EMPTY)
+            else:
+                content += get_single_content(c_item, HOUSE_NO)
         else:
             content += get_single_content(c_item, STREET_NAME)
 

@@ -868,7 +868,6 @@ furth   STREET_NAME
 68  HOUSE_NO
 draše   STREET_NAME
 
-cspstart
 1056    0
 /   0
 40  HOUSE_NO
@@ -1248,7 +1247,6 @@ vlašća  STREET_NAME
 2   HOUSE_NO
 purkyňovo   STREET_NAME
 nám.    STREET_NAME
-cspend
 
 kawasan STREET_NAME
 industrian  STREET_NAME
