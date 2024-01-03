@@ -14,6 +14,9 @@ source:
 
     https://stackoverflow.com/questions/31627321/testing-if-a-value-is-numeric
 
+    Match Result_Iteration 2_ReRun_2023 (Ecolab feedback) 11-30-23
+    https://docs.google.com/spreadsheets/d/14PMNufXfsWASB52py88fGtMnqO8EYnTh_t8ep5drIWc/edit#gid=1279351980
+
     
 '''
 
@@ -1013,11 +1016,10 @@ def pattern_43_maker_single(address):
 
     return pattern_15_maker_single(address)
 
-# BCA
 def pattern_44_maker_single(address):
 
     '''
-        Pattern 44 (BCA):
+        Pattern 44:
 
         44	
         (Suite_No)/(House_No) (StreetName)	
@@ -1058,11 +1060,10 @@ def pattern_44_maker_single(address):
 
     return content
 
-# BCA
 def pattern_45_maker_single(address):
 
     '''
-        Pattern 45 (BCA):
+        Pattern 45:
 
         45	
         (Street_Name) ( Street_Name)	
@@ -1082,6 +1083,110 @@ def pattern_45_maker_single(address):
 def pattern_46_maker_single(address):
 
     return pattern_27_maker_single(address)
+
+def pattern_47_maker_single(address):
+
+    '''
+        Pattern 47:
+
+        47	
+        (House_No) ( Street_Name) (Suite_No)	
+        198 martinez ct unit 104
+        
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    last_index = len(address_parts)-1
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, HOUSE_NO)
+        elif(c_index == last_index):
+            content += get_single_content(c_item, SUITE_NO)
+        elif(c_item == 'unit'):
+            content += get_single_content(c_item, EMPTY)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
+
+def pattern_49_maker_single(address):
+
+    '''
+        Pattern 49:
+
+        49
+        [unit] (suite_no) (Street_Name)	
+        unit k-1-01 menara pearl point 2
+        
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    last_index = len(address_parts)-1
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, 0)
+        elif(c_index == 1):
+            content += get_single_content(c_item, SUITE_NO)
+        elif(c_index == 2 and "-" in c_item):
+            content += get_single_content(c_item, SUITE_NO)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
+
+def pattern_50_maker_single(address):
+
+    '''
+        Pattern 50:
+
+        49
+        (House_No) (Street_Name)-(Street_Name)	
+        1a wilhelm-bertelsmann-str.
+        
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    last_index = len(address_parts)-1
+    for c_index, c_item in enumerate(address_parts):
+        # print(c_index, c_item)
+
+        if(c_index == 0):
+            content += get_single_content(c_item, HOUSE_NO)
+        elif(c_index == 1):
+
+            sub_parts = c_item.split("-")    
+            slast_index = len(sub_parts)-1
+            
+            for sc_index, sc_item in enumerate(sub_parts):
+                content += get_single_content(sc_item, STREET_NAME)
+                if(sc_index < slast_index):
+                    content += get_single_content("-", STREET_NAME)
+        else:
+            if("-" in c_item):
+                sub_parts1 = c_item.split("-")    
+                slast_index1 = len(sub_parts1)-1
+                
+                for sc_index1, sc_item1 in enumerate(sub_parts1):
+                    content += get_single_content(sc_item1, STREET_NAME)
+                    if(sc_index1 < slast_index1):
+                        content += get_single_content("-", STREET_NAME)
+            else:
+                content += get_single_content(c_item, STREET_NAME)
+
+    return content
 
 def pattern_maker_single(c_line, pattern_index):
 

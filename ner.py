@@ -199,6 +199,16 @@ def startpy():
 if __name__ == '__main__':
     startpy()
 
+
+'''
+How to run?
+
+python ner.py
+
+sample output:
+https://gist.github.com/rajasgs/19ea4b6c834cdff53691812d08d272d8
+'''
+
 # Compiling the Java file
 # javac -cp "/home/ashish/corenlp/stanford-corenlp-4.5.2/*" PredictNER.java
 

@@ -457,3 +457,15 @@ cumming STREET_NAME
 hwy     STREET_NAME
 ste     0
 108     SUITE_NO
+
+2835    HOUSE_NO
+showplace   STREET_NAME
+dr  STREET_NAME
+unit    0
+10-40   SUITE_NO
+
+135     HOUSE_NO
+doane   STREET_NAME
+st  STREET_NAME
+unit    0
+103     SUITE_NO

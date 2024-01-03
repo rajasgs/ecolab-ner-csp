@@ -1,0 +1,18 @@
+unit 2, station road
+unit b-0-1 a-0-7 ground floor
+unit d-3a-3
+unit k-1-01 menara pearl point 2
+unit g05
+unit 3e-07-08, tropicana indah
+unit 6
+unit 2 station road
+unit 4-5
+unit 45
+unit 7
+unit 8a
+unit 8a
+unit b-0-1 a-0-7 ground floor
+unit d-3a-3
+unit k-1-01 menara pearl point 2
+unit g05
+unit 47

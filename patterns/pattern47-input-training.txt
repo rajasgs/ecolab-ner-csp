@@ -1,0 +1,44 @@
+160     HOUSE_NO
+petersen    STREET_NAME
+ct  STREET_NAME
+unit    0
+104     SUITE_NO
+
+25938   HOUSE_NO
+plaza   STREET_NAME
+dr  STREET_NAME
+unit    0
+5   SUITE_NO
+
+2835    HOUSE_NO
+showplace   STREET_NAME
+dr  STREET_NAME
+unit    0
+10-40   SUITE_NO
+
+198     HOUSE_NO
+martinez    STREET_NAME
+ct  STREET_NAME
+unit    0
+104     SUITE_NO
+
+29  HOUSE_NO
+n   STREET_NAME
+somerset    STREET_NAME
+st  STREET_NAME
+unit    0
+101     SUITE_NO
+
+197     HOUSE_NO
+santa   STREET_NAME
+cruz    STREET_NAME
+ct  STREET_NAME
+unit    0
+104     SUITE_NO
+
+132     HOUSE_NO
+kai     STREET_NAME
+ehu     STREET_NAME
+ct  STREET_NAME
+unit    0
+103     SUITE_NO

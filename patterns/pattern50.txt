@@ -1,0 +1,17 @@
+20 martin-luther-str.
+28 wolf-hirth-str.
+1 paul-ehrlich-str.
+8 robert-koch-str.
+1 robert-bosch-str.
+7 carl-von-ossietzky-str.
+6 karl-marx-straße
+20 hans-böckler-allee
+7 johannes-müller-str.
+50 werner-von-siemens-str.
+5 rue saint-jean-du-pérot
+29 rote-kreuz-str.
+1a wilhelm-bertelsmann-str.
+182 ul. marii skłodowskiej-curie
+36 abraham-lincoln-str.
+7 ernst-frenzel-str.
+533 frankston-dandenong road
