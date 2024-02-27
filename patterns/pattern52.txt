@@ -1,0 +1,10 @@
+2a ring / brunnsviken h4 / avfart 202
+3c väg / skogslunden r2 / utfart 76
+4d bro / sundet q5 / avfart 89
+5e fält / dalen p3 / utfart 134
+6f kors / fjärden m1 / avfart 157
+7g slätt / ängen v9 / utfart 211
+8h ås / kullen e8 / avfart 45
+9i dal / viken l7 / utfart 92
+10j älv / strömmen g2 / avfart 103
+11k udde / holmen n4 / utfart 118

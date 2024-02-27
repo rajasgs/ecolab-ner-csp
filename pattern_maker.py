@@ -1188,6 +1188,164 @@ def pattern_50_maker_single(address):
 
     return content
 
+def pattern_51_maker_single(address):
+
+    '''
+        Pattern 51:
+
+        krnt
+        yiğit
+        özkan
+        çakr
+        güldemet
+        bahçeler
+        çiğdem
+        şeyma
+        beydağ
+    '''
+
+    content = get_single_content(address, STREET_NAME)
+
+    return content
+
+def pattern_52_maker_single(address):
+
+    '''
+        Pattern 52:
+
+        2a ring / brunnsviken h4 / avfart 202
+
+        2a 		HOUSE_NO
+        202 	SUITE_NO
+        ring / brunnsviken h4 / avfart 	STREET_NAME
+    '''
+
+    address_parts = address.split("/")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        c_item = c_item.strip()
+
+        if(c_index == 0):
+            sub_parts = c_item.split(" ")
+
+            for s_index, s_item in enumerate(sub_parts):
+                if(s_index == 0):
+                    content += get_single_content(s_item, HOUSE_NO)
+                else:
+                    content += get_single_content(s_item, STREET_NAME)
+
+            content += get_single_content("/", EMPTY)
+        elif(c_index == 1):
+            sub_parts = c_item.split(" ")
+
+            for s_index, s_item in enumerate(sub_parts):
+                if(s_index == 0):
+                    content += get_single_content(s_item, STREET_NAME)
+                else:
+                    content += get_single_content(s_item, STREET_NAME)
+
+            content += get_single_content("/", EMPTY)
+        elif(c_index == 2):
+            sub_parts = c_item.split(" ")
+
+            for s_index, s_item in enumerate(sub_parts):
+                if(s_index == 0):
+                    content += get_single_content(s_item, STREET_NAME)
+                else:
+                    content += get_single_content(s_item, SUITE_NO)
+
+
+    return content
+
+def pattern_54_maker_single(address):
+
+    '''
+        Pattern 54:
+            12 5 / 92b
+
+            11 HOUSE_NO
+            4 HOUSE_NO
+	        91a SUITE_NO
+
+    '''
+
+    address_parts = address.split("/")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        c_item = c_item.strip()
+
+        if(c_index == 0):
+            # content += get_single_content(c_item, HOUSE_NO)
+            sub_parts = c_item.split(" ")
+
+            for s_index, s_item in enumerate(sub_parts):
+                if(s_index == 0):
+                    content += get_single_content(s_item, HOUSE_NO)
+                else:
+                    content += get_single_content(s_item, HOUSE_NO)
+
+            content += get_single_content("/", EMPTY)
+        else:
+            content += get_single_content(c_item, SUITE_NO)
+
+    return content
+
+
+def pattern_55_maker_single(address):
+
+    '''
+        Pattern 55:
+            dungel / wirtschafthof
+
+            dungel / wirtschafthof STREET_NAME
+    '''
+
+    address_parts = address.split("/")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        c_item = c_item.strip()
+
+        if(c_index == 0):
+            content += get_single_content(c_item, STREET_NAME)
+
+            content += get_single_content("/", EMPTY)
+        else:
+            content += get_single_content(c_item, STREET_NAME)
+
+    return content
+
+
+def pattern_56_maker_single(address):
+
+    '''
+        Pattern 56:
+            452 303
+
+            452  	HOUSE_NO
+	        303 	SUITE_NO
+    '''
+
+    address_parts = address.split(" ")
+
+    content = ""
+
+    for c_index, c_item in enumerate(address_parts):
+        c_item = c_item.strip()
+
+        if(c_index == 0):
+            content += get_single_content(c_item, HOUSE_NO)
+        else:
+            content += get_single_content(c_item, SUITE_NO)
+
+    return content
+
+
 def pattern_maker_single(c_line, pattern_index):
 
     dynamic_module  = import_module(f"pattern_maker")
@@ -1243,7 +1401,6 @@ def pattern_maker_multiple(pattern_index):
 def startpy():
 
     pattern = int(sys.argv[1])
-
     print(pattern_maker_multiple(pattern))
 
 
@@ -1278,6 +1435,8 @@ if __name__ == '__main__':
     
     
     startpy()
+
+    # print(pattern_52_maker_single("2a ring / brunnsviken h4 / avfart 202"))
 
     # test_split()
 

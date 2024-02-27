@@ -66,7 +66,6 @@ def combine_testing_files():
 
 def startpy(ctype):
 
-    
     testing_file    = CORE_NLP_TESTING_FILEPATH
 
     # print(f'training_file : {training_file}')
@@ -77,7 +76,6 @@ def startpy(ctype):
         combine_testing_files()
     else:
         print("Not matched")
-
 
 if __name__ == '__main__':
 
@@ -96,5 +94,9 @@ if __name__ == '__main__':
 '''
 How to run?
 
+# training
 python final_input_maker.py 1
+
+# testing
+python final_input_maker.py 2
 '''

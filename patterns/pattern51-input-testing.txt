@@ -1,0 +1,17 @@
+yiğit   STREET_NAME
+
+çemberlitaş STREET_NAME
+
+kurtköy STREET_NAME
+
+murphy  STREET_NAME
+
+edebali STREET_NAME
+
+beydağı STREET_NAME
+
+şeyma   STREET_NAME
+
+mutlu   STREET_NAME
+
+delaney STREET_NAME

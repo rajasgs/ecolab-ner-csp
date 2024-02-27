@@ -1,0 +1,121 @@
+py ner.py
+The classpath is:  jars/*
+Invoked on Mon Feb 26 23:46:28 IST 2024 with arguments: -prop ecolab_address_20240226_1.model.props
+useTypeSeqs2=true
+noMidNGrams=false
+testFiles=Ecolab_Address_Testing_Pattern1_2024_02_26_1.txt
+maxNGramLeng=6
+maxLeft=4
+serializeTo=ecolab_address_20240226_1.model.ser.gz
+wordShape=chris2useLC
+trainFileList=Ecolab_Address_Training_Pattern1_2024_02_26_1.txt
+useDisjunctive=true
+useClassFeature=true
+useNGrams=true
+useNext=true
+usePrev=true
+useTypeySequences=true
+usePrevSequences=true
+useTypeSeqs=true
+useSequences=true
+map=word=0,answer=1
+useWord=true
+numFeatures = 19536
+Time to convert docs to feature indices: 0.1 seconds
+Current memory used: 11m
+numClasses: 5 [0=O,1=STREET_NAME,2=HOUSE_NO,3=SUITE_NO,4=0]
+numDocuments: 405
+numDatums: 1546
+numFeatures: 19536
+Time to convert docs to data/labels: 0.1 seconds
+Current memory used: 30m
+Running gradient on 8 threads
+numWeights: 192960
+QNMinimizer called on double function of 192960 variables, using M = 25.
+               An explanation of the output:
+Iter           The number of iterations
+evals          The number of function evaluations
+SCALING        <D> Diagonal scaling was used; <I> Scaled Identity
+LINESEARCH     [## M steplength]  Minpack linesearch
+                   1-Function value was too high
+                   2-Value ok, gradient positive, positive curvature
+                   3-Value ok, gradient negative, positive curvature
+                   4-Value ok, gradient negative, negative curvature
+               [.. B]  Backtracking
+VALUE          The current function value
+TIME           Total elapsed time
+|GNORM|        The current norm of the gradient
+{RELNORM}      The ratio of the current to initial gradient norms
+AVEIMPROVE     The average improvement / current value
+EVALSCORE      The last available eval score
+ 
+Iter ## evals ## <SCALING> [LINESEARCH] VALUE TIME |GNORM| {RELNORM} AVEIMPROVE EVALSCORE
+
+Iter 1 evals 1 <D> [113M 2.118E-3] 3.494E4 0.54s |1.389E3| {7.199E-1} 0.000E0 - 
+Iter 2 evals 5 <D> [M 1.000E0] 3.379E4 0.66s |9.530E2| {4.940E-1} 1.702E-2 - 
+Iter 3 evals 6 <D> [M 1.000E0] 3.251E4 0.79s |3.663E2| {1.899E-1} 2.488E-2 - 
+Iter 4 evals 7 <D> [M 1.000E0] 3.206E4 0.92s |2.972E2| {1.540E-1} 2.245E-2 - 
+Iter 5 evals 8 <D> [M 1.000E0] 2.897E4 1.04s |2.416E2| {1.253E-1} 4.125E-2 - 
+Iter 6 evals 9 <D> [M 1.000E0] 1.591E4 1.14s |2.494E2| {1.293E-1} 1.994E-1 - 
+Iter 7 evals 10 <D> [M 1.000E0] 8.797E3 1.26s |1.300E2| {6.737E-2} 4.246E-1 - 
+Iter 8 evals 11 <D> [M 1.000E0] 7.570E3 1.37s |1.177E2| {6.104E-2} 4.520E-1 - 
+Iter 9 evals 12 <D> [M 1.000E0] 5.649E3 1.47s |1.027E2| {5.324E-2} 5.762E-1 - 
+Iter 10 evals 13 <D> [1M 3.407E-1] 4.460E3 1.66s |1.386E2| {7.187E-2} 6.834E-1 - 
+Iter 11 evals 15 <D> [1M 1.577E-1] 3.680E3 1.87s |1.618E2| {8.389E-2} 8.182E-1 - 
+Iter 12 evals 17 <D> [M 1.000E0] 2.365E3 1.98s |1.773E2| {9.188E-2} 1.275E0 - 
+Iter 13 evals 18 <D> [M 1.000E0] 2.015E3 2.09s |8.603E1| {4.460E-2} 1.491E0 - 
+Iter 14 evals 19 <D> [M 1.000E0] 1.785E3 2.19s |4.878E1| {2.529E-2} 1.522E0 - 
+Iter 15 evals 20 <D> [1M 1.427E-1] 1.690E3 2.40s |4.772E1| {2.473E-2} 8.415E-1 - 
+Iter 16 evals 22 <D> [131M 1.267E-1] 1.563E3 2.81s |4.330E1| {2.245E-2} 4.628E-1 - 
+Iter 17 evals 26 <D> [131M 8.845E-2] 1.492E3 3.22s |4.139E1| {2.145E-2} 4.074E-1 - 
+Iter 18 evals 30 <D> [131M 1.043E-1] 1.423E3 3.70s |4.549E1| {2.358E-2} 2.970E-1 - 
+Iter 19 evals 34 <D> [1M 2.297E-1] 1.338E3 3.91s |6.129E1| {3.177E-2} 2.333E-1 - 
+Iter 20 evals 36 <D> [1M 2.297E-1] 1.243E3 4.13s |3.842E1| {1.991E-2} 1.961E-1 - 
+Iter 21 evals 38 <D> [1M 1.665E-1] 1.215E3 4.34s |5.991E1| {3.106E-2} 9.455E-2 - 
+Iter 22 evals 40 <D> [2M 4.857E-1] 1.156E3 4.55s |6.528E1| {3.384E-2} 7.431E-2 - 
+Iter 23 evals 42 <D> [M 1.000E0] 1.093E3 4.67s |7.516E1| {3.896E-2} 6.329E-2 - 
+Iter 24 evals 43 <D> [M 1.000E0] 1.043E3 4.79s |3.799E1| {1.969E-2} 6.201E-2 - 
+Iter 25 evals 44 <D> [M 1.000E0] 1.005E3 4.91s |4.328E1| {2.244E-2} 5.549E-2 - 
+Iter 26 evals 45 <D> [M 1.000E0] 9.613E2 5.03s |6.137E1| {3.182E-2} 5.520E-2 - 
+Iter 27 evals 46 <D> [M 1.000E0] 9.276E2 5.15s |2.724E1| {1.412E-2} 5.337E-2 - 
+Iter 28 evals 47 <D> [M 1.000E0] 8.899E2 5.27s |2.568E1| {1.331E-2} 5.036E-2 - 
+Iter 29 evals 48 <D> [M 1.000E0] 8.454E2 5.40s |2.441E1| {1.266E-2} 4.704E-2 - 
+Iter 30 evals 49 <D> [M 1.000E0] 8.008E2 5.55s |3.442E1| {1.784E-2} 5.178E-2 - 
+Iter 31 evals 50 <D> [M 1.000E0] 7.853E2 5.68s |1.273E1| {6.597E-3} 4.721E-2 - 
+Iter 32 evals 51 <D> [M 1.000E0] 7.807E2 5.80s |1.279E1| {6.628E-3} 4.006E-2 - 
+Iter 33 evals 52 <D> [M 1.000E0] 7.734E2 5.93s |9.939E0| {5.152E-3} 3.485E-2 - 
+Iter 34 evals 53 <D> [M 1.000E0] 7.679E2 6.05s |9.029E0| {4.680E-3} 3.090E-2 - 
+Iter 35 evals 54 <D> [M 1.000E0] 7.661E2 6.17s |5.690E0| {2.949E-3} 2.548E-2 - 
+Iter 36 evals 55 <D> [M 1.000E0] 7.607E2 6.30s |5.730E0| {2.970E-3} 2.195E-2 - 
+Iter 37 evals 56 <D> [M 1.000E0] 7.592E2 6.42s |4.766E0| {2.471E-3} 1.722E-2 - 
+Iter 38 evals 57 <D> [M 1.000E0] 7.591E2 6.55s |2.809E0| {1.456E-3} 1.137E-2 - 
+Iter 39 evals 58 <D> [M 1.000E0] 7.587E2 6.68s |2.539E0| {1.316E-3} 5.554E-3 - 
+Iter 40 evals 59 <D> [M 1.000E0] 7.582E2 6.82s |2.897E0| {1.502E-3} 3.575E-3 - 
+Iter 41 evals 60 <D> [M 1.000E0] 7.580E2 6.95s |2.565E0| {1.330E-3} 2.995E-3 - 
+Iter 42 evals 61 <D> [M 1.000E0] 7.574E2 7.07s |1.717E0| {8.901E-4} 2.114E-3 - 
+ line search failure: bracketed but no feasible found 
+Iter 43 evals 62 <D> [11111131M 5.760E-12] 7.574E2 8.06s |1.717E0| {8.901E-4} 1.387E-3 - 
+Iter 44 evals 71 <D> [M 1.000E0] 7.570E2 8.18s |1.402E0| {7.268E-4} 1.192E-3 - 
+ line search failure: minimum step length reached 
+Iter 45 evals 72 <D> [111111M 1.000E-12] 7.570E2 8.96s |1.402E0| {7.268E-4} 4.771E-4 - 
+ line search failure: minimum step length reached 
+Iter 46 evals 79 <D> [11111M 1.000E-12] 7.570E2 9.62s |1.402E0| {7.268E-4} 2.836E-4 - 
+ line search failure: minimum step length reached 
+Iter 47 evals 85 <D> [1111111M 1.000E-12] 7.570E2 10.54s |1.402E0| {7.268E-4} 2.734E-4 - 
+ line search failure: minimum step length reached 
+Iter 48 evals 93 <D> [111111M 1.000E-12] 7.570E2 11.30s |1.402E0| {7.268E-4} 2.199E-4 - 
+ line search failure: minimum step length reached 
+Iter 49 evals 100 <D> [1111111M 1.000E-12] 7.570E2 12.15s |1.402E0| {7.268E-4} 1.493E-4 - 
+Iter 50 evals 108 <D> [11M 1.730E-1] 7.570E2 12.48s |1.255E0| {6.504E-4} 1.263E-4 - 
+ line search failure: bracketed but no feasible found 
+QNMinimizer terminated due to average improvement: | newest_val - previous_val | / |newestVal| < TOL 
+Total time spent in optimization: 13.54s
+CRFClassifier training ... done [14.3 sec].
+Serializing classifier to ecolab_address_20240226_1.model.ser.gz... done.
+CRFClassifier tagged 388 words in 104 documents at 3180.33 words per second.
+         Entity	P	R	F1	TP	FP	FN
+              0	0.9730	1.0000	0.9863	36	1	0
+       HOUSE_NO	0.9667	0.9886	0.9775	87	3	1
+    STREET_NAME	0.9896	0.9694	0.9794	95	1	3
+       SUITE_NO	0.9730	1.0000	0.9863	36	1	0
+         Totals	0.9769	0.9845	0.9807	254	6	4

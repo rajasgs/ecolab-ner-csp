@@ -1,0 +1,69 @@
+maçka   STREET_NAME
+
+mutfak  STREET_NAME
+
+çakmakçı    STREET_NAME
+
+manavgat    STREET_NAME
+
+kartal  STREET_NAME
+
+güldemet    STREET_NAME
+
+soylu   STREET_NAME
+
+mahmutpaşa  STREET_NAME
+
+çukurçayır  STREET_NAME
+
+baif    STREET_NAME
+
+chemin  STREET_NAME
+
+kurtköy STREET_NAME
+
+ulaş    STREET_NAME
+
+nagehan STREET_NAME
+
+mazharbey   STREET_NAME
+
+çakır   STREET_NAME
+
+nanika  STREET_NAME
+
+kırlangıç   STREET_NAME
+
+doğuş   STREET_NAME
+
+karaçam STREET_NAME
+
+bahçeler    STREET_NAME
+
+chemin  STREET_NAME
+
+cole    STREET_NAME
+
+ardıçlı STREET_NAME
+
+çiğdem  STREET_NAME
+
+macuncu STREET_NAME
+
+kartal  STREET_NAME
+
+çamlı   STREET_NAME
+
+ümraniye    STREET_NAME
+
+çınar   STREET_NAME
+
+berra   STREET_NAME
+
+özkan   STREET_NAME
+
+burleigh    STREET_NAME
+
+erieau  STREET_NAME
+
+kırıntı STREET_NAME

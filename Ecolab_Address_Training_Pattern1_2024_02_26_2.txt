@@ -1,0 +1,264 @@
+11k     HOUSE_NO
+udde    STREET_NAME
+/   0
+holmen  STREET_NAME
+n4  STREET_NAME
+/   0
+utfart  STREET_NAME
+118     SUITE_NO
+
+9i  HOUSE_NO
+dal     STREET_NAME
+/   0
+viken   STREET_NAME
+l7  STREET_NAME
+/   0
+utfart  STREET_NAME
+92  SUITE_NO
+
+7g  HOUSE_NO
+slätt   STREET_NAME
+/   0
+ängen   STREET_NAME
+v9  STREET_NAME
+/   0
+utfart  STREET_NAME
+211     SUITE_NO
+
+6f  HOUSE_NO
+kors    STREET_NAME
+/   0
+fjärden STREET_NAME
+m1  STREET_NAME
+/   0
+avfart  STREET_NAME
+157     SUITE_NO
+
+10j     HOUSE_NO
+älv     STREET_NAME
+/   0
+strömmen    STREET_NAME
+g2  STREET_NAME
+/   0
+avfart  STREET_NAME
+103     SUITE_NO
+
+8h  HOUSE_NO
+ås  STREET_NAME
+/   0
+kullen  STREET_NAME
+e8  STREET_NAME
+/   0
+avfart  STREET_NAME
+45  SUITE_NO
+
+3c  HOUSE_NO
+väg     STREET_NAME
+/   0
+skogslunden STREET_NAME
+r2  STREET_NAME
+/   0
+utfart  STREET_NAME
+76  SUITE_NO
+
+5e  HOUSE_NO
+fält    STREET_NAME
+/   0
+dalen   STREET_NAME
+p3  STREET_NAME
+/   0
+utfart  STREET_NAME
+134     SUITE_NO
+
+24  HOUSE_NO
+8   HOUSE_NO
+/   0
+104n    SUITE_NO
+
+22  HOUSE_NO
+6   HOUSE_NO
+/   0
+102l    SUITE_NO
+
+25  HOUSE_NO
+9   HOUSE_NO
+/   0
+105o    SUITE_NO
+
+17  HOUSE_NO
+1   HOUSE_NO
+/   0
+97g     SUITE_NO
+
+31  HOUSE_NO
+6   HOUSE_NO
+/   0
+111u    SUITE_NO
+
+15  HOUSE_NO
+8   HOUSE_NO
+/   0
+95e     SUITE_NO
+
+23  HOUSE_NO
+7   HOUSE_NO
+/   0
+103m    SUITE_NO
+
+20  HOUSE_NO
+4   HOUSE_NO
+/   0
+100j    SUITE_NO
+
+26  HOUSE_NO
+1   HOUSE_NO
+/   0
+106p    SUITE_NO
+
+27  HOUSE_NO
+2   HOUSE_NO
+/   0
+107q    SUITE_NO
+
+18  HOUSE_NO
+2   HOUSE_NO
+/   0
+98h     SUITE_NO
+
+12  HOUSE_NO
+5   HOUSE_NO
+/   0
+92b     SUITE_NO
+
+30  HOUSE_NO
+5   HOUSE_NO
+/   0
+110t    SUITE_NO
+
+21  HOUSE_NO
+5   HOUSE_NO
+/   0
+101k    SUITE_NO
+
+29  HOUSE_NO
+4   HOUSE_NO
+/   0
+109s    SUITE_NO
+
+13  HOUSE_NO
+6   HOUSE_NO
+/   0
+93c     SUITE_NO
+
+nachtschatteninsel  STREET_NAME
+/   0
+leuchtturm  STREET_NAME
+
+wolkenfeld  STREET_NAME
+/   0
+mühle   STREET_NAME
+
+frostfluss  STREET_NAME
+/   0
+gerberei    STREET_NAME
+
+mondlichtbucht  STREET_NAME
+/   0
+hafenkneipe STREET_NAME
+
+sonnental   STREET_NAME
+/   0
+bäckerei    STREET_NAME
+
+flüsterwald STREET_NAME
+/   0
+biergarten  STREET_NAME
+
+kristallsee STREET_NAME
+/   0
+handelskammer   STREET_NAME
+
+zauberwald  STREET_NAME
+/   0
+buchhandlung    STREET_NAME
+
+regenwald   STREET_NAME
+/   0
+fischmarkt  STREET_NAME
+
+schattenmoor    STREET_NAME
+/   0
+gasthof STREET_NAME
+
+silbermine  STREET_NAME
+/   0
+zunftsaal   STREET_NAME
+
+nebelhain   STREET_NAME
+/   0
+zollhaus    STREET_NAME
+
+feuerberg   STREET_NAME
+/   0
+rasthof STREET_NAME
+
+sternwiese  STREET_NAME
+/   0
+marktplatz  STREET_NAME
+
+windhöhle   STREET_NAME
+/   0
+weinkeller  STREET_NAME
+
+blitzwüste  STREET_NAME
+/   0
+seidenmanufaktur    STREET_NAME
+
+459     HOUSE_NO
+310     SUITE_NO
+
+453     HOUSE_NO
+304     SUITE_NO
+
+468     HOUSE_NO
+319     SUITE_NO
+
+466     HOUSE_NO
+317     SUITE_NO
+
+469     HOUSE_NO
+320     SUITE_NO
+
+467     HOUSE_NO
+318     SUITE_NO
+
+455     HOUSE_NO
+306     SUITE_NO
+
+465     HOUSE_NO
+316     SUITE_NO
+
+456     HOUSE_NO
+307     SUITE_NO
+
+462     HOUSE_NO
+313     SUITE_NO
+
+461     HOUSE_NO
+312     SUITE_NO
+
+463     HOUSE_NO
+314     SUITE_NO
+
+457     HOUSE_NO
+308     SUITE_NO
+
+454     HOUSE_NO
+305     SUITE_NO
+
+460     HOUSE_NO
+311     SUITE_NO
+
+471     HOUSE_NO
+322     SUITE_NO
+

@@ -1,0 +1,71 @@
+11k     HOUSE_NO
+udde    STREET_NAME
+/   0
+holmen  STREET_NAME
+n4  STREET_NAME
+/   0
+utfart  STREET_NAME
+118     SUITE_NO
+
+9i  HOUSE_NO
+dal     STREET_NAME
+/   0
+viken   STREET_NAME
+l7  STREET_NAME
+/   0
+utfart  STREET_NAME
+92  SUITE_NO
+
+7g  HOUSE_NO
+slätt   STREET_NAME
+/   0
+ängen   STREET_NAME
+v9  STREET_NAME
+/   0
+utfart  STREET_NAME
+211     SUITE_NO
+
+6f  HOUSE_NO
+kors    STREET_NAME
+/   0
+fjärden STREET_NAME
+m1  STREET_NAME
+/   0
+avfart  STREET_NAME
+157     SUITE_NO
+
+10j     HOUSE_NO
+älv     STREET_NAME
+/   0
+strömmen    STREET_NAME
+g2  STREET_NAME
+/   0
+avfart  STREET_NAME
+103     SUITE_NO
+
+8h  HOUSE_NO
+ås  STREET_NAME
+/   0
+kullen  STREET_NAME
+e8  STREET_NAME
+/   0
+avfart  STREET_NAME
+45  SUITE_NO
+
+3c  HOUSE_NO
+väg     STREET_NAME
+/   0
+skogslunden STREET_NAME
+r2  STREET_NAME
+/   0
+utfart  STREET_NAME
+76  SUITE_NO
+
+5e  HOUSE_NO
+fält    STREET_NAME
+/   0
+dalen   STREET_NAME
+p3  STREET_NAME
+/   0
+utfart  STREET_NAME
+134     SUITE_NO

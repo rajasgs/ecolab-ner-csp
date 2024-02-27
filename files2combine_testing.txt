@@ -1,6 +1,1 @@
-pattern41-input-testing.txt
-pattern42-input-testing.txt
-pattern43-input-testing.txt
-pattern44-input-testing.txt
-pattern45-input-testing.txt
-pattern46-input-testing.txt
+pattern51-input-testing.txt

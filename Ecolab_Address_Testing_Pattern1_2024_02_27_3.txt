@@ -1,0 +1,641 @@
+rua     STREET_NAME
+josé    STREET_NAME
+freire  STREET_NAME
+de  STREET_NAME
+moura,  STREET_NAME
+244     HOUSE_NO
+
+英皇道979  HOUSE_NO
+
+avenida STREET_NAME
+cristiano   STREET_NAME
+machado,    STREET_NAME
+4000    HOUSE_NO
+
+chemlonská  STREET_NAME
+1   HOUSE_NO
+
+kutnohorská STREET_NAME
+474     HOUSE_NO
+
+smaragdová  STREET_NAME
+1   HOUSE_NO
+
+savudrijska STREET_NAME
+cesta   STREET_NAME
+9   HOUSE_NO
+
+rua     STREET_NAME
+francisco   STREET_NAME
+dal'negro,  STREET_NAME
+3400    HOUSE_NO
+
+spojovacia  STREET_NAME
+1   HOUSE_NO
+
+朝阳北路175号    HOUSE_NO
+
+arja    STREET_NAME
+vas     STREET_NAME
+92  HOUSE_NO
+
+源順圍28   HOUSE_NO
+
+kajuhova    STREET_NAME
+cesta   STREET_NAME
+1   HOUSE_NO
+
+avenida STREET_NAME
+afonso  STREET_NAME
+pena,   STREET_NAME
+4909    HOUSE_NO
+
+185     STREET_NAME
+sargent STREET_NAME
+st  STREET_NAME
+unit    STREET_NAME
+103     HOUSE_NO
+
+po  STREET_NAME
+box     STREET_NAME
+69  HOUSE_NO
+
+62  HOUSE_NO
+-   HOUSE_NO
+63  HOUSE_NO
+new     STREET_NAME
+street  STREET_NAME
+
+168     HOUSE_NO
+-   HOUSE_NO
+184     HOUSE_NO
+wharf   STREET_NAME
+st  STREET_NAME
+
+78  HOUSE_NO
+-   HOUSE_NO
+80  HOUSE_NO
+county  STREET_NAME
+road    STREET_NAME
+
+6   HOUSE_NO
+-   HOUSE_NO
+8   HOUSE_NO
+platzl  STREET_NAME
+
+61  HOUSE_NO
+-   HOUSE_NO
+63  HOUSE_NO
+demminer    STREET_NAME
+strasse STREET_NAME
+
+1   HOUSE_NO
+-   HOUSE_NO
+2   HOUSE_NO
+kirchweg    STREET_NAME
+
+13  HOUSE_NO
+-   HOUSE_NO
+17  HOUSE_NO
+sacristan,  STREET_NAME
+
+13  HOUSE_NO
+-   HOUSE_NO
+17  HOUSE_NO
+sacristan,  STREET_NAME
+
+402     HOUSE_NO
+-   HOUSE_NO
+416     HOUSE_NO
+victoria    STREET_NAME
+avenue  STREET_NAME
+
+32  HOUSE_NO
+-   HOUSE_NO
+34  HOUSE_NO
+princes STREET_NAME
+street  STREET_NAME
+
+22  HOUSE_NO
+-   HOUSE_NO
+23  HOUSE_NO
+h.  STREET_NAME
+heine   STREET_NAME
+strasse STREET_NAME
+
+182     HOUSE_NO
+-   HOUSE_NO
+188     HOUSE_NO
+high    STREET_NAME
+street  STREET_NAME
+north   STREET_NAME
+
+4   HOUSE_NO
+-   HOUSE_NO
+498     HOUSE_NO
+markland    STREET_NAME
+st  STREET_NAME
+
+23  HOUSE_NO
+-   HOUSE_NO
+41  HOUSE_NO
+galway  STREET_NAME
+ave     STREET_NAME
+
+1   HOUSE_NO
+paul-ehrlich-str.   STREET_NAME
+
+20  HOUSE_NO
+bergstr.    STREET_NAME
+
+9   HOUSE_NO
+blegdamsvej STREET_NAME
+
+3770    HOUSE_NO
+las     STREET_NAME
+vegas   STREET_NAME
+blvd    STREET_NAME
+s   STREET_NAME
+
+2   HOUSE_NO
+arrheniusgatan  STREET_NAME
+
+2202    HOUSE_NO
+s   STREET_NAME
+soncy   STREET_NAME
+rd  STREET_NAME
+
+25  HOUSE_NO
+eisteinova  STREET_NAME
+
+601     HOUSE_NO
+1st     STREET_NAME
+ave     STREET_NAME
+
+6b  HOUSE_NO
+lorien  STREET_NAME
+place   STREET_NAME
+
+986     HOUSE_NO
+nemocničná  STREET_NAME
+
+18  HOUSE_NO
+einsteinova STREET_NAME
+
+12  HOUSE_NO
+kantstr.    STREET_NAME
+
+1100    HOUSE_NO
+college STREET_NAME
+ave     STREET_NAME
+
+3250    HOUSE_NO
+w   STREET_NAME
+vine    STREET_NAME
+st  STREET_NAME
+
+22103   HOUSE_NO
+mandt   STREET_NAME
+rd  STREET_NAME
+
+10  HOUSE_NO
+tabor   STREET_NAME
+
+25  HOUSE_NO
+"digital    STREET_NAME
+park    STREET_NAME
+ii,einsteinova" STREET_NAME
+
+236     HOUSE_NO
+řetová  STREET_NAME
+
+45  HOUSE_NO
+humboldtstrasse STREET_NAME
+
+5701    HOUSE_NO
+marinelli   STREET_NAME
+rd  STREET_NAME
+
+133     HOUSE_NO
+mladoboleslavská    STREET_NAME
+
+15  HOUSE_NO
+chemin  STREET_NAME
+du  STREET_NAME
+closel  STREET_NAME
+
+3   HOUSE_NO
+kaapelikatu STREET_NAME
+
+5380    HOUSE_NO
+greenwood   STREET_NAME
+plaza   STREET_NAME
+blvd    STREET_NAME
+
+18  HOUSE_NO
+einsteinova STREET_NAME
+
+7   HOUSE_NO
+wiesweg STREET_NAME
+
+4304    SUITE_NO
+/   0
+1   HOUSE_NO
+věstonická  STREET_NAME
+
+228     SUITE_NO
+/   0
+2   HOUSE_NO
+nádražní    STREET_NAME
+
+505     SUITE_NO
+/   0
+8   HOUSE_NO
+novovysočanská  STREET_NAME
+
+1913    SUITE_NO
+/   0
+13  HOUSE_NO
+pod     STREET_NAME
+slovany STREET_NAME
+
+2627    SUITE_NO
+/   0
+46  HOUSE_NO
+"vysočina,  STREET_NAME
+vrchlického STREET_NAME
+"   STREET_NAME
+
+1576    SUITE_NO
+/   0
+23c     HOUSE_NO
+bohdalecká  STREET_NAME
+
+153     SUITE_NO
+/   0
+6   HOUSE_NO
+na  STREET_NAME
+dědince STREET_NAME
+
+2459    SUITE_NO
+/   0
+108     HOUSE_NO
+hlavní  STREET_NAME
+
+1666    SUITE_NO
+/   0
+17  HOUSE_NO
+zámecká STREET_NAME
+
+1742    SUITE_NO
+/   0
+114     HOUSE_NO
+koněvova    STREET_NAME
+
+833     SUITE_NO
+/   0
+5   HOUSE_NO
+u   STREET_NAME
+nikolajky   STREET_NAME
+
+658     SUITE_NO
+/   0
+9   HOUSE_NO
+žitná   STREET_NAME
+
+185     SUITE_NO
+/   0
+47  HOUSE_NO
+sluneční    STREET_NAME
+
+1645    SUITE_NO
+/   0
+1   HOUSE_NO
+vrbová  STREET_NAME
+
+133     SUITE_NO
+/   0
+2   HOUSE_NO
+purkyňovo   STREET_NAME
+nám.    STREET_NAME
+
+330     SUITE_NO
+/   0
+33  HOUSE_NO
+evropská    STREET_NAME
+
+68  SUITE_NO
+/   0
+73  HOUSE_NO
+komenského  STREET_NAME
+
+26  SUITE_NO
+/   0
+2   HOUSE_NO
+mate    STREET_NAME
+vlašća  STREET_NAME
+
+corner  STREET_NAME
+of  STREET_NAME
+jalan   STREET_NAME
+sultan  STREET_NAME
+ismail  STREET_NAME
+
+rue     STREET_NAME
+nungesser   STREET_NAME
+et  STREET_NAME
+coli    STREET_NAME
+-   STREET_NAME
+za  STREET_NAME
+nantes  STREET_NAME
+atlantique  STREET_NAME
+
+palazzina   STREET_NAME
+ponte   STREET_NAME
+caracciolo  STREET_NAME
+
+bb  STREET_NAME
+sv.dominika STREET_NAME
+
+designer    STREET_NAME
+outlet  STREET_NAME
+village STREET_NAME
+
+dubai   STREET_NAME
+mirdif  STREET_NAME
+
+zekeriyaköy STREET_NAME
+mahallesi   STREET_NAME
+
+salem   STREET_NAME
+lutheran    STREET_NAME
+rest    STREET_NAME
+home    STREET_NAME
+
+laman   STREET_NAME
+sentral STREET_NAME
+berjaya STREET_NAME
+
+rue     STREET_NAME
+maulage STREET_NAME
+
+1350    HOUSE_NO
+travis  STREET_NAME
+blvd    STREET_NAME
+ste     0
+1   SUITE_NO
+
+1870    HOUSE_NO
+n   STREET_NAME
+perris  STREET_NAME
+blvd    STREET_NAME
+ste     0
+60  SUITE_NO
+
+150     HOUSE_NO
+silhavy STREET_NAME
+rd  STREET_NAME
+ste     0
+120     SUITE_NO
+
+4130    HOUSE_NO
+s   STREET_NAME
+bowen   STREET_NAME
+rd  STREET_NAME
+ste     0
+105     SUITE_NO
+
+11880   HOUSE_NO
+hero    STREET_NAME
+way     STREET_NAME
+w   STREET_NAME
+ste     0
+101     SUITE_NO
+
+8001    HOUSE_NO
+t   STREET_NAME
+w   STREET_NAME
+alexander   STREET_NAME
+dr  STREET_NAME
+ste     0
+200     SUITE_NO
+
+150     HOUSE_NO
+silhavy STREET_NAME
+rd  STREET_NAME
+ste     0
+1200    SUITE_NO
+
+319     HOUSE_NO
+state   STREET_NAME
+ave     STREET_NAME
+ste     0
+101     SUITE_NO
+
+5885    HOUSE_NO
+san     STREET_NAME
+felipe  STREET_NAME
+st  STREET_NAME
+ste     0
+100     SUITE_NO
+
+5000    HOUSE_NO
+w   STREET_NAME
+park    STREET_NAME
+blvd    STREET_NAME
+ste     0
+100     SUITE_NO
+
+1110    HOUSE_NO
+concord STREET_NAME
+ave     STREET_NAME
+ste     0
+e   SUITE_NO
+
+2249    HOUSE_NO
+cumming STREET_NAME
+hwy     STREET_NAME
+ste     0
+108     SUITE_NO
+
+2835    HOUSE_NO
+showplace   STREET_NAME
+dr  STREET_NAME
+unit    0
+10-40   SUITE_NO
+
+135     HOUSE_NO
+doane   STREET_NAME
+st  STREET_NAME
+unit    0
+103     SUITE_NO
+
+unit    0
+47  SUITE_NO
+
+unit    0
+d-3a-3  SUITE_NO
+
+unit    0
+4-5     SUITE_NO
+
+unit    0
+k-1-01  SUITE_NO
+menara  STREET_NAME
+pearl   STREET_NAME
+point   STREET_NAME
+2   STREET_NAME
+
+kırıntı STREET_NAME
+
+güldemet    STREET_NAME
+
+2a  HOUSE_NO
+ring    STREET_NAME
+/   0
+brunnsviken STREET_NAME
+h4  STREET_NAME
+/   0
+avfart  STREET_NAME
+202     SUITE_NO
+
+4d  HOUSE_NO
+bro     STREET_NAME
+/   0
+sundet  STREET_NAME
+q5  STREET_NAME
+/   0
+avfart  STREET_NAME
+89  SUITE_NO
+
+14  HOUSE_NO
+7   HOUSE_NO
+/   0
+94d     SUITE_NO
+
+16  HOUSE_NO
+9   HOUSE_NO
+/   0
+96f     SUITE_NO
+
+19  HOUSE_NO
+3   HOUSE_NO
+/   0
+99i     SUITE_NO
+
+28  HOUSE_NO
+3   HOUSE_NO
+/   0
+108r    SUITE_NO
+
+458     HOUSE_NO
+309     SUITE_NO
+
+464     HOUSE_NO
+315     SUITE_NO
+
+470     HOUSE_NO
+321     SUITE_NO
+
+472     HOUSE_NO
+323     SUITE_NO
+
+donnerklippe    STREET_NAME
+/   0
+brauerei    STREET_NAME
+
+bracken STREET_NAME
+/   0
+kornspeicher    STREET_NAME
+
+eisgipfel   STREET_NAME
+/   0
+schmiede    STREET_NAME
+
+drachenschlucht STREET_NAME
+/   0
+juwelier    STREET_NAME
+
+2a  HOUSE_NO
+ring    STREET_NAME
+/   0
+brunnsviken STREET_NAME
+h4  STREET_NAME
+/   0
+avfart  STREET_NAME
+202     SUITE_NO
+
+4d  HOUSE_NO
+bro     STREET_NAME
+/   0
+sundet  STREET_NAME
+q5  STREET_NAME
+/   0
+avfart  STREET_NAME
+89  SUITE_NO
+
+14  HOUSE_NO
+7   HOUSE_NO
+/   0
+94d     SUITE_NO
+
+16  HOUSE_NO
+9   HOUSE_NO
+/   0
+96f     SUITE_NO
+
+19  HOUSE_NO
+3   HOUSE_NO
+/   0
+99i     SUITE_NO
+
+28  HOUSE_NO
+3   HOUSE_NO
+/   0
+108r    SUITE_NO
+
+458     HOUSE_NO
+309     SUITE_NO
+
+464     HOUSE_NO
+315     SUITE_NO
+
+470     HOUSE_NO
+321     SUITE_NO
+
+472     HOUSE_NO
+323     SUITE_NO
+
+donnerklippe    STREET_NAME
+/   0
+brauerei    STREET_NAME
+
+bracken STREET_NAME
+/   0
+kornspeicher    STREET_NAME
+
+eisgipfel   STREET_NAME
+/   0
+schmiede    STREET_NAME
+
+drachenschlucht STREET_NAME
+/   0
+juwelier    STREET_NAME
+
+yiğit   STREET_NAME
+
+çemberlitaş STREET_NAME
+
+kurtköy STREET_NAME
+
+murphy  STREET_NAME
+
+edebali STREET_NAME
+
+beydağı STREET_NAME
+
+şeyma   STREET_NAME
+
+mutlu   STREET_NAME
+
+delaney STREET_NAME

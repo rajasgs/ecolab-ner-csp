@@ -1,0 +1,17 @@
+2a  HOUSE_NO
+ring    STREET_NAME
+/   0
+brunnsviken STREET_NAME
+h4  STREET_NAME
+/   0
+avfart  STREET_NAME
+202     SUITE_NO
+
+4d  HOUSE_NO
+bro     STREET_NAME
+/   0
+sundet  STREET_NAME
+q5  STREET_NAME
+/   0
+avfart  STREET_NAME
+89  SUITE_NO
