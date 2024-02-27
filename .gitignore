@@ -202,3 +202,6 @@ static/images/*
 
 outputs1/
 address_*_bert_*.csv
+
+# finalized models
+!ecolab_address_20240227_3.model.ser.gz
