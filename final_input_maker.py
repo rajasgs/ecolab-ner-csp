@@ -8,6 +8,8 @@ def cleanfile(filename):
     with open(filename,'w') as file:
         pass
 
+from pathlib import Path
+
 def combine_training_files():
 
     training_file   = CORE_NLP_TRAINING_FILEPATH
@@ -28,7 +30,12 @@ def combine_training_files():
         cline = cline.replace('\n', '').strip()
 
         cfile_lines = None
-        with open('patterns/' + cline) as f:
+        c_filename = 'patterns/' + cline
+        my_file = Path(c_filename)
+        if not my_file.is_file():
+            print(f'{c_filename} is not available, so skipping')
+            continue
+        with open(c_filename) as f:
             cfile_lines = f.read()
 
         with open(training_file, 'a') as filetowrite:
@@ -56,7 +63,12 @@ def combine_testing_files():
         cline = cline.replace('\n', '').strip()
 
         cfile_lines = None
-        with open('patterns/' + cline) as f:
+        c_filename = 'patterns/' + cline
+        my_file = Path(c_filename)
+        if not my_file.is_file():
+            print(f'{c_filename} is not available, so skipping')
+            continue
+        with open(c_filename) as f:
             cfile_lines = f.read()
 
         with open(training_file, 'a') as filetowrite:
@@ -64,9 +76,23 @@ def combine_testing_files():
 
             filetowrite.write('\n\n')
 
-def startpy(ctype):
+
+def print_filenames():
+
+    for idx in range(1, 57):
+        print(f"pattern{idx}-input-training.txt")
+
+def startpy():
+
+    # print_filenames()
+    # return
+
+    ctype = int(sys.argv[1])
+    # 1 - training; 2 - testing
 
     testing_file    = CORE_NLP_TESTING_FILEPATH
+
+    
 
     # print(f'training_file : {training_file}')
 
@@ -79,10 +105,7 @@ def startpy(ctype):
 
 if __name__ == '__main__':
 
-    ctype = int(sys.argv[1])
-    # 1 - training; 2 - testing
-    
-    startpy(ctype)
+    startpy()
 
     # test_split()
 
