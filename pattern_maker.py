@@ -1364,6 +1364,9 @@ def pattern_maker_multiple(pattern_index):
     # print(lines)
 
     content = ""
+    training_content = ""
+    testing_content = ""
+    
 
     train_list, test_list = train_test_split(lines, train_size=0.8)
 
@@ -1380,8 +1383,10 @@ def pattern_maker_multiple(pattern_index):
         c_line = c_line.lower()
 
         content += pattern_maker_single(c_line, pattern_index)
-
         content += "\n"
+
+        training_content += pattern_maker_single(c_line, pattern_index)
+        training_content += "\n"
 
     content += str(f'-' * 50 + "\n")
 
@@ -1391,17 +1396,41 @@ def pattern_maker_multiple(pattern_index):
         c_line = c_line.lower()
 
         content += pattern_maker_single(c_line, pattern_index)
-
         content += "\n"
+
+        testing_content += pattern_maker_single(c_line, pattern_index)
+        testing_content += "\n"
 
     # print(content)
 
-    return content
+    return content, training_content, testing_content
+
+
+from pathlib import Path
+def cleanfile(filename):
+
+    with open(filename,'w') as file:
+        pass
+
+def append2file(content, c_file):
+
+    # clean the file first
+    cleanfile(c_file)
+
+    with open(c_file, 'a') as filetowrite:
+        filetowrite.write(content)
+        # filetowrite.write('\n\n')
+
+    print(f'{c_file} updated')
 
 def startpy():
 
     pattern = int(sys.argv[1])
-    print(pattern_maker_multiple(pattern))
+    content, training_content, testing_content = pattern_maker_multiple(pattern)
+    # print(content)
+
+    append2file(training_content, f"patterns/pattern{pattern}-input-training.txt")
+    append2file(testing_content, f"patterns/pattern{pattern}-input-testing.txt")
 
 
 def test_split():
