@@ -255,7 +255,7 @@ public class SimplePredictNER {
         instance.modelFilename      = modelFilename;
         instance.model              = instance.getModel(instance.modelFilename);
 
-        print("Getting singleton instance");
+        // print("Getting singleton instance");
         
         return instance;
     }
