@@ -216,7 +216,7 @@ def pattern_5_maker_single(address):
         Pattern 5:
 
         5	
-        (Suite_No)/(House_No) (StreetName)	
+        (House_No)/(Sute_No) (StreetName)
         55/57 BAHNHOFSTRASSE
 
         Sample:
@@ -238,9 +238,9 @@ def pattern_5_maker_single(address):
 
             sub_parts = c_item.split("/")
 
-            content += get_single_content(sub_parts[0], SUITE_NO)
+            content += get_single_content(sub_parts[0], HOUSE_NO)
             content += get_single_content("/", EMPTY)
-            content += get_single_content(sub_parts[1], HOUSE_NO)
+            content += get_single_content(sub_parts[1], SUITE_NO)
         else:
             content += get_single_content(c_item, STREET_NAME)
 

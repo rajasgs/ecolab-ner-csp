@@ -5034,3 +5034,177 @@ road    STREET_NAME
 po  SUITE_NO
 box     SUITE_NO
 755     SUITE_NO
+
+800     HOUSE_NO
+/   0
+609     SUITE_NO
+hills   STREET_NAME
+westgate    STREET_NAME
+dr  STREET_NAME
+
+1068    HOUSE_NO
+/   0
+7   SUITE_NO
+markova STREET_NAME
+
+2116    HOUSE_NO
+/   0
+15  SUITE_NO
+na  STREET_NAME
+florenci    STREET_NAME
+
+767     HOUSE_NO
+/   0
+197     SUITE_NO
+birch   STREET_NAME
+neville STREET_NAME
+dr  STREET_NAME
+
+501     HOUSE_NO
+/   0
+899     SUITE_NO
+oak     STREET_NAME
+shaftesbury STREET_NAME
+ave     STREET_NAME
+
+123     HOUSE_NO
+/   0
+835     SUITE_NO
+cedar   STREET_NAME
+main    STREET_NAME
+
+447     HOUSE_NO
+/   0
+801     SUITE_NO
+birch   STREET_NAME
+temple  STREET_NAME
+street  STREET_NAME
+
+191     HOUSE_NO
+/   0
+429     SUITE_NO
+ul.     STREET_NAME
+snp     STREET_NAME
+
+148     HOUSE_NO
+/   0
+938     SUITE_NO
+terrace STREET_NAME
+spruce  STREET_NAME
+st  STREET_NAME
+
+345     HOUSE_NO
+/   0
+8   SUITE_NO
+hurbanova   STREET_NAME
+
+710     HOUSE_NO
+/   0
+936     SUITE_NO
+main    STREET_NAME
+elm     STREET_NAME
+
+109     HOUSE_NO
+/   0
+941     SUITE_NO
+wyresdale   STREET_NAME
+willow  STREET_NAME
+street  STREET_NAME
+
+562     HOUSE_NO
+/   0
+482     SUITE_NO
+cedar   STREET_NAME
+main    STREET_NAME
+road    STREET_NAME
+
+985     HOUSE_NO
+/   0
+823     SUITE_NO
+spruce  STREET_NAME
+pine    STREET_NAME
+
+55  HOUSE_NO
+/   0
+57  SUITE_NO
+bahnhofstrasse  STREET_NAME
+
+17  HOUSE_NO
+/   0
+2   SUITE_NO
+konopnickiej    STREET_NAME
+
+3077    HOUSE_NO
+/   0
+20  SUITE_NO
+vychodilova STREET_NAME
+
+90  HOUSE_NO
+/   0
+931     SUITE_NO
+westgate    STREET_NAME
+wyresdale   STREET_NAME
+street  STREET_NAME
+
+432     HOUSE_NO
+/   0
+254     SUITE_NO
+chanute STREET_NAME
+spruce  STREET_NAME
+
+354     HOUSE_NO
+/   0
+822     SUITE_NO
+elm     STREET_NAME
+willow  STREET_NAME
+
+628     HOUSE_NO
+/   0
+901     SUITE_NO
+patrick STREET_NAME
+hills   STREET_NAME
+
+727     HOUSE_NO
+/   0
+19  SUITE_NO
+spruce  STREET_NAME
+spruce  STREET_NAME
+
+582     HOUSE_NO
+/   0
+26  SUITE_NO
+laity   STREET_NAME
+shaftesbury STREET_NAME
+court   STREET_NAME
+
+492     HOUSE_NO
+/   0
+62  SUITE_NO
+birch   STREET_NAME
+chanute STREET_NAME
+drive   STREET_NAME
+
+329     HOUSE_NO
+/   0
+163     SUITE_NO
+park    STREET_NAME
+birch   STREET_NAME
+
+578     HOUSE_NO
+/   0
+884     SUITE_NO
+laity   STREET_NAME
+redwood STREET_NAME
+
+6   HOUSE_NO
+/   0
+10  SUITE_NO
+great   STREET_NAME
+portland    STREET_NAME
+street  STREET_NAME
+
+1054    HOUSE_NO
+/   0
+45  SUITE_NO
+t.  STREET_NAME
+vansovej    STREET_NAME
