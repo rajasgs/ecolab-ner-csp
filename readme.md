@@ -4,7 +4,9 @@
 ### How to run?
 
 ```
-conda activate ml39
+conda create -n ner39 -y python=3.9
+
+conda activate ner39
 
 python ner.py
 ```

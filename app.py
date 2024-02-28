@@ -21,16 +21,16 @@ if __name__ == "__main__":
     host = os.environ.get('IP', '0.0.0.0')
     port = int(os.environ.get('PORT', 8071))
 
-    model_version   = sys.argv[1]
-    user_port       = sys.argv[2]
+    # model_version   = sys.argv[1]
+    user_port       = sys.argv[1]
 
     port = int(os.environ.get('PORT', user_port))
 
-    # pr.initiate()
+    pr.initiate()
 
-    print(f'model_version : {model_version}')
+    # print(f'model_version : {model_version}')
 
-    vas_singlton = vas.ValidatorSingleton.getInstance(model_version = model_version)
+    vas_singlton = vas.ValidatorSingleton.getInstance(model_version = None)
     
     app.run(
         host            = host, 
@@ -38,3 +38,11 @@ if __name__ == "__main__":
         debug           = True,
         use_reloader    = False
     )
+
+
+'''
+How to run?
+    py app.py <port_no>
+
+    py app.py 9090
+'''

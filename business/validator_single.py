@@ -11,11 +11,11 @@ class ValidatorSingleton:
     @staticmethod 
     def getInstance(model_version = "v1"):
         """ Static access method. """
-        if ValidatorSingleton.__instance == None:
-            ValidatorSingleton(model_version)
+        # if ValidatorSingleton.__instance == None:
+        ValidatorSingleton(model_version)
 
-        if(ValidatorSingleton.__instance.model_version != model_version):
-            ValidatorSingleton.__instance.reload_model(model_version) 
+        # if(ValidatorSingleton.__instance.model_version != model_version):
+        #     ValidatorSingleton.__instance.reload_model(model_version) 
 
         return ValidatorSingleton.__instance
     
@@ -36,7 +36,8 @@ class ValidatorSingleton:
     def __init__(self, model_version):
         
         self.model_version  = model_version
-        self.model          = f"models/{self.model_version}.model.ser.gz"
+        # self.model          = f"models/{self.model_version}.model.ser.gz"
+        self.model          = f"ecolab_address_20240228_4.model.ser.gz"
 
         print('calling init')
 
