@@ -209,3 +209,5 @@ address_*_bert_*.csv
 !ecolab_address_20240*.model.ser.gz
 
 ner_classification.txt
+
+Address-Patterns-RS-address-ner-testing-*.csv
