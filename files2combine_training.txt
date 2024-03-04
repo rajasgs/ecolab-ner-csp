@@ -41,7 +41,7 @@ pattern40-input-training.txt
 pattern41-input-training.txt
 pattern42-input-training.txt
 pattern43-input-training.txt
-pattern44-input-training.txt
+
 pattern45-input-training.txt
 pattern46-input-training.txt
 pattern47-input-training.txt

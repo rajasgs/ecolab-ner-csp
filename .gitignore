@@ -204,9 +204,9 @@ outputs1/
 address_*_bert_*.csv
 
 # finalized models
-!ecolab_address_20240227_3.model.ser.gz
-!ecolab_address_20240228_2.model.ser.gz
-!ecolab_address_20240*.model.ser.gz
+#!ecolab_address_20240227_3.model.ser.gz
+#!ecolab_address_20240228_2.model.ser.gz
+#!ecolab_address_20240*.model.ser.gz
 
 ner_classification.txt
 
