@@ -42,10 +42,9 @@ def get_tokens(address, core_nlp_modelname):
 
     model_path = f"{core_nlp_modelname}.model.ser.gz"
 
-    simple_predict_class        = jpype.JClass("SimplePredictNER")
-    simple_predict      = simple_predict_class.getInstance(model_path)
+    simple_predict_class        = jpype.JClass("SimplePredictNERNoSingleton")
 
-    result = simple_predict.getTokens(str(address))
+    result = simple_predict_class.getTokens(str(address), model_path)
 
     # print(result)
 
