@@ -16,9 +16,24 @@ def is_unncessary_column(col_name):
 
     return False
 
+FILEPATH = "~/datasets/Address-Pattern-NER-20240305-1.xlsx"
+
+def read_addess_full_excel():
+
+    # Replace 'path_to_file.xlsx' with the path to your Excel file
+    df = pd.read_excel(FILEPATH, sheet_name='base', engine='openpyxl', header = 1)
+
+    return df
+
+def read_addess_full_csv():
+
+    df = df.read_csv("Address-Patterns-RS-address-ner-testing-20240229-1.csv", header=1)
+
+    return df
+
 def read_address_csv():
 
-    df = pd.read_csv("Address-Patterns-RS-address-ner-testing-20240229-1.csv", header=1)
+    df = read_addess_full_excel()
 
     col_list = df.columns.tolist()
 
@@ -60,20 +75,26 @@ def test_single():
     print(f'result : {result}')
 
 def is_match(expected, predicted):
+
     if(
-        (expected['street_name'] == predicted['street_name'])
-
-        and
-
+        (expected['street_name'] != predicted['street_name'])
+    ):
+        print(f"failed to match street_name: {expected['street_name']} : {predicted['street_name']}")
+        return False
+    
+    if(
         (expected['house_no'] == predicted['house_no'])
-
-        and
-
+    ):
+        print(f"failed to match street_name: {expected['house_no']} : {predicted['house_no']}")
+        return False
+    
+    if(
         (expected['suite_no'] == predicted['suite_no'])
     ):
-        return True
+        print(f"failed to match street_name: {expected['suite_no']} : {predicted['suite_no']}")
+        return False
 
-    return False
+    return True
 
 def hypenate(predicted, key):
 
@@ -101,6 +122,8 @@ def test_multiple():
 
     # return
 
+    total_addresses = len(df)
+    failed_addresses = 0
     for idx, row in df.iterrows():
         # if(row['address'] != 'nan'):
         # print(f'{idx} row["address"] : {type(row["address"])}')
@@ -142,14 +165,17 @@ def test_multiple():
         match_result = is_match(expected_dict, predicted)
 
         if(match_result == False):
-            print(f'Expected:\nstreet_name: {expected_street_name}\nhouse_no: {expected_house_no}\nsuite_no: {expected_suite_no}')
-            print(f'predicted : {predicted}')
+            print(f'\nc_address: {c_address}')
+            print(f'\nExpected:\nstreet_name: {expected_street_name}\nhouse_no: {expected_house_no}\nsuite_no: {expected_suite_no}')
+            print(f'\npredicted : {predicted}')
 
             print(f'match_result: {match_result}')
 
             print(f'\n' * 1)
         
             print(f'-' * 90)
+
+            failed_addresses += 1
 
         # print(f'row : {row["address"]}')
         pass
@@ -160,6 +186,8 @@ def test_multiple():
     #     )
 
     #     print(f'result : {result}')
+
+    print(f'failed {failed_addresses} out of {total_addresses}')
 
 def startpy():
 

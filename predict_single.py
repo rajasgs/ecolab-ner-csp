@@ -20,7 +20,7 @@ def test_single(c_address, model_name):
 
     simple_predict_class        = jpype.JClass("SimplePredictNERNoSingleton")
 
-    predicted = simple_predict_class.getTokens(c_address, model_name)
+    predicted = simple_predict_class.getTokens(c_address, model_path)
     print(predicted)
 
     return predicted
@@ -43,9 +43,10 @@ def test_java_class():
     java_class.hello()
     
 if __name__ == '__main__':
-    # startpy()
+    
+    startpy()
 
-    test_java_class()
+    # test_java_class()
 
 
 

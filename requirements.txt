@@ -13,3 +13,6 @@ markupsafe==2.0.1
 itsdangerous==2.0.1 
 uvicorn==0.18.2
 fastapi==0.85.0
+jupyterlab==3.5.2
+openpyxl==3.0.10
+xlrd==2.0.1

@@ -12,6 +12,8 @@ from fastapi.responses import (
     JSONResponse,
 )
 
+from pydantic import BaseModel
+
 # import validator_single_extended as vase
 import jpype
 
@@ -82,7 +84,29 @@ async def ping_api():
 @app.post("/predict")
 async def api_predict_single(address: str, model_name: str):
 
-    if("ecolab_".startswith(model_name)):
+    if(not "ecolab_".startswith(model_name)):
+        model_name = f"ecolab_{model_name}"
+
+    address_result = test_single(address, model_name)
+
+    total_results = {
+        "address" : address,
+        "classified" : address_result
+    }
+
+    return JSONResponse(content=total_results)
+
+class Item(BaseModel):
+    address: str
+    model_name: str
+    
+@app.post("/predict/json")
+async def api_predict_json_single(item: Item):
+
+    address = item.address
+    model_name = item.model_name
+
+    if(not "ecolab_".startswith(model_name)):
         model_name = f"ecolab_{model_name}"
 
     address_result = test_single(address, model_name)
