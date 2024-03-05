@@ -30,16 +30,13 @@ def standardize_local_multiple(filepath):
             continue
         result = standardize_local_single(line)
 
-        print(f'result: {result}')
+        print(f'{result}')
 
-        print(f'-' * 80)
+        # print(f'-' * 80)
 
 def startpy():
-    
     standardize_local_multiple('sample_address.txt')
     
-
-
 
 if __name__ == '__main__':
     startpy()
