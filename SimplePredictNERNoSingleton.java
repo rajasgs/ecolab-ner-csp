@@ -45,7 +45,7 @@ public class SimplePredictNERNoSingleton {
     static String HOUSE_NO              = "HOUSE_NO";
     static String SUITE_NO              = "SUITE_NO";
 
-    private CRFClassifier getModel(String modelPath) {
+    private static CRFClassifier getModel(String modelPath) {
         /*
          * This returns a classifier model
          */
@@ -157,7 +157,7 @@ public class SimplePredictNERNoSingleton {
         return resultMap;
     }
 
-    public HashMap<String, String> getEntities2(CRFClassifier model, String input){
+    public static HashMap<String, String> getEntities2(CRFClassifier model, String input){
         String xmlContent = model.classifyWithInlineXML(input);
 
         // print(xmlContent);
@@ -181,7 +181,7 @@ public class SimplePredictNERNoSingleton {
         }
     }
 
-    public String getTokens(String content, String modelPath){
+    public static String getTokens(String content, String modelPath){
 
         CRFClassifier model = getModel(modelPath);
 

@@ -38,8 +38,6 @@ app = FastAPI(
 
 def get_tokens(address, core_nlp_modelname):
 
-    
-
     model_path = f"{core_nlp_modelname}.model.ser.gz"
 
     simple_predict_class        = jpype.JClass("SimplePredictNERNoSingleton")
