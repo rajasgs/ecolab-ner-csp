@@ -5,9 +5,11 @@ import validator_single_extended as vase
 import pandas as pd
 from constants import *
 
+FILEPATH = "~/datasets/Address-Pattern-NER-20240305-1.xlsx"
+
 vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{CORE_NLP_MODELNAME}.model.ser.gz")
 
-MAX_READ_ROWS = 27
+# MAX_READ_ROWS = 27
 
 def is_unncessary_column(col_name):
 
@@ -16,7 +18,7 @@ def is_unncessary_column(col_name):
 
     return False
 
-FILEPATH = "~/datasets/Address-Pattern-NER-20240305-1.xlsx"
+
 
 def read_addess_full_excel():
 
@@ -50,7 +52,7 @@ def read_address_csv():
 
     df.dropna()
 
-    df = df[0:MAX_READ_ROWS]
+    # df = df[0:MAX_READ_ROWS]
 
     return df
 
@@ -124,6 +126,7 @@ def test_multiple():
 
     total_addresses = len(df)
     failed_addresses = 0
+    no_address = 0
     for idx, row in df.iterrows():
         # if(row['address'] != 'nan'):
         # print(f'{idx} row["address"] : {type(row["address"])}')
@@ -131,6 +134,12 @@ def test_multiple():
         #     continue
         c_address = row['address']
         expected_street_name = row['street_name']
+
+        # print(f'c_address: {c_address}, c_address.type:{type(c_address)}')
+        if(isinstance(c_address, float)):
+            # print('skipping')
+            no_address += 1
+            continue
 
         if(expected_street_name == 'not_decided'):
             continue
@@ -187,7 +196,7 @@ def test_multiple():
 
     #     print(f'result : {result}')
 
-    print(f'failed {failed_addresses} out of {total_addresses}')
+    print(f'failed {failed_addresses} out of {total_addresses - no_address}')
 
 def startpy():
 
