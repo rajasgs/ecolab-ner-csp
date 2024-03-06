@@ -29,8 +29,10 @@ def startpy():
 
     import sys
 
-    model_name = "ecolab_address_20230828_3"
+    model_name = sys.argv[1]
     c_address = sys.argv[2]
+
+    print(f"c_address: {c_address}")
 
     test_single(c_address, model_name)
 
