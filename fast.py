@@ -84,7 +84,7 @@ async def ping_api():
 @app.post("/predict")
 async def api_predict_single(address: str, model_name: str):
 
-    if(not "ecolab_".startswith(model_name)):
+    if("ecolab" not in model_name):
         model_name = f"ecolab_{model_name}"
 
     address_result = test_single(address, model_name)
@@ -106,8 +106,8 @@ async def api_predict_json_single(item: Item):
     address = item.address
     model_name = item.model_name
 
-    if(not "ecolab_".startswith(model_name)):
-        model_name = f"ecolab_{model_name}"
+    # if("ecolab" not in model_name):
+    #     model_name = f"ecolab_{model_name}"
 
     address_result = test_single(address, model_name)
 
