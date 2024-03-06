@@ -79,24 +79,61 @@ def test_single():
 
     print(f'result : {result}')
 
+def match_street(street_name_expected, street_name_predicted):
+
+    if(isinstance(street_name_expected, float)):
+        if(street_name_predicted != '-'):
+            print(f"failed to match street_name:: [{street_name_expected}] : [{street_name_predicted}]")
+            return False
+    else:
+    # print(f'street_name_expected: {street_name_expected}, street_name_expected.type: {type(street_name_expected)}')
+        if(
+            (street_name_expected != street_name_predicted)
+        ):
+            print(f"failed to match street_name:: [{street_name_expected}] : [{street_name_predicted}]")
+            return False
+    
+    return True
+
+def match_house_no(house_no_expected, house_no_predicted):
+
+    if(isinstance(house_no_expected, float)):
+        if(house_no_predicted != '-'):
+            print(f"failed to match house_no:: [{house_no_expected}] : [{house_no_predicted}]")
+            return False
+    else:
+        if(
+            (house_no_expected != house_no_predicted)
+        ):
+            print(f"failed to match house_no:: [{house_no_expected}] : [{house_no_predicted}]")
+            return False
+    
+    return True
+
+def match_suite_no(suite_no_expected, suite_no_predicted):
+
+    if(isinstance(suite_no_expected, float)):
+        if(suite_no_predicted != '-'):
+            print(f"failed to match house_no:: [{suite_no_expected}] : [{suite_no_predicted}]")
+            return False
+    else:
+        if(
+            (suite_no_expected != suite_no_predicted)
+        ):
+            print(f"failed to match house_no:: [{suite_no_expected}] : [{suite_no_predicted}]")
+            return False
+    
+    return True
+
 def is_match(expected, predicted):
 
-    if(
-        (expected['street_name'] != predicted['street_name'])
-    ):
-        print(f"failed to match street_name: {expected['street_name']} : {predicted['street_name']}")
+    if(not match_street(expected['street_name'], predicted['street_name'])):
         return False
     
-    if(
-        (expected['house_no'] == predicted['house_no'])
-    ):
-        print(f"failed to match street_name: {expected['house_no']} : {predicted['house_no']}")
+    if(not match_house_no(expected['house_no'], predicted['house_no'])):
         return False
     
-    if(
-        (expected['suite_no'] == predicted['suite_no'])
-    ):
-        print(f"failed to match street_name: {expected['suite_no']} : {predicted['suite_no']}")
+    if(not match_suite_no(expected['suite_no'], predicted['suite_no'])):
         return False
 
     return True
