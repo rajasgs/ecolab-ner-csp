@@ -8,7 +8,9 @@ import validator_single_extended as vase
 import pandas as pd
 from constants import *
 
-FILEPATH = "~/datasets/Address-Pattern-NER-20240305-3.xlsx"
+FILEPATH = TESTING_FILEPATH
+
+COL_ADDRESS =  'address_standardized'
 
 vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{CORE_NLP_MODELNAME}.model.ser.gz")
 
@@ -26,11 +28,11 @@ def read_addess_full_excel():
 
     return df
 
-def read_addess_full_csv():
+# def read_addess_full_csv():
 
-    df = df.read_csv("Address-Patterns-RS-address-ner-testing-20240229-1.csv", header=1)
+#     df = df.read_csv("Address-Patterns-RS-address-ner-testing-20240229-1.csv", header=1)
 
-    return df
+#     return df
 
 def read_address_csv():
 
@@ -135,11 +137,11 @@ def test_multiple():
     failed_addresses = 0
     no_address = 0
     for idx, row in df.iterrows():
-        # if(row['address'] != 'nan'):
+        # if(row[COL_ADDRESS] != 'nan'):
         # print(f'{idx} row["address"] : {type(row["address"])}')
-        # if(isinstance(type(row['address']), float)):
+        # if(isinstance(type(row[COL_ADDRESS]), float)):
         #     continue
-        c_address = row['address']
+        c_address = row[COL_ADDRESS]
         expected_street_name = row['street_name']
 
         # print(f'c_address: {c_address}, c_address.type:{type(c_address)}')

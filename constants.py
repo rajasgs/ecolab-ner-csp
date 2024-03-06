@@ -29,3 +29,5 @@ STREET_NAME                 = "STREET_NAME"
 HOUSE_NO                    = "HOUSE_NO"
 SUITE_NO                    = "SUITE_NO"
 EMPTY                       = "0"
+
+TESTING_FILEPATH            = os.getenv("TESTING_FILEPATH")

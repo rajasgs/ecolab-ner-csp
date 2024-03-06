@@ -5,7 +5,8 @@ Created on
 @author: Vishnu
 
 source:
-    
+    Postman API:
+    http://{{WEBURL}}:{{WEBPORT}}/{{TENANT_ID}}/api/matchservice/standardize
 '''
 
 import requests
