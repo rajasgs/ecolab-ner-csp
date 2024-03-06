@@ -8,11 +8,9 @@ import validator_single_extended as vase
 import pandas as pd
 from constants import *
 
-FILEPATH = "~/datasets/Address-Pattern-NER-20240305-2.xlsx"
+FILEPATH = "~/datasets/Address-Pattern-NER-20240305-3.xlsx"
 
 vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{CORE_NLP_MODELNAME}.model.ser.gz")
-
-# MAX_READ_ROWS = 27
 
 def is_unncessary_column(col_name):
 
@@ -20,8 +18,6 @@ def is_unncessary_column(col_name):
         return True
 
     return False
-
-
 
 def read_addess_full_excel():
 
@@ -82,16 +78,17 @@ def test_single():
 
 def match_entity(entity, entity_expected, entity_predicted):
 
-    if(isinstance(entity_expected, float)):
-        if(entity_predicted != '-'):
-            print(f"failed to match {entity}:: [{entity_expected}] : [{entity_predicted}]")
-            return False
-    else:
-        if(
-            (entity_expected != entity_predicted)
-        ):
-            print(f"failed to match {entity}:: [{entity_expected}] : [{entity_predicted}]")
-            return False
+    entity_expected = str(entity_expected)
+    entity_predicted = str(entity_predicted)
+
+    if(entity_predicted == '-'):
+        entity_predicted = 'nan'
+
+    if(
+        (entity_expected != entity_predicted)
+    ):
+        print(f"failed to match {entity}:: [{entity_expected}] vs [{entity_predicted}]")
+        return False
     
     return True
 
