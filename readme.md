@@ -12,13 +12,29 @@ python ner.py
 ```
 
 
-
-### How to run multiple versions?
+### Standardize
 ```
-py app.py v1 8080
 
-py app.py v2 9090
 ```
+
+
+### Run Testcases:
+```
+Address-Pattern-NER-20240305
+https://syndigo-my.sharepoint.com/:x:/r/personal/raja_raman_syndigo_com/_layouts/15/Doc.aspx?sourcedoc=%7BCDB645B0-52D6-4F4F-AFC7-05E5FC4F50F4%7D&file=Book%203.xlsx&action=editnew&mobileredirect=true&wdNewAndOpenCt=1709620017905&ct=1709620018676&wdOrigin=OFFICECOM-WEB.START.NEW&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=0813768f-0739-4594-9c90-bd985f876144&login_hint=Raja.Raman%40syndigo.com&cid=d108cf7f-9401-4860-8ce8-484ffce80609
+
+download file and put it into
+~/datasets/Address-Pattern-NER-20240305-3.xlsx
+
+python predict_local.py
+```
+
+
+### How to run FastAPI?
+```
+uvicorn fast:app --reload
+```
+
 
 ### How to make inputs?
 ```

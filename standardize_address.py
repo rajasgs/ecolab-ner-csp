@@ -13,6 +13,12 @@ import logging
 import pprint
 import json
 
+
+# Configure logging to print to the console with the specified format and level
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    datefmt='%m/%d/%Y %I:%M:%S %p')
+
 headers = {
     'x-rdp-version': '8.1',
     "Content-Type": "application/json",
@@ -105,7 +111,10 @@ def startpy():
 
     # files = ["Ecolab_Address_Training_Ver2_1.txt", "Ecolab_Address_Testing_Ver2_1.txt"]
 
-    files = ["oct17-training.txt", "oct17-testing.txt"]
+    files = [
+        "march-06-training.txt", 
+        # "march-06-testing.txt"
+    ]
     
     for filename in files:
         standardize_dataset(filename)
