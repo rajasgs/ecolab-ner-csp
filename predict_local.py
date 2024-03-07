@@ -7,12 +7,18 @@
 import validator_single_extended as vase
 import pandas as pd
 from constants import *
+import sys
 
 FILEPATH = TESTING_FILEPATH
 
 COL_ADDRESS =  'address_standardized'
 
-vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{FINEL_NER_MODEL_BASE}{CORE_NLP_MODELNAME}.model.ser.gz")
+vas_singleton = None
+if(len(sys.argv) == 2):
+    mpath = sys.argv[1]
+    vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{mpath}")
+else:
+    vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{FINEL_NER_MODEL_BASE}{CORE_NLP_MODELNAME}.model.ser.gz")
 
 def is_unncessary_column(col_name):
 
@@ -205,7 +211,7 @@ def test_multiple():
 
     #     print(f'result : {result}')
 
-    print(f'failed {failed_addresses} out of {total_addresses - no_address}')
+    print(f'final:failed {failed_addresses} out of {total_addresses - no_address}')
 
 def startpy():
 
@@ -220,14 +226,10 @@ if __name__ == '__main__':
 '''
 How to run?
 
-Download 'address-ner-testing' from 
-https://docs.google.com/spreadsheets/d/1RuTw-ycDOy2EUHf0qDp3kVvoZ0_s-bjd4eeRAyZndRk/edit#gid=806720616
+py predict_local.py 
 
-as 
-Address-Patterns-RS-address-ner-testing.csv
+or
 
-
-index,pattern index,address,street_name,house_no,suite_no,CoreNLP Output,street_name,house_no,suite_no,
-
+py predict_local.py 
 
 '''
