@@ -31,3 +31,5 @@ SUITE_NO                    = "SUITE_NO"
 EMPTY                       = "0"
 
 TESTING_FILEPATH            = os.getenv("TESTING_FILEPATH")
+
+FINEL_NER_MODEL_BASE        = os.getenv("FINEL_NER_MODEL_BASE")

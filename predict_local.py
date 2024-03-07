@@ -12,7 +12,7 @@ FILEPATH = TESTING_FILEPATH
 
 COL_ADDRESS =  'address_standardized'
 
-vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{CORE_NLP_MODELNAME}.model.ser.gz")
+vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{FINEL_NER_MODEL_BASE}{CORE_NLP_MODELNAME}.model.ser.gz")
 
 def is_unncessary_column(col_name):
 
