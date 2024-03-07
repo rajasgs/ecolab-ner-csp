@@ -20,7 +20,7 @@ import subprocess
 #from stanza.server import CoreNLPClient
 
 # Local
-from constants import (CORE_NLP_TRAINING_FILEPATH, CORE_NLP_TESTING_FILEPATH, CORE_NLP_MODELNAME)
+from constants import (CORE_NLP_TRAINING_FILEPATH, CORE_NLP_TESTING_FILEPATH, CORE_NLP_MODELNAME, NER_MODEL_FOLDER_BASE)
 
 '''
 Below line, installs the stanfordCore NLP JARS. As it is already installed separately, commenting out the line.
@@ -92,8 +92,8 @@ def train_model(model_name: str, train_files: list, test_files: list, print_repo
 
     cleanfile(output_filepath)
     
-    model_file        = f'{model_name}.model.ser.gz'
-    ner_prop_filename = f'{model_name}.model.props'
+    model_file        = os.path.join(NER_MODEL_FOLDER_BASE, f'{model_name}.model.ser.gz') 
+    ner_prop_filename = os.path.join(NER_MODEL_FOLDER_BASE, f'{model_name}.model.props') 
 
     write_ner_prop_file(ner_prop_filename, train_files, test_files, model_file)
 
