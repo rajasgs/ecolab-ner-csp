@@ -204,12 +204,6 @@ def test_multiple():
         # print(f'row : {row["address"]}')
         pass
 
-    # for idx in range(5):
-    #     result, modelpath = classify_address(
-    #         "45 spadina road"
-    #     )
-
-    #     print(f'result : {result}')
 
     print(f'final:failed {failed_addresses} out of {total_addresses - no_address}')
 
@@ -230,6 +224,6 @@ py predict_local.py
 
 or
 
-py predict_local.py 
+py predict_local.py /home/rajaraman/datasets/ecolab-ner/ecolab_address_20240229_2.model.ser.gz
 
 '''
