@@ -62,6 +62,7 @@ def prepare_payload(value):
     return payload
 
 def standardize_values(headers, list_of_addresses):
+    
     session = requests.Session()
     session.headers.update(headers)
     standardized_addresses = []
