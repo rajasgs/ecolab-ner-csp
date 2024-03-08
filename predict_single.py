@@ -7,23 +7,18 @@ from constants import *
 
 import jpype
 
-jpype.startJVM(classpath    = ['jars/*', "./"])
+def test_single(c_address, model_path):
 
-# vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{CORE_NLP_MODELNAME}.model.ser.gz")
+    vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{model_path}")
 
-def test_single(c_address, model_name):
+    result = vas_singleton.get_tokens(c_address)
 
-    if("ecolab_".startswith(model_name)):
-        model_name = f"ecolab_{model_name}"
+    return result
 
-    model_path = f"{model_name}.model.ser.gz"
+def print_addres_dict(c_dict):
 
-    simple_predict_class        = jpype.JClass("SimplePredictNERNoSingleton")
-
-    predicted = simple_predict_class.getTokens(c_address, model_path)
-    print(predicted)
-
-    return predicted
+    for key, val in c_dict.items():
+        print(f"{key}: {val}")
 
 def startpy():
 
@@ -34,7 +29,8 @@ def startpy():
 
     print(f"c_address: {c_address}")
 
-    test_single(c_address, model_name)
+    result = test_single(c_address, model_name)
+    print_addres_dict(result)
 
     pass
 
@@ -56,5 +52,5 @@ if __name__ == '__main__':
 '''
 How to run?
 
-python predict_single.py ecolab_address_20240103_1 "12-89 spadina road"
+python predict_single.py /home/rajaraman/datasets/ecolab-ner/ecolab_address_20240308_1.model.ser.gz "12-89 spadina road"
 '''
