@@ -82,3 +82,7 @@ def startpy():
 if __name__ == "__main__":
     
     startpy()
+
+'''
+python single_standardizer.py "1173/38 u cementárny"
+'''
