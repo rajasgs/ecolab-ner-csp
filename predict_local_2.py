@@ -13,7 +13,7 @@ FILEPATH = TESTING_FILEPATH
 
 COL_ADDRESS =  'address_standardized'
 
-# TESTING_SHEET = 'testing-unique'
+TESTING_SHEET = 'testing-unique'
 TESTING_SHEET = 'testing'
 
 vas_singleton = None
@@ -210,15 +210,17 @@ def test_multiple():
 
             failed_addresses += 1
         else:
-            print(f'c_address: {c_address} successfully matched')
+            # print(f'c_address: {c_address} successfully matched')
             # print(f'\n' * 1)
 
             # print(f'\nExpected:\nstreet_name: {expected_street_name}\nhouse_no: {expected_house_no}\nsuite_no: {expected_suite_no}')
             # print(f'\npredicted : {predicted}')
 
-            print(f'match_result: {match_result}')
+            # print(f'match_result: {match_result}')
         
-            print(f'-' * 90)
+            # print(f'-' * 90)
+
+            pass
 
         # print(f'row : {row["address"]}')
         pass
