@@ -1,19 +1,36 @@
 
 
 
-import validator_single_extended as vase
+# import validator_single_extended as vase
 import pandas as pd
 from constants import *
 
 import jpype
 
+jpype.startJVM(classpath    = ['jars/*', "./"])
+
 def test_single(c_address, model_path):
 
-    vas_singleton = vase.ValidatorSingletonExtended.getInstance(model_path = f"{model_path}")
+    simple_predict_class        = jpype.JClass("SimplePredictNERNoSingleton")
 
-    result = vas_singleton.get_tokens(c_address)
+    result = simple_predict_class.getTokens(str(c_address), model_path)
 
-    return result
+    result_parts = result.split('\n')
+
+    street_name = result_parts[0].replace('STREET_NAME=', '')
+    house_no    = result_parts[1].replace('HOUSE_NO=', '')
+    suite_no    = result_parts[2].replace('SUITE_NO=', '')
+
+    if(suite_no == 'null'):
+        suite_no = 'null'
+
+    token_dict = {
+        "STREET_NAME"   : str(street_name),
+        "HOUSE_NO"      : str(house_no),
+        "SUITE_NO"      : str(suite_no),
+    }
+
+    return token_dict
 
 def print_addres_dict(c_dict):
 
@@ -34,12 +51,6 @@ def startpy():
 
     pass
 
-def test_java_class():
-
-    java_class        = jpype.JClass("ClassA")
-
-    java_class.hello()
-    
 if __name__ == '__main__':
     
     startpy()
@@ -52,5 +63,5 @@ if __name__ == '__main__':
 '''
 How to run?
 
-python predict_single.py /home/rajaraman/datasets/ecolab-ner/ecolab_address_20240308_1.model.ser.gz "12-89 spadina road"
+python predict_single.py /home/rajaraman/datasets/ecolab-ner-archive/ecolab_address_20240308_1.model.ser.gz "12-89 spadina road"
 '''

@@ -224,6 +224,6 @@ py predict_local.py
 
 or
 
-py predict_local.py /home/rajaraman/datasets/ecolab-ner/ecolab_address_20240229_2.model.ser.gz
+py predict_local.py /home/rajaraman/datasets/ecolab-ner-archive/ecolab_address_20240229_2.model.ser.gz
 
 '''
