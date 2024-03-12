@@ -114,7 +114,7 @@ def startpy():
     # files = ["Ecolab_Address_Training_Ver2_1.txt", "Ecolab_Address_Testing_Ver2_1.txt"]
 
     files = [
-        "march-06-training.txt", 
+        "z_address.txt", 
         # "march-06-testing.txt"
     ]
     

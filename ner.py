@@ -44,6 +44,31 @@ def ner_prop_str(train_files: list, test_files: list, output: str) -> str:
     train_fils_str = ",".join(train_files)
     test_files_str = ",".join(test_files)
 
+    # Original
+    # return f"""
+    # trainFileList = {train_fils_str}
+    # testFiles = {test_files_str}
+    # serializeTo = {output}
+    # map = word=0,answer=1
+
+    # useClassFeature = true
+    # useWord=true
+    # useNGrams=true
+    # noMidNGrams=false
+    # maxNGramLeng=6
+    # usePrev=true
+    # useNext=true
+    # useSequences=true
+    # usePrevSequences=true
+    # maxLeft=4
+    # useTypeSeqs=true
+    # useTypeSeqs2=true
+    # useTypeySequences=true
+    # wordShape=chris2useLC
+    # useDisjunctive=true 
+    # """
+
+    # Experiment
     return f"""
     trainFileList = {train_fils_str}
     testFiles = {test_files_str}
@@ -63,7 +88,7 @@ def ner_prop_str(train_files: list, test_files: list, output: str) -> str:
     useTypeSeqs=true
     useTypeSeqs2=true
     useTypeySequences=true
-    wordShape=chris2useLC
+    wordShape=chris1
     useDisjunctive=true 
     """
 
