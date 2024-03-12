@@ -239,10 +239,10 @@ if __name__ == '__main__':
 '''
 How to run?
 
-py predict_local.py 
+py predict_local_2.py 
 
 or
 
-py predict_local.py /home/rajaraman/datasets/ecolab-ner-archive/ecolab_address_20240229_2.model.ser.gz
+py predict_local_2.py /home/rajaraman/datasets/ecolab-ner-archive/ecolab_address_20240229_2.model.ser.gz
 
 '''
