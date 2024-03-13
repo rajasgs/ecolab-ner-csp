@@ -14,9 +14,10 @@ FILEPATH = TESTING_FILEPATH
 COL_ADDRESS =  'address_standardized'
 
 # TESTING_SHEET = 'testing-unique'
-TESTING_SHEET = 'testing-important'
-TESTING_SHEET = 'testing-full'
+# TESTING_SHEET = 'testing-important'
+# TESTING_SHEET = 'testing-full'
 # TESTING_SHEET = 'testing-full-50'
+TESTING_SHEET = 'testing-important-100'
 
 # 0- don't show; 1 - show
 SUCCESS_DEDBUG = 0
