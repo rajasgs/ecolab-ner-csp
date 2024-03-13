@@ -13,8 +13,8 @@ FILEPATH = TESTING_FILEPATH
 
 COL_ADDRESS =  'address_standardized'
 
-TESTING_SHEET = 'testing-unique'
-TESTING_SHEET = 'testing'
+# TESTING_SHEET = 'testing-unique'
+TESTING_SHEET = 'testing-important'
 
 vas_singleton = None
 if(len(sys.argv) == 2):
@@ -151,6 +151,7 @@ def test_multiple():
     total_addresses = len(df)
     failed_addresses = 0
     buggy_address = 0
+    pattern_failure_dict = {}
     for idx, row in df.iterrows():
         # if(row[COL_ADDRESS] != 'nan'):
         # print(f'{idx} row["address"] : {type(row["address"])}')
@@ -158,6 +159,8 @@ def test_multiple():
         #     continue
         c_address = row[COL_ADDRESS]
         expected_street_name = row['street_name']
+
+        c_pattern_index = row['pattern_index']
 
         # print(f'c_address: {c_address}, c_address.type:{type(c_address)}')
         if(isinstance(c_address, float)):
@@ -208,6 +211,11 @@ def test_multiple():
         
             print(f'-' * 90)
 
+            if(c_pattern_index in pattern_failure_dict):
+                pattern_failure_dict[c_pattern_index] += 1
+            else:
+                pattern_failure_dict[c_pattern_index] = 0
+
             failed_addresses += 1
         else:
             # print(f'c_address: {c_address} successfully matched')
@@ -228,6 +236,17 @@ def test_multiple():
     fail_percentage = (((failed_addresses)/ (total_addresses - buggy_address)) * 100)
     print(f'final:failed {failed_addresses} out of {total_addresses - buggy_address}')
     print(f'failure pecentage: {"%.2f" % fail_percentage}')
+
+    pattern_failure_dict = {
+        k: v for k, v in sorted(
+            pattern_failure_dict.items(), 
+            key=lambda item: item[1],
+            reverse=True
+        )
+    }
+
+    print(f'pattern_failure_dict: {pattern_failure_dict}')
+
 
 def startpy():
 
