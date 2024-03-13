@@ -150,7 +150,7 @@ def test_multiple():
 
     total_addresses = len(df)
     failed_addresses = 0
-    no_address = 0
+    buggy_address = 0
     for idx, row in df.iterrows():
         # if(row[COL_ADDRESS] != 'nan'):
         # print(f'{idx} row["address"] : {type(row["address"])}')
@@ -161,8 +161,8 @@ def test_multiple():
 
         # print(f'c_address: {c_address}, c_address.type:{type(c_address)}')
         if(isinstance(c_address, float)):
-            # print('skipping')
-            no_address += 1
+            print('skipping {c_address}')
+            buggy_address += 1
             continue
 
         if(expected_street_name == 'not_decided'):
@@ -225,8 +225,9 @@ def test_multiple():
         # print(f'row : {row["address"]}')
         pass
 
-
-    print(f'final:failed {failed_addresses} out of {total_addresses - no_address}')
+    fail_percentage = (((failed_addresses)/ (total_addresses - buggy_address)) * 100)
+    print(f'final:failed {failed_addresses} out of {total_addresses - buggy_address}')
+    print(f'failure pecentage: {"%.2f" % fail_percentage}')
 
 def startpy():
 
