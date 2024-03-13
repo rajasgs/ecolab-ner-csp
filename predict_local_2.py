@@ -214,7 +214,7 @@ def test_multiple():
             if(c_pattern_index in pattern_failure_dict):
                 pattern_failure_dict[c_pattern_index] += 1
             else:
-                pattern_failure_dict[c_pattern_index] = 0
+                pattern_failure_dict[c_pattern_index] = 1
 
             failed_addresses += 1
         else:

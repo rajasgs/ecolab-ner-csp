@@ -68,7 +68,31 @@ def ner_prop_str(train_files: list, test_files: list, output: str) -> str:
     # useDisjunctive=true 
     # """
 
-    # Experiment
+    # # Experiment 1
+    # return f"""
+    # trainFileList = {train_fils_str}
+    # testFiles = {test_files_str}
+    # serializeTo = {output}
+    # map = word=0,answer=1
+
+    # useClassFeature = true
+    # useWord=true
+    # useNGrams=true
+    # noMidNGrams=false
+    # maxNGramLeng=6
+    # usePrev=true
+    # useNext=true
+    # useSequences=true
+    # usePrevSequences=true
+    # maxLeft=4
+    # useTypeSeqs=true
+    # useTypeSeqs2=true
+    # useTypeySequences=true
+    # wordShape=chris1
+    # useDisjunctive=true 
+    # """
+
+    # # Experiment 2
     return f"""
     trainFileList = {train_fils_str}
     testFiles = {test_files_str}
@@ -90,6 +114,12 @@ def ner_prop_str(train_files: list, test_files: list, output: str) -> str:
     useTypeySequences=true
     wordShape=chris1
     useDisjunctive=true 
+
+    useObservedSequencesOnly=true
+    normalize=true
+    
+    useQN=true
+    QNSize=25
     """
 
 
