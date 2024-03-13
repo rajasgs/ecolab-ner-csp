@@ -14,11 +14,12 @@ FILEPATH = TESTING_FILEPATH
 COL_ADDRESS =  'address_standardized'
 
 # TESTING_SHEET = 'testing-unique'
-# TESTING_SHEET = 'testing-important'
-TESTING_SHEET = 'testing-full'
+TESTING_SHEET = 'testing-important'
+# TESTING_SHEET = 'testing-full'
+TESTING_SHEET = 'testing-full-50'
 
 # 0- don't show; 1 - show
-SUCCESS_DEDBUG = 1
+SUCCESS_DEDBUG = 0
 
 vas_singleton = None
 if(len(sys.argv) == 2):
@@ -42,7 +43,10 @@ def read_addess_full_excel():
         sheet_name=TESTING_SHEET, 
         engine='openpyxl', 
         header = 1,
-        converters={'suite_no':str}
+        converters={
+            'suite_no':str,
+            'pattern_index' : int
+        }
     )
 
     return df
@@ -206,6 +210,9 @@ def test_multiple():
         match_result = is_match(expected_dict, predicted)
 
         if(match_result == False):
+
+            print(f'Pattern: {c_pattern_index}')
+
             print(f'\nc_address: {c_address}')
             print(f'\nExpected:\nstreet_name: {expected_street_name}\nhouse_no: {expected_house_no}\nsuite_no: {expected_suite_no}')
             print(f'\npredicted : {predicted}')
