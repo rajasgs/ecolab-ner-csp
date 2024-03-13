@@ -14,7 +14,11 @@ FILEPATH = TESTING_FILEPATH
 COL_ADDRESS =  'address_standardized'
 
 # TESTING_SHEET = 'testing-unique'
-TESTING_SHEET = 'testing-important'
+# TESTING_SHEET = 'testing-important'
+TESTING_SHEET = 'testing-full'
+
+# 0- don't show; 1 - show
+SUCCESS_DEDBUG = 0
 
 vas_singleton = None
 if(len(sys.argv) == 2):
@@ -194,6 +198,7 @@ def test_multiple():
 
         # print(f'{idx} c_address: {c_address}, street_name: {c_street_name}')
 
+        # print(f'c_address: {c_address}')
         predicted = vas_singleton.get_tokens(c_address)
         predicted = replace_null_with_hypen(predicted)
         # 
@@ -218,15 +223,17 @@ def test_multiple():
 
             failed_addresses += 1
         else:
-            print(f'c_address: {c_address} successfully matched')
-            print(f'\n' * 1)
 
-            print(f'\nExpected:\nstreet_name: {expected_street_name}\nhouse_no: {expected_house_no}\nsuite_no: {expected_suite_no}')
-            print(f'\npredicted : {predicted}')
+            if(SUCCESS_DEDBUG):
+                print(f'c_address: {c_address} successfully matched')
+                print(f'\n' * 1)
 
-            print(f'match_result: {match_result}')
-        
-            print(f'-' * 90)
+                print(f'\nExpected:\nstreet_name: {expected_street_name}\nhouse_no: {expected_house_no}\nsuite_no: {expected_suite_no}')
+                print(f'\npredicted : {predicted}')
+
+                print(f'match_result: {match_result}')
+            
+                print(f'-' * 90)
 
             pass
 
@@ -234,7 +241,7 @@ def test_multiple():
         pass
 
     fail_percentage = (((failed_addresses)/ (total_addresses - buggy_address)) * 100)
-    print(f'final:failed {failed_addresses} out of {total_addresses - buggy_address}')
+    print(f'\n\nfinal:failed {failed_addresses} out of {total_addresses - buggy_address}')
     print(f'failure pecentage: {"%.2f" % fail_percentage}')
 
     pattern_failure_dict = {
@@ -245,7 +252,7 @@ def test_multiple():
         )
     }
 
-    print(f'pattern_failure_dict: {pattern_failure_dict}')
+    print(f'\n\npattern_failure_dict: {pattern_failure_dict}')
 
 
 def startpy():
