@@ -18,7 +18,7 @@ COL_ADDRESS =  'address_standardized'
 TESTING_SHEET = 'testing-full'
 
 # 0- don't show; 1 - show
-SUCCESS_DEDBUG = 0
+SUCCESS_DEDBUG = 1
 
 vas_singleton = None
 if(len(sys.argv) == 2):
