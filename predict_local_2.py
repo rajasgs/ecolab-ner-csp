@@ -17,7 +17,7 @@ COL_ADDRESS =  'address_standardized'
 # TESTING_SHEET = 'testing-important'
 # TESTING_SHEET = 'testing-full'
 # TESTING_SHEET = 'testing-full-50'
-TESTING_SHEET = 'testing-important-100'
+TESTING_SHEET = 'testing-ecolab-addr-important'
 
 # 0- don't show; 1 - show
 SUCCESS_DEDBUG = 0
