@@ -2,53 +2,16 @@
 
 import requests
 import json
+import constants as cot
 
-headers = {
-    'x-rdp-version': '8.1',
-    "Content-Type": "application/json",
-    'x-rdp-userId': 'system_user',
-    'x-rdp-userRoles': '["admin"]',
-    'x-rdp-clientId': 'match-feedbackClient',
-    'x-rdp-appId': 'match-feedback'
-}
-WEBPORT     = 8085
-WEBURL      = "manage.rdpfsna20.riversand-dataplatform.com"
-TENANT_ID   = "ecolabuat"
-
-API_URL = f"http://{WEBURL}:{WEBPORT}/{TENANT_ID}/api/matchservice/standardize"
-
-session = requests.Session()
-session.headers.update(headers)
-
-def prepare_payload(value):
-    payload = {
-        "entity": {
-            "id": "test_standardize",
-            "name": "test_standardize",
-            "type": "customerSite",
-            "data": {
-                "attributes": {
-                    "addressLine1Cleansed": {
-                        "values": [
-                            {
-                                "id": "3_0_0",
-                                "value": value,
-                                "locale": "en-US",
-                                "source": "internal"
-                            }
-                        ]
-                    }
-                }
-            }
-        }
-    }
-    
-    return payload
 
 def standardize_single(address, count):
 
-    payload = prepare_payload(address)
-    response = session.post(API_URL, data=json.dumps(payload), timeout=60)        
+    session = requests.Session()
+    session.headers.update(cot.HEADERS)
+    payload = cot.prepare_payload(address)
+
+    response = session.post(cot.API_URL, data=json.dumps(payload), timeout=60)        
     
     if response.status_code != requests.codes.ok:
         print(f"Error while standardizing record number: {count} value: {address}")
