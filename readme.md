@@ -18,6 +18,16 @@ python ner.py
 ```
 
 
+### Test single
+```
+python predict_single.py models/v1.model.ser.gz "alfred nobels 21 a"
+
+
+```
+![1733281882844](image/readme/1733281882844.png)
+
+![1733281913204](image/readme/1733281913204.png)
+
 ### Run Testcases:
 ```
 Address-Pattern-NER-20240305

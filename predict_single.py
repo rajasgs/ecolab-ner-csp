@@ -16,7 +16,10 @@ def test_single(c_address, model_name):
     if("ecolab_".startswith(model_name)):
         model_name = f"ecolab_{model_name}"
 
-    model_path = f"{model_name}.model.ser.gz"
+    if not model_name.endswith("model.ser.gz"):
+        model_path = f"{model_name}.model.ser.gz"
+    else:
+        model_path = model_name
 
     simple_predict_class        = jpype.JClass("SimplePredictNERNoSingleton")
 
@@ -43,9 +46,9 @@ def test_java_class():
     java_class        = jpype.JClass("ClassA")
 
     java_class.hello()
-    
+
 if __name__ == '__main__':
-    
+
     startpy()
 
     # test_java_class()
