@@ -45,5 +45,5 @@ if __name__ == '__main__':
 '''
 How to run?
 
-python predict_multiple.py /home/rajaraman/datasets/ecolab-ner-archive/ecolab_address_20240313_3.model.ser.gz
+python predict_multiple.py /home/rajaraman/datasets/ecolab-ner-archive/ecolab_address_20240318_2.model.ser.gz
 '''

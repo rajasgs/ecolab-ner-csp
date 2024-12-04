@@ -40,7 +40,7 @@ def startpy():
 
     print(standardize_single(addr, 0))
 
-    print(f"Done!")
+    # print(f"Done!")
 
 if __name__ == "__main__":
     
